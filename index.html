@@ -8,12 +8,7 @@
 </head>
 <body>
     <nav>
-        <div class="buscador">
-            <input type="text" id="tituloInput" placeholder="nombre del libro">
-            <button id="buscarButton">Buscar</button>
-            <script src="assets/js/buscador.js"></script>
-        </div>
-        <div>
+        <div class="nav">
         <a href="index.html" id="paginas">inicio</a>
         <a href="paginas/categorias.html" id="paginas">categorias</a>
         <a href="paginas/prestamos.html" id="paginas">prestamos</a>
@@ -24,10 +19,20 @@
         <h1 class="tituloHeader">biblioteca el amanecer</h1>
     </header>
     <section class="seccion1">
+        <div id="contenedorBusqueda">
+            <div>
+            <h1 id="colorTitulo">busqueda de libros</h1>
+        </div>
+            <div id="buscador">
+                <input type="text" id="tituloInput" placeholder="nombre del libro">
+                <button id="buscarButton">Buscar</button>
+                <script src="assets/js/buscador.js"></script>
+            </div>
+        </div>
         <div id="resultados"></div>
     </section>
-    <section>
-
+    <section class="seccion2">
+        <h1>holas</h1>
     </section>
     <footer>
 

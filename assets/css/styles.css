@@ -5,7 +5,7 @@
 }
 
 header{
-    height: 70vh;
+    height: 60vh;
     width: 100%;
     background-image: url(../imagenes/fondoHeader.jpeg);
     background-size: cover;
@@ -41,23 +41,20 @@ nav a{
     font-size: 30px;
 }
 
-.buscador{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
 .seccion1{
-    background-color: #ffffff;
+    background-color: white;
 }
 
-#resultados{
+#contenedorBusqueda{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
-    padding: 20px 0;
-    font-size: 20px;
+    flex-direction: row;
+    padding: 10px 0;
+    background-color: black;
+}
 
+#colorTitulo{
+    color: white;
+    font-size: 30px;
 }
