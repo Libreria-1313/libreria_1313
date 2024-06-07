@@ -2,11 +2,7 @@ tareas
 
 grupo 1
 
-grupo 2
-integrantes
-- juan esteban grajales mesa 
-- daniela romerin 
-- 
+
 
 tareas
-el grupo dos resolvera los requisitos 2,3,7,8,9
+el grupo uno resolvera los requisitos 1,2,4,5,6,10,11
