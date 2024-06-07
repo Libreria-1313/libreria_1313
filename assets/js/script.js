@@ -17,7 +17,7 @@ const libros = {
     2: {
         titulo: "El temor de un hombre sabio",
         autor: "Patrick Rothfuss",
-        genero: "Fantasía",
+        genero: "hola",
         idioma: "Español",
         precio: 1200,
         formato: "Físico",

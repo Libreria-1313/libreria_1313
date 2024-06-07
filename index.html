@@ -7,16 +7,10 @@
     <title>pagina principal</title>
 </head>
 <body>
-    <header>
-        <h1 class="tituloHeader"> bienvenidos </h1>
-        <h1 class="tituloHeader">biblioteca el amanecer</h1>
-    </header>
     <nav>
         <div class="buscador">
-            <h1>Buscador de Libros</h1>
-            <input type="text" id="tituloInput" placeholder="Escribe el título del libro">
+            <input type="text" id="tituloInput" placeholder="nombre del libro">
             <button id="buscarButton">Buscar</button>
-            <div id="resultados"></div>
             <script src="../assets/js/script.js"></script>
         </div>
         <div>
@@ -25,8 +19,12 @@
         <a href="paginas/prestamos.html" id="paginas">prestamos</a>
         </div>
     </nav>
+    <header>
+        <h1 class="tituloHeader"> bienvenidos </h1>
+        <h1 class="tituloHeader">biblioteca el amanecer</h1>
+    </header>
     <section class="seccion1">
-        
+        <div id="resultados"></div>
     </section>
     <section>
 
