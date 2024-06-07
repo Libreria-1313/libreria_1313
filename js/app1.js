@@ -331,3 +331,9 @@ const libros = [
     }
 ];
 
+console.log(libros);
+
+
+
+
+
