@@ -68,8 +68,6 @@ document.getElementById('buscarButton').addEventListener('click', () => {
     mostrarResultados(resultados);
 });
 
-
-
 /*
 
 */ 

@@ -24,10 +24,13 @@ header{
 
 nav{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
-    background-color: #89858f;
     padding: 15px 0;
+    background-color: #89858f;
+    border-style:solid ;
+    border-color: #c3beca
+
 }
 
 nav a{
@@ -42,7 +45,7 @@ nav a{
 }
 
 .seccion1{
-    background-color: white;
+    height: 20vh;    
 }
 
 #contenedorBusqueda{
@@ -51,10 +54,31 @@ nav a{
     align-items: center;
     flex-direction: row;
     padding: 10px 0;
-    background-color: black;
+    background-color: rgb(71, 71, 71);
 }
 
 #colorTitulo{
     color: white;
     font-size: 30px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #89858f;
+    height: 5vh;
+}
+
+#colorFooter{
+    color: white;
+    font-size: 30px;
+}
+
+#colorFooter a{
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    background-color:aqua ;
 }
