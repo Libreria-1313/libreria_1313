@@ -15,21 +15,6 @@ const libros = [
         paginas: 471
     },
     {
-        titulo: "1984",
-        autor: "George Orwell",
-        genero: "Distopía",
-        idioma: "Inglés",
-        precio: "10.99 USD",
-        formato: "eBook",
-        isbn: "978-0-452-28423-4",
-        descripcion: "Una novela que presenta una visión aterradora de un futuro totalitario.",
-        estado: "Nuevo",
-        ubicacion: "Nueva York, EE.UU.",
-        fecha_publicacion: "1949-06-08",
-        editorial: "Secker & Warburg",
-        paginas: 328
-    },
-    {
         titulo: "El nombre de la rosa",
         autor: "Umberto Eco",
         genero: "Misterio",
@@ -331,7 +316,81 @@ const libros = [
     }
 ];
 
-console.log(libros);
+const body = document.getElementById('body')
+
+listBooks(libros)
+function listBooks(books) {
+  books.forEach(myBook => {
+    createBook(myBook)
+  });
+}
+
+function createBook (book) {
+  const myBook = document.createElement('div')
+  myBook.classList.add('book')
+
+  const title = document.createElement('h2')
+  title.textContent = book.titulo
+
+  const autor = document.createElement('p')
+  autor.textContent = book.autor
+
+  const genero = document.createElement('p')
+  genero.textContent = book.genero
+
+  const idioma = document.createElement('p')
+  idioma.textContent = book.idioma
+
+  const precio = document.createElement('p')
+  precio.textContent = book.precio
+
+  const formato= document.createElement('p')
+  formato.textContent = book.formato
+
+  const isbn = document.createElement('p')
+  isbn.textContent = book.isbn
+
+  const description = document.createElement('p')
+  description.textContent = book.descripcion
+
+  const estado = document.createElement('p')
+  estado.textContent = book.estado
+
+  const ubicasion = document.createElement('p')
+  ubicasion.textContent = book.ubicacion
+
+  const fecha = document.createElement('p')
+  fecha.textContent = book.fecha
+
+  const editorial = document.createElement('p')
+  editorial.textContent = book.editorial
+
+  const Cpaginas= document.createElement('p')
+  Cpaginas.textContent = book.Cpaginas
+
+
+
+  myBook.appendChild(title)
+  myBook.appendChild(autor)
+  myBook.appendChild(genero)
+  myBook.appendChild(idioma)
+  myBook.appendChild(precio)
+  myBook.appendChild(formato)
+  myBook.appendChild(isbn)
+  myBook.appendChild(description)
+  myBook.appendChild(estado)
+  myBook.appendChild(ubicasion)
+  myBook.appendChild(fecha)
+  myBook.appendChild(editorial)
+  myBook.appendChild(Cpaginas)
+  
+  body.appendChild(myBook)
+  libros.sort((a, b) => a.titulo.localeCompare(b.titulo));
+};
+
+
+
+
 
 
 
