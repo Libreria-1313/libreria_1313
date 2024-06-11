@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Libros</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Listado de Libros</h1>
+        <ul id="bookList">
+            <!-- Listado de libros generado aparecerá aquí -->
+        </ul>
+        
+        <h2>Buscar y Eliminar Libro</h2>
+        <form id="searchForm">
+            <label for="searchCriteria">Criterio de Búsqueda:</label>
+            <select id="searchCriteria">
+                <option value="title">Título</option>
+                <option value="editorial">Editorial</option>
+                <option value="stock">Stock</option>
+            </select>
+            <label for="searchValue">Valor:</label>
+            <input type="text" id="searchValue" required>
+            <button type="button" onclick="searchAndDeleteBook()">Buscar y Eliminar</button>
+        </form>
+    </div>
+
+    <script src="/js/app10.js"></script>
+</body>
+</html>
