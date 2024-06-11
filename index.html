@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Libros</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Listado de Libros</h1>
+        <ul id="bookList">
+            <!-- Listado de libros generado aparecerá aquí -->
+        </ul>
+        
+        <h2>Ajustar Stock</h2>
+        <form id="stockForm">
+            <label for="bookSelectStock">Selecciona un Libro:</label>
+            <select id="bookSelectStock">
+                <!-- Opciones de libros generadas dinámicamente -->
+            </select>
+            <label for="stockChange">Cantidad a Ajustar:</label>
+            <input type="number" id="stockChange" required>
+            <button type="button" onclick="adjustStock(true)">Aumentar Stock</button>
+            <button type="button" onclick="adjustStock(false)">Disminuir Stock</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
