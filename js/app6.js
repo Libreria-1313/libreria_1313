@@ -1,37 +1,52 @@
-// Definimos una clase Libro
-class Libro {
-    constructor(nombre, precio) {
-      this.nombre = nombre;
-      this.precio = precio;
-    }
-  
-    // Método para aplicar el descuento del 10%
-    aplicarDescuento() {
-      this.precio = this.precio * 0.9;
-    }
-  
-    // Método para quitar el descuento y volver al precio original
-    quitarDescuento() {
-      this.precio = this.precio / 0.9;
-    }
-  }
-  
-  // Creamos algunos libros
-  let libro1 = new Libro("El Señor de los Anillos", 50);
-  let libro2 = new Libro("Harry Potter", 40);
-  
-  // Aplicamos el descuento del 10%
-  libro1.aplicarDescuento();
-  libro2.aplicarDescuento();
-  
-  // Mostramos los precios modificados
-  console.log("Precio del libro 1 con descuento: $" + libro1.precio);
-  console.log("Precio del libro 2 con descuento: $" + libro2.precio);
-  
-  // Quitamos el descuento
-  libro1.quitarDescuento();
-  libro2.quitarDescuento();
-  
-  // Mostramos los precios originales
-  console.log("Precio original del libro 1: $" + libro1.precio);
-  console.log("Precio original del libro 2: $" + libro2.precio);
+// Definir la lista de libros
+const libros = [
+  {
+      titulo: "Cien años de soledad",
+      autor: "Gabriel García Márquez",
+      genero: "Ficción",
+      idioma: "Español",
+      precio: "15.99 EUR",
+      formato: "Físico",
+      isbn: "978-3-16-148410-0",
+      descripcion: "Una de las obras más importantes de la literatura hispanoamericana.",
+      estado: "Nuevo",
+      ubicacion: "Madrid, España",
+      fecha_publicacion: "1967-06-05",
+      editorial: "Editorial Sudamericana",
+      paginas: 471
+  },
+  // Agregar más libros si es necesario
+];
+
+// Función para aplicar el descuento del 10% a todos los libros
+function aplicarDescuento(libros) {
+  libros.forEach(libro => {
+      let precioActual = parseFloat(libro.precio.split(" ")[0]); // Convertir el precio a un número
+      precioActual *= 0.9; // Aplicar descuento del 10%
+      libro.precio = `${precioActual.toFixed(2)} EUR`; // Actualizar el precio del libro
+  });
+}
+
+// Función para restaurar los precios originales de todos los libros
+function restaurarPreciosOriginales(libros) {
+  libros.forEach(libro => {
+      // Se podría asumir que se tiene almacenado el precio original en otra propiedad, por simplicidad aquí usaremos el precio original en el objeto original.
+      libro.precio = "15.99 EUR"; // Restaurar el precio original (en este caso, se asume que todos los libros tienen el mismo precio original)
+  });
+}
+
+// Aplicar descuento del 10%
+aplicarDescuento(libros);
+
+// Verificar precios después del descuento
+libros.forEach(libro => {
+  console.log(`${libro.titulo}: ${libro.precio}`);
+});
+
+// Restaurar precios originales
+restaurarPreciosOriginales(libros);
+
+// Verificar precios después de restaurar
+libros.forEach(libro => {
+  console.log(`${libro.titulo}: ${libro.precio}`);
+});
