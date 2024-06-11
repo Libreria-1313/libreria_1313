@@ -123,6 +123,19 @@ li a {
 }
 
 
+.book {
+    display: flex;
+    flex-direction: column;
+    background-color: #57d0e6;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin: 10px 0;
+    width: 600px;
+    border-radius: 5px;
+}
+
 
 
 footer {
@@ -133,6 +146,7 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
 
 
 
