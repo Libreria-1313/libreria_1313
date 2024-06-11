@@ -77,23 +77,29 @@ li a {
     color: white;
 }
 
+.activo{
+    color:#f7450f;
+}
+
 .seccion1{
 	background-color:rgb(36, 40, 43) ;
 	color:rgb(255, 255, 255) ;
 	display: flex;
 	justify-content: space-around;
+	flex-direction: row;
+	align-items: center;
     height: 10vh;
-	position: sticky;
 }
 
-#subscribete{
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-    color: white;
-    padding: 30px 20px;
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
+#titulo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#colorTitulo{
+	display: flex;
+	color: #f7450f;
 }
 
 #input{
@@ -101,25 +107,22 @@ li a {
     justify-content: space-around; 
     align-items: center;
     padding: 0px 10px;
-    font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
+}
+
+#tituloInput{
+	padding: 0px 10px;
 }
 
 
-
-.buscarButton {
+#buscarButton {
     background-color: #d14b0d;
+	border-radius: 5px;
     color: rgb(255, 255, 255); 
     padding: 0px 10px; 
-    cursor: pointer; 
-    width: 150px 50px;
-    height: 25px;
 }
 
 
-.activo{
-    color:#f7450f;
-}
+
 
 footer {
     background-color: #408cff;
