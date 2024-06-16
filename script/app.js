@@ -315,6 +315,50 @@ const libros = [
         paginas: 194
     }
 ];
-libros[1].titulo = "Mil Novecientos Ochenta y Cuatro";
 
-console.log(libros[[0],[1]])
+function mostrarLibros() {
+    const bookList = document.getElementById('book-list');
+    bookList.innerHTML = '';
+    const select = document.getElementById('libro-select');
+    select.innerHTML = '<option value="">Selecciona un libro</option>';
+    libros.forEach((libro, index) => {
+        const bookDiv = document.createElement('div');
+        bookDiv.className = 'book';
+        bookDiv.innerHTML = `
+            <h2>${libro.titulo}</h2>
+            <p><strong>Autor:</strong> ${libro.autor}</p>
+            <p><strong>Género:</strong> ${libro.genero}</p>
+            <p><strong>Idioma:</strong> ${libro.idioma}</p>
+            <p><strong>Precio:</strong> ${libro.precio}</p>
+            <p><strong>Formato:</strong> ${libro.formato}</p>
+            <p><strong>ISBN:</strong> ${libro.isbn}</p>
+            <p><strong>Descripción:</strong> ${libro.descripcion}</p>
+            <p><strong>Estado:</strong> ${libro.estado}</p>
+            <p><strong>Ubicación:</strong> ${libro.ubicacion}</p>
+            <p><strong>Fecha de Publicación:</strong> ${libro.fecha_publicacion}</p>
+            <p><strong>Editorial:</strong> ${libro.editorial}</p>
+            <p><strong>Páginas:</strong> ${libro.paginas}</p>
+        `;
+        bookList.appendChild(bookDiv);
+
+        const option = document.createElement('option');
+        option.value = index;
+        option.textContent = libro.titulo;
+        select.appendChild(option);
+    });
+}
+
+function cambiarEditorial() {
+    const select = document.getElementById('libro-select');
+    const nuevaEditorial = document.getElementById('nueva-editorial-input').value;
+    const libroIndex = select.value;
+    if (libroIndex !== '') {
+        libros[libroIndex].editorial = nuevaEditorial;
+        alert(`La editorial ha sido cambiada a: "${nuevaEditorial}" para el libro seleccionado`);
+        mostrarLibros();
+    } else {
+        alert('Por favor, selecciona un libro');
+    }
+}
+
+mostrarLibros();
