@@ -315,73 +315,22 @@ const libros = [
         paginas: 194
     }
 ];
+            
+      
+      document.getElementById('submitButton').addEventListener('click', function() {
+            const form = document.getElementById('dataForm');
+            const formData = new FormData(form);
 
-function mostrarLibros() {
-    const bookList = document.getElementById('book-list');
-    bookList.innerHTML = '';
-    const select = document.getElementById('libro-select');
-    select.innerHTML = '<option value="">Selecciona un libro</option>';
-    libros.forEach((libro, index) => {
-        const bookDiv = document.createElement('div');
-        bookDiv.className = 'book';
-        bookDiv.innerHTML = `
-            <h2>${libro.titulo}</h2>
-            <p><strong>Autor:</strong> ${libro.autor}</p>
-            <p><strong>Género:</strong> ${libro.genero}</p>
-            <p><strong>Idioma:</strong> ${libro.idioma}</p>
-            <p><strong>Precio:</strong> ${libro.precio}</p>
-            <p><strong>Formato:</strong> ${libro.formato}</p>
-            <p><strong>ISBN:</strong> ${libro.isbn}</p>
-            <p><strong>Descripción:</strong> ${libro.descripcion}</p>
-            <p><strong>Estado:</strong> ${libro.estado}</p>
-            <p><strong>Ubicación:</strong> ${libro.ubicacion}</p>
-            <p><strong>Fecha de Publicación:</strong> ${libro.fecha_publicacion}</p>
-            <p><strong>Editorial:</strong> ${libro.editorial}</p>
-            <p><strong>Páginas:</strong> ${libro.paginas}</p>
-        `;
-        bookList.appendChild(bookDiv);
+            const output = [];
+            formData.forEach((value, key) => {
+                output.push(`${key}: ${value}`);
+            });
 
-        const option = document.createElement('option');
-        option.value = index;
-        option.textContent = libro.titulo;
-        select.appendChild(option);
-    });
-}
-
-function cambiarEditorial() {
-    const select = document.getElementById('libro-select');
-    const nuevaEditorial = document.getElementById('nueva-editorial-input').value;
-    const libroIndex = select.value;
-    if (libroIndex !== '') {
-        libros[libroIndex].editorial = nuevaEditorial;
-        alert(`La editorial ha sido cambiada a: "${nuevaEditorial}" para el libro seleccionado`);
-        mostrarLibros();
-    } else {
-        alert('Por favor, selecciona un libro');
-    }
-}
-
-mostrarLibros();
-document.getElementById('submitButton').addEventListener('click', function() {
-    const form = document.getElementById('dataForm');
-    const formData = new FormData(form);
-
-    const output = [];
-    formData.forEach((value, key) => {
-        output.push(`${key}: ${value}`);
-    });
-
-    alert(`Datos del formulario:\n${output.join('\n')}`);
-});
-function cambiarEditorial() {
-const select = document.getElementById('libro-select');
-const nuevaEditorial = document.getElementById('nueva-editorial-input').value;
-const libroIndex = select.value;
-if (libroIndex !== '') {
-libros[libroIndex].editorial = nuevaEditorial;
-alert(`La editorial ha sido cambiada a: "${nuevaEditorial}" para el libro seleccionado`);
-mostrarLibros();
-} else {
-alert('Por favor, selecciona un libro');
-}
-}
+            alert(`Datos del formulario:\n${output.join('\n')}`);
+        });
+       
+        let titulo = document.getElementById('titulo')
+        
+        titulo.innerHTML = `
+         <h2>${libros.titulo}</h2>   
+        `
