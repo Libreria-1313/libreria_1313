@@ -16,7 +16,7 @@ const libros = [
     paginas: 471
     },
     {
-    Image: "../assets/img/imagen1.jpeg",
+    Image: "../assets/img/El nombre de la rosa.jpg",
     titulo: "El nombre de la rosa",
     autor: "Umberto Eco",
     genero: "Misterio",
@@ -32,7 +32,7 @@ const libros = [
     paginas: 592
     },
     {
-    Image: "../assets/img/imagen1.jpeg",
+    Image: "../assets/img/Sapiens De animales a dioses_.jpg",
     titulo: "Sapiens: De animales a dioses",
     autor: "Yuval Noah Harari",
     genero: "Investigación",
@@ -48,7 +48,7 @@ const libros = [
     paginas: 496
     },
     {
-    Image: "../assets/img/imagen1.jpeg",
+    Image: "../assets/img/La sombra del viento.jpg",
     titulo: "La sombra del viento",
     autor: "Carlos Ruiz Zafón",
     genero: "Novela",
@@ -64,7 +64,7 @@ const libros = [
     paginas: 576
     },
     {
-    Image: "../assets/img/imagen1.jpeg",
+    Image: "../assets/img/El alquimista.jpg",
     titulo: "El alquimista",
     autor: "Paulo Coelho",
     genero: "Ficción",
@@ -80,7 +80,7 @@ const libros = [
     paginas: 208
     },
     {
-    Image: "../assets/img/imagen1.jpeg",
+    Image: "../assets/img/Orgullo y prejuicio.jpg",
     titulo: "Orgullo y prejuicio",
     autor: "Jane Austen",
     genero: "Romance",
@@ -96,7 +96,7 @@ const libros = [
     paginas: 279
     },
     {
-    Image: "../assets/img/imagen1.jpeg",
+    Image: "../assets/img/Don Quijote de la Mancha.jpg",
     titulo: "Don Quijote de la Mancha",
     autor: "Miguel de Cervantes",
     genero: "Aventura",
@@ -112,7 +112,7 @@ const libros = [
     paginas: 863
     },
     {
-    Image: "../assets/img/imagen1.jpeg",
+    Image: "../assets/img/Crimen y castigo.jpg",
     titulo: "Crimen y castigo",
     autor: "Fiódor Dostoyevski",
     genero: "Drama",
@@ -128,7 +128,7 @@ const libros = [
     paginas: 671
     },
     {
-    Image: "../assets/img/imagen1.jpeg",
+    Image: "../assets/img/El gran Gatsby.jpg",
     titulo: "El gran Gatsby",
     autor: "F. Scott Fitzgerald",
     genero: "Novela",
@@ -144,7 +144,7 @@ const libros = [
     paginas: 180
     },
     {
-    Image: "../assets/img/imagen1.jpeg",
+    Image: "../assets/img/Matar a un ruiseñor.jpg",
     titulo: "Matar a un ruiseñor",
     autor: "Harper Lee",
     genero: "Ficción",
@@ -160,7 +160,7 @@ const libros = [
     paginas: 324
     },
     {
-    Image: "../assets/img/imagen1.jpeg",
+    Image: "../assets/img/El señor de los anillos.jpg",
     titulo: "El señor de los anillos",
     autor: "J.R.R. Tolkien",
     genero: "Fantasía",
@@ -176,7 +176,7 @@ const libros = [
     paginas: 1216
     },
     {
-    Image: "../assets/img/imagen1.jpeg",
+    Image: "../assets/img/Cumbres borrascosas.jpg",
     titulo: "Cumbres borrascosas",
     autor: "Emily Brontë",
     genero: "Romance",
@@ -192,7 +192,7 @@ const libros = [
     paginas: 416
     },
     {
-    Image: "../assets/img/imagen1.jpeg",
+    Image: "../assets/img/El retrato de Dorian Gray.jpg",
     titulo: "El retrato de Dorian Gray",
     autor: "Oscar Wilde",
     genero: "Ficción",
@@ -208,7 +208,7 @@ const libros = [
     paginas: 254
     },
     {
-    Image: "../assets/img/imagen1.jpeg",
+    Image: "../assets/img/La metamorfosis.jpg",
     titulo: "La metamorfosis",
     autor: "Franz Kafka",
     genero: "Ficción",
@@ -224,7 +224,7 @@ const libros = [
     paginas: 96
     },
     {
-    Image: "../assets/img/imagen1.jpeg",
+    Image: "../assets/img/En busca del tiempo perdido.jpg",
     titulo: "En busca del tiempo perdido",
     autor: "Marcel Proust",
     genero: "Ficción",
@@ -240,7 +240,7 @@ const libros = [
     paginas: 4215
     },
     {
-    Image: "../assets/img/imagen1.jpeg",
+    Image: "../assets/img/El principito.jpg",
     titulo: "El principito",
     autor: "Antoine de Saint-Exupéry",
     genero: "Fábula",
@@ -256,7 +256,7 @@ const libros = [
     paginas: 96
     },
     {
-    Image: "../assets/img/imagen1.jpeg",
+    Image: "../assets/img/Ulises.jpg",
     titulo: "Ulises",
     autor: "James Joyce",
     genero: "Ficción",
@@ -272,7 +272,7 @@ const libros = [
     paginas: 732
     },
     {
-    Image: "../assets/img/imagen1.jpeg",
+    Image: "../assets/img/iEl guardián entre el centeno.jpg",
     titulo: "El guardián entre el centeno",
     autor: "J.D. Salinger",
     genero: "Ficción",
@@ -288,7 +288,7 @@ const libros = [
     paginas: 277
     },
     {
-    Image: "../assets/img/imagen1.jpeg",
+    Image: "../assets/img/La Odisea.jpg",
     titulo: "La Odisea",
     autor: "Homero",
     genero: "Épica",
@@ -304,7 +304,7 @@ const libros = [
     paginas: 541
     },
     {
-    Image: "../assets/img/imagen1.jpeg",
+    Image: "../assets/img/Los miserables.jpg",
     titulo: "Los miserables",
     autor: "Victor Hugo",
     genero: "Drama",
@@ -320,7 +320,7 @@ const libros = [
     paginas: 1463
     },
     {
-    Image: "../assets/img/imagen1.jpeg",
+    Image: "../assets/img/Fahrenheit 451.jpg",
     titulo: "Fahrenheit 451",
     autor: "Ray Bradbury",
     genero: "Ciencia Ficción",
