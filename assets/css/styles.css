@@ -148,3 +148,28 @@ footer {
     border-color: #000000;
     padding: 10px;
 }
+
+aside{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #408cff;
+    border-style: solid;
+    border-color: #000000;
+    padding: 10px;
+    height: 10vh;
+    background-color: #b9b8b6;
+}
+
+.ayuda{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    padding: 0px 20px 0px 0px;
+
+}
