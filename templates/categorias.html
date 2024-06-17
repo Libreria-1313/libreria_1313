@@ -11,23 +11,39 @@
     <main>
         <nav>
             <div class="breadcrumb-title">
-            <p>LIBRERIA </p> <p id="textocolor1"> EL AMANECER</p>
+                <p>LIBRERIA </p> <p id="textocolor1"> EL AMANECER</p>
             </div>
-			<ul>
-				<li><a href="../index.html">INICIO</a></li>
+            <ul>
+                <li><a href="../index.html">INICIO</a></li>
                 <li><a href="categorias.html" class="activo">CATEGORIAS</a></li>
-			</ul>
-		</nav>
+            </ul>
+        </nav>
         <section class="seccion1-1">
-        <h1>Lista de Libros disponibles</h1>
-        <div id="resultados"></div>
+            <div>
+                <label for="ordenar">Ordenar por : </label>
+                <select id="ordenar">
+                    <option value="estado">Disponibilidad</option>
+                    <option value="idioma">Idioma</option>
+                    <option value="editorial">Editorial</option>
+                    <option value="titulo">Título</option>
+                    <option value="autor">Autor</option>
+                    <option value="precio">Precio</option>
+                </select>
+            </div>
+            <h1>libros disponibles</h1>
+            <div id="resultados"></div>
 
-        <script src="../assets/js/libros.js"></script>
-        <script src="../assets/js/prueba.js"></script>
+            <script src="../assets/js/libros.js"></script>
+            <script src="../assets/js/lista.js"></script>
         </section>
-		<footer>
-			<p>Grephel Desarrollo Web, copyright &copy; 2017</p>
-		</footer>
-	</main>
+        <section class="seccion1-1">
+            <h1>libros mas costosos</h1>
+            <script src="../assets/js/libros.js"></script>
+            <script src="../assets/js/lista.js"></script>
+        </section>
+        <footer>
+            <p>Grephel Desarrollo Web, copyright &copy; 2017</p>
+        </footer>
+    </main>
 </body>
 </html>
