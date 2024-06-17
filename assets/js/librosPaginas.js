@@ -29,7 +29,5 @@ document.addEventListener('DOMContentLoaded', () => {
         const librosFiltrados = libros.filter(libro => libro.paginas > 200);
         listarLibros(librosFiltrados);
     }
-
-    // Filtrar y listar libros automáticamente al cargar la página
     filtrarLibrosPaginas();
 });
