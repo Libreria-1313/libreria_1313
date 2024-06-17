@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 { label: 'Título', value: libro.titulo },
                 { label: 'Autor', value: libro.autor },
                 { label: 'Precio', value: libro.precio },
-                { label: 'Páginas', value: libro.paginas }
             ];
 
             detalles.forEach(detalle => {
@@ -176,4 +175,16 @@ document.addEventListener('DOMContentLoaded', () => {
     selectOrdenar.addEventListener('change', (event) => {
         ordenarLibros(event.target.value);
     });
+});
+
+
+///////////////////
+
+function convertir() {
+    const librosFiltrados = libros.filter(libro => libro.paginas > 200);
+    listarLibros(librosFiltrados);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const convercion = document.getElementById('precio');
 });
