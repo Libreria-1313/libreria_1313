@@ -1,13 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Listado de Libros</title>
+    <style>
+        .libro {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 300px;
+        }
+        .descuento {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <button onclick="aplicarDescuentoclick()">aplicar Descuento</button>
-    <button onclick="restaurarDescuentoclick()">restaurar Descuento</button>
+    <h1>Listado de Libros</h1>
+    <div id="listaLibros">
+        <!-- Aquí se mostrarán los libros dinámicamente -->
+    </div>
+
+    <button onclick="aplicarDescuentoClick()">Aplicar Descuento del 10%</button>
+    <button onclick="restaurarDescuentoClick()">Restaurar Precios Originales</button>
+
     <script src="/js/app6.js"></script>
 </body>
 </html>

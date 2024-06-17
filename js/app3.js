@@ -423,3 +423,22 @@ function az() {
     libros.sort((a, b) => a.titulo.localeCompare(b.titulo));
     listBooks();
 }
+
+function aplicarDescuentoClick() {
+  libros.forEach(libro => {
+      let precioActual = parseFloat(libro.precio.split(" ")[0]); // Convertir el precio a un número
+      precioActual *= 0.9; // Aplicar descuento del 10%
+      libro.precio = `${precioActual.toFixed(2)} EUR`; // Actualizar el precio del libro
+  });
+
+  listBooks(); // Mostrar los libros actualizados después de aplicar descuento
+}
+
+function restaurarDescuentoClick() {
+  libros.forEach(libro => {
+      // Aquí podrías tener una propiedad en cada libro que almacene el precio original para restaurarlo.
+      libro.precio = "15.99 EUR"; // Restaurar el precio original (en este caso, asumido estático)
+  });
+
+  listBooks(); // Mostrar los libros con los precios restaurados
+}
