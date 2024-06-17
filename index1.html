@@ -1,25 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Agregar y Mostrar Libros</title>
+    <link rel="stylesheet" href="/style/style.css">
 </head>
-<body id="body">
-    <input id="title" type="text" placeholder="nombre de la obra"> <br>
-    <input id="author" type="text" placeholder="nombre autor"> <br>
-    <input id="genre" type="text" placeholder="nombre genero"> <br>
-    <input id="language" type="text" placeholder="nombre del lenguaje"> <br>
-    <input id="price" type="number" placeholder="precio"> <br>
-    <input id="format" type="text" placeholder="tipo de formato"> <br>
-    <input id="isbn" type="text" placeholder="isbn"> <br>
-    <input id="description" type="text" placeholder="descripcion del libro"> <br>
-    <input id="condition" type="text" placeholder="condicion del libro"> <br>
-    <input id="location" type="text" placeholder="localizacion dellibro"> <br>
-    <input id="publication_date" type="text" placeholder="fecha de publicacion"> <br>
-    <input id="publisher" type="text" placeholder="editoral a la que pertenece"> <br>
-    <input id="pages" type="number" placeholder="cantidad de paginas"> <br>
-    <input type="submit" value="agregar libro" onclick="submit(books);">
-    <script src="js/app1.js"></script>
+<body>
+    <div class="container">
+        <h1>Agregar Libro</h1>
+        <form id="bookForm">
+            <label for="title">Título:</label>
+            <input type="text" id="title" required>
+            
+            <label for="author">Autor:</label>
+            <input type="text" id="author" required>
+            
+            <label for="genre">Género:</label>
+            <input type="text" id="genre" required>
+            
+            <label for="language">Idioma:</label>
+            <input type="text" id="language" required>
+            
+            <label for="price">Precio:</label>
+            <input type="number" id="price" required>
+            
+            <label for="format">Formato:</label>
+            <input type="text" id="format" required>
+            
+            <label for="isbn">ISBN:</label>
+            <input type="text" id="isbn" required>
+            
+            <label for="description">Descripción:</label>
+            <input type="text" id="description" required>
+            
+            <label for="condition">Condición:</label>
+            <input type="text" id="condition" required>
+            
+            <label for="location">Ubicación:</label>
+            <input type="text" id="location" required>
+            
+            <label for="publication_date">Fecha de Publicación:</label>
+            <input type="date" id="publication_date" required>
+            
+            <label for="publisher">Editorial:</label>
+            <input type="text" id="publisher" required>
+            
+            <label for="pages">Páginas:</label>
+            <input type="number" id="pages" required>
+            
+            <button type="button" onclick="submitBook()">Agregar Libro</button>
+        </form>
+        
+        <h1>Listado de Libros</h1>
+        <ul id="bookList">
+            <!-- Listado de libros generado aparecerá aquí -->
+        </ul>
+    </div>
+
+    <script src="/js/app1.js"></script>
 </body>
 </html>
