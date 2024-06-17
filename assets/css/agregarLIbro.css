@@ -31,3 +31,8 @@ header{
     border-radius: 25px;
     padding: 10px;
 }
+
+#styles{
+    background-color: white;
+    border-style: solid #222;
+}

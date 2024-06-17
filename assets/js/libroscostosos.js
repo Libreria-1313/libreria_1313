@@ -50,4 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
     botonFiltrarCostosos.addEventListener('click', filtrarLibrosCostosos);
 });
 
-// libroCostosos(libros);
+function convercion(cantidad,moneda) {
+    let dolar = 4100;
+    let conversion;
+    if (libros.precio < 10000) {
+        conversion = dolar * cantidad;
+        return conversion;
+    }
+
+}
+
+convercion();

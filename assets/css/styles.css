@@ -123,9 +123,6 @@ li a {
 }
 
 
-
-
-
 footer {
     background-color: #408cff;
     color: #fff;
@@ -135,17 +132,19 @@ footer {
     align-items: center;
 }
 
+/* estilos de listas */
+
+#resultadosLista{
+    display: flex;
+    flex-direction: column;
+    background-color: #408cff;
+    border-style: solid;
+    border-color: #000000;
+    padding: 10px;
+}
 
 .libro{
     border-style: solid;
-    border-color: #408cff;
+    border-color: #000000;
+    padding: 10px;
 }
-
-#resultados{
-    display: flex;
-    flex-direction: column;
-    background-color: #57d0e6;
-    border-style: solid;
-    border-width: 2px
-}
-
