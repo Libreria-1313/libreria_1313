@@ -11,7 +11,7 @@ body{
 header{
     height: 70vh;
     width: 100%;
-    background-image: url(../imagenes/13.jpg);
+    background-image: url(../imagenes/fondoHeader.png);
     background-size: cover;
     background-position: center;
     display: flex;
