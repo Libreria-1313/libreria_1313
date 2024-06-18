@@ -13,19 +13,21 @@ document.addEventListener('DOMContentLoaded', () => {
             libroItem.classList.add('libro');
 
             const detalles = [
+                { label: 'Image', value: libro.Image },
                 { label: 'Título', value: libro.titulo },
                 { label: 'Autor', value: libro.autor },
                 { label: 'Género', value: libro.genero },
                 { label: 'Idioma', value: libro.idioma },
                 { label: 'Precio', value: libro.precio },
-                { label: 'Formato', value: libro.formato },
-                { label: 'ISBN', value: libro.isbn },
-                { label: 'Descripción', value: libro.descripcion },
-                { label: 'Disponibilidad', value: libro.estado },
-                { label: 'Ubicación', value: libro.ubicacion },
+                // { label: 'Formato', value: libro.formato },
+                // { label: 'ISBN', value: libro.isbn },
+                // { label: 'Descripción', value: libro.descripcion },
+                // { label: 'Disponibilidad', value: libro.estado },
+                // { label: 'Ubicación', value: libro.ubicacion },
                 { label: 'Fecha de Publicación', value: libro.fecha_publicacion },
                 { label: 'Editorial', value: libro.editorial },
-                { label: 'Páginas', value: libro.paginas }
+                { label: 'Páginas', value: libro.paginas },
+                
             ];
 
             detalles.forEach(detalle => {
@@ -70,6 +72,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 { label: 'Título', value: libro.titulo },
                 { label: 'Autor', value: libro.autor },
                 { label: 'Precio', value: libro.precio },
+                { label: 'Género', value: libro.genero },
+                { label: 'Idioma', value: libro.idioma },
+                { label: 'Editorial', value: libro.editorial },
+                { label: 'Páginas', value: libro.paginas }
             ];
 
             detalles.forEach(detalle => {
@@ -112,33 +118,33 @@ document.addEventListener('DOMContentLoaded', () => {
             genero.textContent = `Género: ${libro.genero}`;
             libroItem.appendChild(genero);
 
-            const idioma = document.createElement('p');
-            idioma.textContent = `Idioma: ${libro.idioma}`;
-            libroItem.appendChild(idioma);
+            // const idioma = document.createElement('p');
+            // idioma.textContent = `Idioma: ${libro.idioma}`;
+            // libroItem.appendChild(idioma);
 
             const precio = document.createElement('p');
             precio.textContent = `Precio: ${libro.precio}`;
             libroItem.appendChild(precio);
 
-            const formato = document.createElement('p');
-            formato.textContent = `Formato: ${libro.formato}`;
-            libroItem.appendChild(formato);
+            // const formato = document.createElement('p');
+            // formato.textContent = `Formato: ${libro.formato}`;
+            // libroItem.appendChild(formato);
 
-            const isbn = document.createElement('p');
-            isbn.textContent = `ISBN: ${libro.isbn}`;
-            libroItem.appendChild(isbn);
+            // const isbn = document.createElement('p');
+            // isbn.textContent = `ISBN: ${libro.isbn}`;
+            // libroItem.appendChild(isbn);
 
-            const descripcion = document.createElement('p');
-            descripcion.textContent = `Descripción: ${libro.descripcion}`;
-            libroItem.appendChild(descripcion);
+            // const descripcion = document.createElement('p');
+            // descripcion.textContent = `Descripción: ${libro.descripcion}`;
+            // libroItem.appendChild(descripcion);
 
             const estado = document.createElement('p');
             estado.textContent = `Disponibilidad: ${libro.estado}`;
             libroItem.appendChild(estado);
 
-            const ubicacion = document.createElement('p');
-            ubicacion.textContent = `Ubicación: ${libro.ubicacion}`;
-            libroItem.appendChild(ubicacion);
+            // const ubicacion = document.createElement('p');
+            // ubicacion.textContent = `Ubicación: ${libro.ubicacion}`;
+            // libroItem.appendChild(ubicacion);
 
             const fechaPublicacion = document.createElement('p');
             fechaPublicacion.textContent = `Fecha de Publicación: ${libro.fecha_publicacion}`;

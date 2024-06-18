@@ -8,7 +8,7 @@
     <title>diseño multimedia</title>
 </head>
 <body>
-    <main>
+    
         <nav>
             <div class="breadcrumb-title">
                 <p>LIBRERIA </p> <p id="textocolor1"> EL AMANECER</p>
@@ -18,44 +18,45 @@
                 <li><a href="categorias.html" class="activo">CATEGORIAS</a></li>
             </ul>
         </nav>
-        <aside id="accesoRapido">
-           <a class="ayuda" href="#resultadosLista">lista ordenada</a>
-           <a class="ayuda" href="#costo">libros costosos</a>
-           <a class="ayuda" href="#paginas">libros con mas de 200 paginas</a> 
-        </aside>
-        <section class="seccion1-1">
-            <div>
-                <label for="ordenar">Ordenar por : </label>
-                <select id="ordenar">
-                    <option value="estado">Disponibilidad</option>
-                    <option value="idioma">Idioma</option>
-                    <option value="editorial">Editorial</option>
-                    <option value="titulo">Título</option>
-                    <option value="autor">Autor</option>
-                    <option value="precio">Precio</option>
-                </select>
-            </div>
-            <h1>libros disponibles</h1></a>
-            <div id="resultadosLista"></div>
-        </section>
-        <section class="seccion1-1">
-            <h1>libros mas costosos</h1></a>
-            <button id="filtrarCostosos">Filtrar 5 libros más costosos</button>
-            <div id="costo"></div>
-        </section>
-        <section class="seccion1-1">
-            <h1>libros que superan las 200 paginas</h1></a>
-            <div id="paginas"></div>
-        </section>
-        <section>
-            <h1>libros con precios entre $30000 COP y los $80000 COP </h1>
-            <div id="precio"></div>
-        </section>
-        <footer>
-            <p>Grephel Desarrollo Web, copyright &copy; 2017</p>
-        </footer>
-        <script src="../assets/js/libros.js"></script>
-        <script src="../assets/js/categorias.js"></script>
+        <main>
+            <section id="todo">
+            <section class="seccion1-1">
+                <div>
+                    <label for="ordenar">Ordenar por : </label>
+                    <select id="ordenar">
+                        <option value="estado">Disponibilidad</option>
+                        <option value="idioma">Idioma</option>
+                        <option value="editorial">Editorial</option>
+                        <option value="titulo">Título</option>
+                        <option value="autor">Autor</option>
+                        <option value="precio">Precio</option>
+                    </select>
+                    <a class="ayuda" href="#resultadosLista">lista ordenada</a>
+                    <a class="ayuda" href="#costo">libros costosos</a>
+                    <a class="ayuda" href="#paginas">libros con mas de 200 paginas</a> 
+                 </div>
+            </section>
+            <section class="seccion1-2">
+                <h1>libros disponibles</h1></a>
+                <div id="resultadosLista"></div>
+                <h1>libros mas costosos</h1></a>
+                <button id="filtrarCostosos">Filtrar 5 libros más costosos</button>
+                <div id="costo"></div>
+                <h1>libros que superan las 200 paginas</h1></a>
+                <div id="paginas"></div>
+                <h1>libros con precios entre $30000 COP y los $80000 COP </h1>
+                <div id="precio"></div>
+            </section>
+            <section>
+                
+            </section>
+            </section>
+            <footer>
+                <p>Grephel Desarrollo Web, copyright &copy; 2017</p>
+            </footer>
+            <script src="../assets/js/libros.js"></script>
+            <script src="../assets/js/categorias.js"></script>
+        
     </main>
 </body>
 </html>

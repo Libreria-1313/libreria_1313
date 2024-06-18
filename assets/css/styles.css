@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: content-box;
 }
+body{
+    background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWJ4dTZzbTFjZTVnem00aWd5OGJhdmJ2cTIzdmlxeXpkMDUyd2pzOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/94P1LEMyuVEeA/200.webp);
+}
 
 
 header{
@@ -82,15 +85,26 @@ li a {
     color:#f7450f;
 }
 
-.seccion1{
-	background-color:rgb(102, 102, 102) ;
-	color:rgb(255, 255, 255) ;
+.seccion1-1{
+    border-width: 5px;
+    border-radius: 20px;
+    border-color: #d14b0d;
+    border-style: groove;
+    text-align: center;
+    margin: 22px;
+	background-color:rgb(175, 175, 175) ;
+	color:rgb(9, 0, 0) ;
 	display: flex;
-	justify-content: space-around;
-	flex-direction: row;
+	justify-content: space-around ;
+	flex-direction: column;
 	align-items: center;
-    height: 10vh;
+    height: 40vh;
+    width: 250px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-size: 15px;
 }
+
 
 #titulo{
 	display: flex;
@@ -135,19 +149,70 @@ footer {
 /* estilos de listas */
 
 #resultadosLista{
+    border-radius: 20px;
+    justify-content: center;
+    width: auto;
     display: flex;
-    flex-direction: column;
-    background-color: #408cff;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: #8f8f8f77;
     border-style: solid;
-    border-color: #000000;
-    padding: 10px;
+    border-color: #3a2708;
+    padding: px;
+    width: 1000px;
+    text-align: center;
+    border-width: 5px;
 }
 
 .libro{
-    border-style: solid;
+    background-image: url(../imagenes/libros.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+    justify-content: space-around;
+    border-style:inset;
     border-color: #000000;
-    padding: 10px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 15px;
+    border-radius: 5px 16px 5px 16px;
+    
 }
+#paginas{
+    border-radius: 20px;
+    justify-content: center;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: #8f8f8f77;
+    border-style: solid;
+    border-color: #3a2708;
+    padding: px;
+    width: 1000px;
+    text-align: center;
+    border-width: 5px;
+    
+}
+#costo{
+    border-radius: 20px;
+    justify-content: center;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color:#8f8f8f77;
+    border-style: solid;
+    border-color: #3a2708;
+    padding: px;
+    width: 1000px;
+    text-align: center;
+    border-width: 5px;
+}
+   
+
+
 
 aside{
     display: flex;
@@ -168,8 +233,18 @@ aside{
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     padding: 0px 20px 0px 0px;
 
+}
+/* caja principal */
+#todo{
+    display:flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+/* seccio 1-2 */
+#seccion1-2{
+    margin: 20px 20px 20px 20px;
 }
