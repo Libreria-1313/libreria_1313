@@ -66,8 +66,8 @@ function sortedBooks() {
   // Usamos sort() con una función de comparación
   libros.sort((a, b) => {
     // Comparamos los títulos de los libros, en minúsculas para ser case-insensitive
-    let titleA = a.title.toLowerCase();
-    let titleB = b.title.toLowerCase();
+    let titleA = a.titulo.toLowerCase();
+    let titleB = b.titulo.toLowerCase();
     
     if (titleA < titleB) {
       return -1; // a debe venir antes que b
@@ -80,3 +80,12 @@ function sortedBooks() {
   generateCard()
   return libros; // Devolvemos el array de libros ordenado
 }
+
+function bookspreasi() {
+  let bookcostoso = libros.filter(libros => libros.precio > 100)
+  bookcostoso.forEach(libros => makeCard(libros))
+  return bookcostoso
+}
+
+bookspreasi(libros);
+
