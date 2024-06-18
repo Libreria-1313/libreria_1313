@@ -1,29 +1,32 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestionar Libros</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Ajuste de Stock de Libros</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Listado de Libros</h1>
-        <ul id="bookList">
-            <!-- Listado de libros generado aparecerá aquí -->
-        </ul>
-        
-        <h2>Ajustar Stock</h2>
-        <form id="stockForm">
-            <label for="bookSelectStock">Selecciona un Libro:</label>
-            <select id="bookSelectStock">
-                <!-- Opciones de libros generadas dinámicamente -->
-            </select>
-            <label for="stockChange">Cantidad a Ajustar:</label>
-            <input type="number" id="stockChange" required>
-            <button type="button" onclick="adjustStock(true)">Aumentar Stock</button>
-            <button type="button" onclick="adjustStock(false)">Disminuir Stock</button>
-        </form>
+    <h1>Ajuste de Stock de Libros</h1>
+
+    <div>
+        <label for="bookSelectStock">Seleccione un libro:</label>
+        <select id="bookSelectStock">
+            <!-- Options will be added dynamically by JavaScript -->
+        </select>
+    </div>
+
+    <div>
+        <label for="stockChange">Cantidad a ajustar:</label>
+        <input type="number" id="stockChange" min="1">
+    </div>
+
+    <div>
+        <button onclick="adjustStock(true)">Aumentar Stock</button>
+        <button onclick="adjustStock(false)">Disminuir Stock</button>
+    </div>
+
+    <div id="divbooks">
+        <!-- Aquí se mostrarán los libros -->
     </div>
 
     <script src="/js/app5.js"></script>
