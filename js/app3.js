@@ -13,7 +13,7 @@ const libros = [
     ubicacion: "Madrid, España",
     fecha_publicacion: "1967-06-05",
     editorial: "Editorial Sudamericana",
-    paginas: 471
+    paginas: 471,
     },
     {
     Image: "../assets/img/El nombre de la rosa.jpg",
@@ -272,7 +272,7 @@ const libros = [
     paginas: 732
     },
     {
-    Image: "../assets/img/iEl guardián entre el centeno.jpg",
+    Image: "../assets/img/El guardián entre el centeno.jpg",
     titulo: "El guardián entre el centeno",
     autor: "J.D. Salinger",
     genero: "Ficción",
@@ -424,21 +424,30 @@ function az() {
     listBooks();
 }
 
+
 function aplicarDescuentoClick() {
-  libros.forEach(libro => {
-      let precioActual = parseFloat(libro.precio.split(" ")[0]); // Convertir el precio a un número
-      precioActual *= 0.9; // Aplicar descuento del 10%
-      libro.precio = `${precioActual.toFixed(2)} EUR`; // Actualizar el precio del libro
-  });
-
-  listBooks(); // Mostrar los libros actualizados después de aplicar descuento
-}
-
-function restaurarDescuentoClick() {
-  libros.forEach(libro => {
-      // Aquí podrías tener una propiedad en cada libro que almacene el precio original para restaurarlo.
-      libro.precio = "15.99 EUR"; // Restaurar el precio original (en este caso, asumido estático)
-  });
-
-  listBooks(); // Mostrar los libros con los precios restaurados
-}
+    libros.forEach(libro => {
+        // Guardar el precio original antes de aplicar el descuento
+        if (!libro.precioOriginal) {
+          libro.precioOriginal = libro.precio;
+        }
+  
+        let precioActual = parseFloat(libro.precio.split(" ")[0]); // Convertir el precio a un número
+        precioActual *= 0.9; // Aplicar descuento del 10%
+        libro.precio = `${precioActual.toFixed(2)} EUR`; // Actualizar el precio del libro
+    });
+  
+    listBooks(); // Mostrar los libros actualizados después de aplicar descuento
+  }
+  
+  function restaurarDescuentoClick() {
+    libros.forEach(libro => {
+        if (libro.precioOriginal) {
+          libro.precio = libro.precioOriginal;
+          delete libro.precioOriginal; // Eliminar la propiedad precioOriginal una vez restaurado el precio
+        }
+    });
+  
+    listBooks(); // Mostrar los libros con los precios restaurados
+  }
+  
