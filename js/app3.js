@@ -14,6 +14,7 @@ const libros = [
     fecha_publicacion: "1967-06-05",
     editorial: "Editorial Sudamericana",
     paginas: 471,
+    stock: 15
     },
     {
     Image: "../assets/img/El nombre de la rosa.jpg",
@@ -29,7 +30,8 @@ const libros = [
     ubicacion: "Roma, Italia",
     fecha_publicacion: "1980-01-01",
     editorial: "Bompiani",
-    paginas: 592
+    paginas: 592,
+    stock: 15
     },
     {
     Image: "../assets/img/Sapiens De animales a dioses_.jpg",
@@ -45,7 +47,8 @@ const libros = [
     ubicacion: "Barcelona, España",
     fecha_publicacion: "2011-01-01",
     editorial: "Debate",
-    paginas: 496
+    paginas: 496,
+    stock: 15
     },
     {
     Image: "../assets/img/La sombra del viento.jpg",
@@ -61,7 +64,8 @@ const libros = [
     ubicacion: "Barcelona, España",
     fecha_publicacion: "2001-01-01",
     editorial: "Planeta",
-    paginas: 576
+    paginas: 576,
+    stock: 15
     },
     {
     Image: "../assets/img/El alquimista.jpg",
@@ -77,7 +81,8 @@ const libros = [
     ubicacion: "Lisboa, Portugal",
     fecha_publicacion: "1988-01-01",
     editorial: "HarperOne",
-    paginas: 208
+    paginas: 208,
+    stock: 15
     },
     {
     Image: "../assets/img/Orgullo y prejuicio.jpg",
@@ -93,7 +98,8 @@ const libros = [
     ubicacion: "Londres, Reino Unido",
     fecha_publicacion: "1813-01-28",
     editorial: "T. Egerton",
-    paginas: 279
+    paginas: 279,
+    stock: 15
     },
     {
     Image: "../assets/img/Don Quijote de la Mancha.jpg",
@@ -109,7 +115,8 @@ const libros = [
     ubicacion: "Madrid, España",
     fecha_publicacion: "1605-01-16",
     editorial: "Francisco de Robles",
-    paginas: 863
+    paginas: 863,
+    stock: 15
     },
     {
     Image: "../assets/img/Crimen y castigo.jpg",
@@ -125,7 +132,8 @@ const libros = [
     ubicacion: "San Petersburgo, Rusia",
     fecha_publicacion: "1866-01-01",
     editorial: "The Russian Messenger",
-    paginas: 671
+    paginas: 671,
+    stock: 15
     },
     {
     Image: "../assets/img/El gran Gatsby.jpg",
@@ -141,7 +149,8 @@ const libros = [
     ubicacion: "Nueva York, EE.UU.",
     fecha_publicacion: "1925-04-10",
     editorial: "Charles Scribner's Sons",
-    paginas: 180
+    paginas: 180,
+    stock: 15
     },
     {
     Image: "../assets/img/Matar a un ruiseñor.jpg",
@@ -157,7 +166,8 @@ const libros = [
     ubicacion: "Monroeville, EE.UU.",
     fecha_publicacion: "1960-07-11",
     editorial: "J.B. Lippincott & Co.",
-    paginas: 324
+    paginas: 324,
+    stock: 15
     },
     {
     Image: "../assets/img/El señor de los anillos.jpg",
@@ -173,7 +183,8 @@ const libros = [
     ubicacion: "Oxford, Reino Unido",
     fecha_publicacion: "1954-07-29",
     editorial: "Allen & Unwin",
-    paginas: 1216
+    paginas: 1216,
+    stock: 15
     },
     {
     Image: "../assets/img/Cumbres borrascosas.jpg",
@@ -189,7 +200,8 @@ const libros = [
     ubicacion: "Yorkshire, Reino Unido",
     fecha_publicacion: "1847-12-01",
     editorial: "Thomas Cautley Newby",
-    paginas: 416
+    paginas: 416,
+    stock: 15
     },
     {
     Image: "../assets/img/El retrato de Dorian Gray.jpg",
@@ -205,7 +217,8 @@ const libros = [
     ubicacion: "Dublín, Irlanda",
     fecha_publicacion: "1890-06-20",
     editorial: "Lippincott's Monthly Magazine",
-    paginas: 254
+    paginas: 254,
+    stock: 15
     },
     {
     Image: "../assets/img/La metamorfosis.jpg",
@@ -221,7 +234,8 @@ const libros = [
     ubicacion: "Praga, República Checa",
     fecha_publicacion: "1915-01-01",
     editorial: "Kurt Wolff Verlag",
-    paginas: 96
+    paginas: 96,
+    stock: 15
     },
     {
     Image: "../assets/img/En busca del tiempo perdido.jpg",
@@ -237,7 +251,8 @@ const libros = [
     ubicacion: "París, Francia",
     fecha_publicacion: "1913-11-14",
     editorial: "Grasset",
-    paginas: 4215
+    paginas: 4215,
+    stock: 15
     },
     {
     Image: "../assets/img/El principito.jpg",
@@ -253,7 +268,8 @@ const libros = [
     ubicacion: "París, Francia",
     fecha_publicacion: "1943-04-06",
     editorial: "Reynal & Hitchcock",
-    paginas: 96
+    paginas: 96,
+    stock: 15
     },
     {
     Image: "../assets/img/Ulises.jpg",
@@ -269,7 +285,8 @@ const libros = [
     ubicacion: "Dublín, Irlanda",
     fecha_publicacion: "1922-02-02",
     editorial: "Shakespeare and Company",
-    paginas: 732
+    paginas: 732,
+    stock: 15
     },
     {
     Image: "../assets/img/El guardián entre el centeno.jpg",
@@ -285,7 +302,8 @@ const libros = [
     ubicacion: "Nueva York, EE.UU.",
     fecha_publicacion: "1951-07-16",
     editorial: "Little, Brown and Company",
-    paginas: 277
+    paginas: 277,
+    stock: 15
     },
     {
     Image: "../assets/img/La Odisea.jpg",
@@ -301,7 +319,8 @@ const libros = [
     ubicacion: "Atenas, Grecia",
     fecha_publicacion: "800-01-01",
     editorial: "Penguin Classics",
-    paginas: 541
+    paginas: 541,
+    stock: 15
     },
     {
     Image: "../assets/img/Los miserables.jpg",
@@ -317,7 +336,8 @@ const libros = [
     ubicacion: "París, Francia",
     fecha_publicacion: "1862-01-01",
     editorial: "A. Lacroix, Verboeckhoven & Cie.",
-    paginas: 1463
+    paginas: 1463,
+    stock: 15
     },
     {
     Image: "../assets/img/Fahrenheit 451.jpg",
@@ -333,7 +353,8 @@ const libros = [
     ubicacion: "Los Ángeles, EE.UU.",
     fecha_publicacion: "1953-10-19",
     editorial: "Ballantine Books",
-    paginas: 194
+    paginas: 194,
+    stock: 15
     }
     ];
 
@@ -395,6 +416,10 @@ function createBook(book) {
     const paginas = document.createElement('p');
     paginas.textContent = `Páginas: ${book.paginas}`;
 
+    const stock = document.createElement('p');
+    stock.textContent = `Stock: ${book.stock}`;
+
+
     // Añadir elementos al contenedor de cada libro
     myBook.appendChild(title);
     myBook.appendChild(image);
@@ -410,6 +435,7 @@ function createBook(book) {
     myBook.appendChild(fecha);
     myBook.appendChild(editorial);
     myBook.appendChild(paginas);
+    myBook.appendChild(stock);
 
     // Añadir el libro al contenedor principal
     divbooks.appendChild(myBook);
@@ -479,4 +505,22 @@ function aplicarDescuentoClick() {
     }
 }
 
+// Función para ajustar el stock de un libro seleccionado
+function adjustStock(increase) {
+    const bookSelectStock = document.getElementById('bookSelectStock');
+    const stockChange = parseInt(document.getElementById('stockChange').value, 10);
+    const selectedIndex = bookSelectStock.value;
+
+    if (selectedIndex !== '' && !isNaN(stockChange) && stockChange > 0) {
+        if (increase) {
+            libros[selectedIndex].stock += stockChange;
+        } else {
+            libros[selectedIndex].stock = Math.max(0, books[selectedIndex].stock - stockChange);
+        }
+        showBooks(); // Actualizar la visualización del stock
+        alert('Stock ajustado con éxito');
+    } else {
+        alert('Por favor, seleccione un libro y complete el campo de cantidad a ajustar.');
+    }
+}
   
