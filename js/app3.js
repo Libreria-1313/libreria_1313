@@ -434,6 +434,21 @@ function createBook(book) {
     const stock = document.createElement('p');
     stock.textContent = `Stock: ${book.stock}`;
 
+    const stockContainer = document.createElement('div');
+
+    const stockLabel = document.createElement('label');
+    stockLabel.textContent = 'Stock: ';
+
+    const stockValue = document.createElement('span');
+    stockValue.textContent = book.stock;
+
+    const increaseStockButton = document.createElement('button');
+    increaseStockButton.textContent = '+';
+    increaseStockButton.addEventListener('click', () => increaseStock(book));
+
+    const decreaseStockButton = document.createElement('button');
+    decreaseStockButton.textContent = '-';
+    decreaseStockButton.addEventListener('click', () => decreaseStock(book));
 
     // Añadir elementos al contenedor de cada libro
     myBook.appendChild(title);
@@ -451,9 +466,25 @@ function createBook(book) {
     myBook.appendChild(editorial);
     myBook.appendChild(paginas);
     myBook.appendChild(stock);
+    stockContainer.appendChild(stockLabel);
+    stockContainer.appendChild(stockValue);
+    stockContainer.appendChild(increaseStockButton);
+    stockContainer.appendChild(decreaseStockButton);
+
+    // Añadir el contenedor del stock al libro
+    myBook.appendChild(stockContainer);
 
     // Añadir el libro al contenedor principal
     divbooks.appendChild(myBook);
+}
+
+// Ejemplo de ordenar libros alfabéticamente por título
+const button = document.getElementById('button');
+button.addEventListener('click', az);
+
+function az() {
+    libros.sort((a, b) => a.titulo.localeCompare(b.titulo));
+    listBooks();
 }
 
 function aplicarDescuentoClick() {
@@ -510,33 +541,20 @@ function aplicarDescuentoClick() {
     }
 }
 
-// Función para ajustar el stock de un libro seleccionado
-function adjustStock(increase) {
-    const bookSelectStock = document.getElementById('bookSelectStock');
-    const stockChange = parseInt(document.getElementById('stockChange').value, 10);
-    const selectedIndex = bookSelectStock.value;
+function increaseStock(book) {
+    book.stock++; // Incrementa el stock del libro seleccionado
+    listBooks(); // Vuelve a renderizar la lista de libros para mostrar el cambio
+}
 
-    if (selectedIndex !== '' && !isNaN(stockChange) && stockChange > 0) {
-        if (increase) {
-            libros[selectedIndex].stock += stockChange;
-        } else {
-            libros[selectedIndex].stock = Math.max(0, libros[selectedIndex].stock - stockChange);
-        }
-        listBooks(); // Actualizar lista de libros después de ajustar el stock
-        alert('Stock ajustado con éxito');
+function decreaseStock(book) {
+    if (book.stock > 0) {
+        book.stock--; // Decrementa el stock del libro seleccionado solo si es mayor que cero
+        listBooks(); // Vuelve a renderizar la lista de libros para mostrar el cambio
     } else {
-        alert('Por favor, seleccione un libro y complete el campo de cantidad a ajustar.');
+        alert('El stock ya está en cero.'); // Avisa al usuario si el stock es cero y no se puede decrementar más
     }
 }
 
-// Ejemplo de ordenar libros alfabéticamente por título
-const button = document.getElementById('button');
-button.addEventListener('click', az);
-
-function az() {
-    libros.sort((a, b) => a.titulo.localeCompare(b.titulo));
-    listBooks();
-}
 
 
 

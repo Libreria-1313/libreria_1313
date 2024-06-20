@@ -22,24 +22,6 @@
         <input type="text" id="searchValue" required>
         <button type="button" onclick="searchAndDeleteBook()">Buscar y Eliminar</button>
     </form>
-
-    <div>
-        <label for="bookSelectStock">Seleccione un libro:</label>
-        <select id="bookSelectStock">
-            <!-- Options will be added dynamically by JavaScript -->
-        </select>
-    </div>
-
-    <div>
-        <label for="stockChange">Cantidad a ajustar:</label>
-        <input type="number" id="stockChange" min="1">
-    </div>
-
-    <div>
-        <button onclick="adjustStock(true)">Aumentar Stock</button>
-        <button onclick="adjustStock(false)">Disminuir Stock</button>
-    </div>
-
     <h1>Lista de Libros</h1>
     <div id="divbooks"></div>
 
