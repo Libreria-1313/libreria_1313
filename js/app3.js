@@ -360,15 +360,30 @@ const libros = [
 
 const divbooks = document.getElementById('divbooks');
 
-listBooks();
-
+// Cargar libros cuando se carga la página
+loadBooks();
+    
 function listBooks() {
-    divbooks.innerHTML = '';
-    libros.forEach(myBook => {
-        createBook(myBook);
+    divbooks.innerHTML = ''; // Limpiar contenido anterior
+    
+    libros.forEach(book => {
+            createBook(book); // Llamar a createBook para cada libro
     });
 }
     
+function loadBooks() {
+    divbooks.innerHTML = ''; // Limpiar contenido anterior
+    
+    libros.forEach((book, index) => {
+            createBook(book); // Llamar a createBook para cada libro
+    });
+    
+    // Opcionalmente, mostrar el primer libro por defecto
+    if (libros.length > 0) {
+            createBook(libros[0]);
+    }
+}
+
 function createBook(book) {
     const myBook = document.createElement('div');
     myBook.classList.add('book');
@@ -441,16 +456,6 @@ function createBook(book) {
     divbooks.appendChild(myBook);
 }
 
-// Ejemplo de cómo ordenar los libros alfabéticamente
-const button = document.getElementById('button');
-button.addEventListener('click', az);
-
-function az() {
-    libros.sort((a, b) => a.titulo.localeCompare(b.titulo));
-    listBooks();
-}
-
-
 function aplicarDescuentoClick() {
     libros.forEach(libro => {
         // Guardar el precio original antes de aplicar el descuento
@@ -515,12 +520,26 @@ function adjustStock(increase) {
         if (increase) {
             libros[selectedIndex].stock += stockChange;
         } else {
-            libros[selectedIndex].stock = Math.max(0, books[selectedIndex].stock - stockChange);
+            libros[selectedIndex].stock = Math.max(0, libros[selectedIndex].stock - stockChange);
         }
-        showBooks(); // Actualizar la visualización del stock
+        listBooks(); // Actualizar lista de libros después de ajustar el stock
         alert('Stock ajustado con éxito');
     } else {
         alert('Por favor, seleccione un libro y complete el campo de cantidad a ajustar.');
     }
 }
+
+// Ejemplo de ordenar libros alfabéticamente por título
+const button = document.getElementById('button');
+button.addEventListener('click', az);
+
+function az() {
+    libros.sort((a, b) => a.titulo.localeCompare(b.titulo));
+    listBooks();
+}
+
+
+
+
+
   
