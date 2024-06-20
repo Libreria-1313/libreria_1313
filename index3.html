@@ -7,7 +7,7 @@
     <title>Biblioteca</title>
 </head>
 <body>
-    <button id="button">AZ</button>
+    <button onclick="ordenarPorTitulo()">A-Z</button>
     <button onclick="aplicarDescuentoClick()">Aplicar Descuento del 10%</button>
     <button onclick="restaurarDescuentoClick()">Restaurar Precios Originales</button>
     <h2>Buscar y Eliminar Libro</h2>
@@ -22,6 +22,15 @@
         <input type="text" id="searchValue" required>
         <button type="button" onclick="searchAndDeleteBook()">Buscar y Eliminar</button>
     </form>
+  <div class="change-editorial">
+    <h3>Cambiar editorial del libro</h3>
+    <select id='libro-select'>
+        <option value="">Selecciona un libro</option>
+    </select>
+    <input type="text" id='nueva-editorial-input' placeholder="Nueva Editorial">
+    <button onclick="cambiarEditorial()">Cambiar Editorial</button>
+</div>
+</div>
     <h1>Lista de Libros</h1>
     <div id="divbooks"></div>
 

@@ -359,28 +359,31 @@ const libros = [
     ];
 
 const divbooks = document.getElementById('divbooks');
+const libroSelect = document.getElementById('libro-select');
 
 // Cargar libros cuando se carga la página
 loadBooks();
-    
+
 function listBooks() {
     divbooks.innerHTML = ''; // Limpiar contenido anterior
-    
+
     libros.forEach(book => {
-            createBook(book); // Llamar a createBook para cada libro
+        createBook(book); // Llamar a createBook para cada libro
+        addBookOption(book); // Agregar opción al selector
     });
 }
-    
+
 function loadBooks() {
     divbooks.innerHTML = ''; // Limpiar contenido anterior
-    
+
     libros.forEach((book, index) => {
-            createBook(book); // Llamar a createBook para cada libro
+        createBook(book); // Llamar a createBook para cada libro
+        addBookOption(book); // Agregar opción al selector
     });
-    
+
     // Opcionalmente, mostrar el primer libro por defecto
     if (libros.length > 0) {
-            createBook(libros[0]);
+        showBookDetails(libros[0].titulo); // Mostrar los detalles del primer libro por defecto
     }
 }
 
@@ -450,6 +453,10 @@ function createBook(book) {
     decreaseStockButton.textContent = '-';
     decreaseStockButton.addEventListener('click', () => decreaseStock(book));
 
+    const comprarButton = document.createElement('button');
+    comprarButton.textContent = `comprar`;
+    comprarButton.addEventListener('click', () => comprarLibro(book));
+
     // Añadir elementos al contenedor de cada libro
     myBook.appendChild(title);
     myBook.appendChild(image);
@@ -470,21 +477,13 @@ function createBook(book) {
     stockContainer.appendChild(stockValue);
     stockContainer.appendChild(increaseStockButton);
     stockContainer.appendChild(decreaseStockButton);
+    myBook.appendChild(comprarButton); // Agregar el botón de comprar al libro
 
     // Añadir el contenedor del stock al libro
     myBook.appendChild(stockContainer);
 
     // Añadir el libro al contenedor principal
     divbooks.appendChild(myBook);
-}
-
-// Ejemplo de ordenar libros alfabéticamente por título
-const button = document.getElementById('button');
-button.addEventListener('click', az);
-
-function az() {
-    libros.sort((a, b) => a.titulo.localeCompare(b.titulo));
-    listBooks();
 }
 
 function aplicarDescuentoClick() {
@@ -554,6 +553,84 @@ function decreaseStock(book) {
         alert('El stock ya está en cero.'); // Avisa al usuario si el stock es cero y no se puede decrementar más
     }
 }
+
+function addBookOption(book) {
+    const option = document.createElement('option');
+    option.value = book.titulo; // El valor del option será el título del libro
+    option.textContent = book.titulo; // El texto visible será también el título
+
+    libroSelect.appendChild(option);
+}
+
+libroSelect.addEventListener('change', (event) => {
+    const selectedBookTitle = event.target.value;
+    showBookDetails(selectedBookTitle);
+});
+
+function showBookDetails(selectedBookTitle) {
+    const selectedBook = libros.find(book => book.titulo === selectedBookTitle);
+
+    // Mostrar detalles del libro seleccionado en algún elemento del DOM (por ejemplo, en un div con id "book-details")
+    const bookDetails = document.getElementById('book-details');
+    bookDetails.innerHTML = ''; // Limpiar contenido anterior
+
+    const title = document.createElement('h2');
+    title.textContent = selectedBook.titulo;
+
+    const image = document.createElement('img');
+    image.src = selectedBook.Image;
+    image.alt = selectedBook.titulo;
+
+    const author = document.createElement('p');
+    author.textContent = `Autor: ${selectedBook.autor}`;
+
+    // Agregar más detalles del libro según necesites
+
+    // Añadir elementos al contenedor de detalles del libro
+    bookDetails.appendChild(title);
+    bookDetails.appendChild(image);
+    bookDetails.appendChild(author);
+
+    // Incluir aquí los demás detalles del libro que desees mostrar
+}
+
+// Función para cambiar la editorial de un libro seleccionado
+function cambiarEditorial() {
+    const nuevaEditorial = document.getElementById('nueva-editorial-input').value;
+    const selectedBookTitle = libroSelect.value;
+
+    if (selectedBookTitle) {
+        const selectedBook = libros.find(book => book.titulo === selectedBookTitle);
+        selectedBook.editorial = nuevaEditorial;
+        alert(`La editorial ha sido cambiada a: "${nuevaEditorial}" para el libro seleccionado`);
+        listBooks(); // Actualizar la lista de libros mostrados
+    } else {
+        alert('Por favor, selecciona un libro');
+    }
+}
+
+function ordenarPorTitulo() {
+    libros.sort((a, b) => {
+        // Compara los títulos en minúsculas para evitar problemas de mayúsculas y minúsculas
+        const tituloA = a.titulo.toLowerCase();
+        const tituloB = b.titulo.toLowerCase();
+
+        if (tituloA < tituloB) {
+            return -1;
+        }
+        if (tituloA > tituloB) {
+            return 1;
+        }
+        return 0;
+    });
+
+    listBooks(); // Vuelve a renderizar la lista de libros ordenados
+}
+
+
+
+
+
 
 
 
