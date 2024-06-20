@@ -10,6 +10,19 @@
         <button id="button">AZ</button>
         <button onclick="aplicarDescuentoClick()">Aplicar Descuento del 10%</button>
         <button onclick="restaurarDescuentoClick()">Restaurar Precios Originales</button>
+        <h2>Buscar y Eliminar Libro</h2>
+        <form id="searchForm">
+            <label for="searchCriteria">Criterio de Búsqueda:</label>
+            <select id="searchCriteria">
+                <option value="titulo">Título</option>
+                <option value="editorial">Editorial</option>
+                <option value="precio">precio</option>
+            </select>
+            <label for="searchValue">opcion:</label>
+            <input type="text" id="searchValue" required>
+            <button type="button" onclick="searchAndDeleteBook()">Buscar y Eliminar</button>
+        </form>
+        <h1>lista de libros</h1>
         <div id="divbooks"></div>
     <script src="/js/app3.js"></script>
 </body>

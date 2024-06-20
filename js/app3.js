@@ -450,4 +450,33 @@ function aplicarDescuentoClick() {
   
     listBooks(); // Mostrar los libros con los precios restaurados
   }
+
+  // Función para buscar y eliminar un libro
+  function searchAndDeleteBook() {
+    const searchCriteria = document.getElementById('searchCriteria').value;
+    const searchValue = document.getElementById('searchValue').value.toLowerCase();
+
+    let bookFound = false;
+
+    for (let i = 0; i < libros.length; i++) {
+        const book = libros[i];
+        if (
+            (searchCriteria === 'titulo' && book.titulo.toLowerCase() === searchValue) ||
+            (searchCriteria === 'editorial' && book.editorial.toLowerCase() === searchValue) ||
+            (searchCriteria === 'precio' && book.precio.toLowerCase() === searchValue) // Modificar según los criterios de búsqueda necesarios
+        ) {
+            libros.splice(i, 1);
+            bookFound = true;
+            break;
+        }
+    }
+
+    if (bookFound) {
+        listBooks(); // Actualizar la lista de libros después de eliminar
+        alert('Libro eliminado con éxito');
+    } else {
+        alert('No se encontró un libro con ese criterio');
+    }
+}
+
   
