@@ -149,8 +149,8 @@ function masDe200Paginas() {
     bookPhoto.classList.add('book-photo');
 
     let imgBook = document.createElement('img');
-    imgBook.src = libro.imagen;
-    imgBook.alt = libro.titulo;
+    imgBook.src = libros.image;
+    imgBook.alt = libros.titulo;
 
     let descriptionBook = document.createElement('div');
     descriptionBook.classList.add('book-description');
