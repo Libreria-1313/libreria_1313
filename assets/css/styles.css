@@ -272,6 +272,24 @@ footer {
     border: double 5px #041c93;
   }
 
+
+#seccion2{
+  display: flex;
+  flex-direction: column;
+  background-color: #041c93;
+}
+
   #estanteriaCostos{
-    background-color: #041c93;
+    display: flex;
+
   }
+
+.costosos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: double 5px gray;
+  background-color: white;
+  border-radius: 5px;  
+  margin: 1rem;
+}

@@ -1,137 +1,178 @@
-
 import { libros } from './libros.js';
 
-const containerBooks = document.getElementById('lista')
-const filterGender = document.getElementById('select-gender').addEventListener('change', filterToGender)
-const btnSort = document.getElementById('btnSort').addEventListener('click', sortedBooks)
+const containerBooks = document.getElementById('lista');
+const filterGender = document.getElementById('select-gender');
+const btnSort = document.getElementById('btnSort');
+const estante2 = document.getElementById('estanteriaCostos');
+const numeropaginas = document.getElementById('numerodepaginas')
 
-window.addEventListener('DOMContentLoaded', generateCard)
+
+filterGender.addEventListener('change', filterToGender);
+btnSort.addEventListener('click', sortedBooks);
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    generateCard();
+    mostrarCincoMasCostosos();
+    masDe200Paginas();
+});
 
 function generateCard() {  
-  libros.forEach( libros => makeCard(libros) )
+  libros.forEach(libro => makeCard(libro));
 }
 
 function makeCard(libros) {
   // Crear elementos de la card
-  let bookCard = document.createElement('div')
-  bookCard.classList.add('book')
+  let bookCard = document.createElement('div');
+  bookCard.classList.add('book');
 
-  let bookPhoto = document.createElement('div')
-  bookPhoto.classList.add('book-photo')
+  let bookPhoto = document.createElement('div');
+  bookPhoto.classList.add('book-photo');
 
-  let imgBook = document.createElement('img')
-  imgBook.src = libros.image
-  imgBook.alt = libros.titulo
+  let imgBook = document.createElement('img');
+  imgBook.src = libros.image;
+  imgBook.alt = libros.titulo;
 
-  let descriptionBook = document.createElement('div')
-  descriptionBook.classList.add('book-description')
+  let descriptionBook = document.createElement('div');
+  descriptionBook.classList.add('book-description');
 
-  let titleBook = document.createElement('h2')
-  titleBook.textContent = libros.titulo
+  let titleBook = document.createElement('h2');
+  titleBook.textContent = libros.titulo;
 
-  let priceBook = document.createElement('h3')
-  priceBook.textContent = `${libros.precio}$`
+  let priceBook = document.createElement('h3');
+  priceBook.textContent = `${libros.precio}$`;
 
-  let btnBuy = document.createElement('button')
-  btnBuy.textContent = 'Comprar'
+  let btnBuy = document.createElement('button');
+  btnBuy.textContent = 'Comprar';
 
-  bookPhoto.appendChild(imgBook)
+  bookPhoto.appendChild(imgBook);
   
-  descriptionBook.appendChild(titleBook)
-  descriptionBook.appendChild(priceBook)
-  descriptionBook.appendChild(btnBuy)
+  descriptionBook.appendChild(titleBook);
+  descriptionBook.appendChild(priceBook);
+  descriptionBook.appendChild(btnBuy);
   
-  bookCard.appendChild(bookPhoto)
-  bookCard.appendChild(descriptionBook)
+  bookCard.appendChild(bookPhoto);
+  bookCard.appendChild(descriptionBook);
 
-  containerBooks.appendChild(bookCard)
-  return bookCard;
+  containerBooks.appendChild(bookCard);
 }
 
-function filterToGender (event) {     
-  containerBooks.innerHTML = ''
+function filterToGender(event) {     
+  containerBooks.innerHTML = '';
   if (event.target.value === 'everything') {
-    generateCard()    
+    generateCard();
   } else {
-    libros.forEach( libros => {
-      if (libros.genero === event.target.value ) {
-        makeCard(libros)
+    libros.forEach(libro => {
+      if (libro.genero === event.target.value) {
+        makeCard(libro);
       }
-    })
-  }  
+    });
+  }
 }
 
 function sortedBooks() {
-  containerBooks.innerHTML = ''
-  // Usamos sort() con una función de comparación
+  containerBooks.innerHTML = '';
   libros.sort((a, b) => {
-    // Comparamos los títulos de los libros, en minúsculas para ser case-insensitive
     let titleA = a.titulo.toLowerCase();
     let titleB = b.titulo.toLowerCase();
     
     if (titleA < titleB) {
-      return -1; // a debe venir antes que b
+      return -1;
     }
     if (titleA > titleB) {
-      return 1; // b debe venir antes que a
+      return 1;
     }
-    return 0; // son iguales
+    return 0;
   });
-  generateCard()
-  return libros; // Devolvemos el array de libros ordenado
+  generateCard();
 }
 
 
+function mostrarCincoMasCostosos() {
+  const cincoMasCostosos = libros
+    .sort((a, b) => b.precio - a.precio)
+    .slice(0, 5);
 
+  const containerCostosos = document.createElement('div');
+  containerCostosos.classList.add('top-five-costosos');
+  
+  cincoMasCostosos.forEach(libro => {
+    let expensiveBookCard = document.createElement('div');
+    expensiveBookCard.classList.add('costosos');
 
-const estante2 = document.getElementById('estanteriaCostos');
-const botonLibros = document.getElementById('botonestanteria');
-botonLibros.addEventListener('click', booksPreciosos);
-
-window.addEventListener('DOMContentLoaded', cargarEstante);
-
-function cargarEstante() {
-  libros.forEach(libro => mostrarLibroCostoso(libro));
-}
-
-function mostrarLibroCostoso(libro) {
-  if (libro.precio > 100) {
-    let expensiveBooks1 = document.createElement('div');
-    expensiveBooks1.classList.add('costosos');
-
-    let imagenLibro = document.createElement('div');
-    imagenLibro.classList.add('libro-imagen');
+    let bookPhoto = document.createElement('div');
+    bookPhoto.classList.add('book-photo');
 
     let imgBook = document.createElement('img');
-    imgBook.src = libro.imagen;
+    imgBook.src = libro.image;
     imgBook.alt = libro.titulo;
 
-    let descripcion = document.createElement('div');
-    descripcion.classList.add('description');
+    let descriptionBook = document.createElement('div');
+    descriptionBook.classList.add('book-description');
 
-    let titulo = document.createElement('h2');
-    titulo.textContent = libro.titulo;
+    let titleBook = document.createElement('h2');
+    titleBook.textContent = libro.titulo;
 
-    let precio = document.createElement('h3');
-    precio.textContent = `${libro.precio}$`;
+    let priceBook = document.createElement('h3');
+    priceBook.textContent = `${libro.precio}$`;
 
-    let botonCompra = document.createElement('button');
-    botonCompra.textContent = 'Comprar';
+    let btnBuy = document.createElement('button');
+    btnBuy.textContent = 'Comprar';
 
-    imagenLibro.appendChild(imgBook);
-    descripcion.appendChild(titulo);
-    descripcion.appendChild(precio);
-    descripcion.appendChild(botonCompra);
+    bookPhoto.appendChild(imgBook);
+    descriptionBook.appendChild(titleBook);
+    descriptionBook.appendChild(priceBook);
+    descriptionBook.appendChild(btnBuy);
+    
+    expensiveBookCard.appendChild(bookPhoto);
+    expensiveBookCard.appendChild(descriptionBook);
 
-    expensiveBooks1.appendChild(imagenLibro);
-    expensiveBooks1.appendChild(descripcion);
+    containerCostosos.appendChild(expensiveBookCard);
+  });
 
-    estante2.appendChild(expensiveBooks1);
-  }
+  // Añadir el contenedor de libros más costosos a la sección del HTML específica
+  const estanteriaCostosos = document.getElementById('estanteriaCostos');
+  estanteriaCostosos.appendChild(containerCostosos);
 }
 
-function booksPreciosos() {
-  estante2.innerHTML = '';
-  libros.filter(libro => libro.precio > 1).forEach(libro => mostrarLibroCostoso(libro));
+function masDe200Paginas() {
+  const paginas = libros.filter(libro => libro.paginas > 200)
+
+  const containerCostosos = document.createElement('div');
+  containerCostosos.classList.add('top-five-costosos');
+  
+  cincoMasCostosos.forEach(libro => {
+    let expensiveBookCard = document.createElement('div');
+    expensiveBookCard.classList.add('costosos');
+
+    let bookPhoto = document.createElement('div');
+    bookPhoto.classList.add('book-photo');
+
+    let imgBook = document.createElement('img');
+    imgBook.src = libro.image;
+    imgBook.alt = libro.titulo;
+
+    let descriptionBook = document.createElement('div');
+    descriptionBook.classList.add('book-description');
+
+    let titleBook = document.createElement('h2');
+    titleBook.textContent = libro.titulo;
+
+    let priceBook = document.createElement('h3');
+    priceBook.textContent = `${libro.precio}$`;
+
+    let btnBuy = document.createElement('button');
+    btnBuy.textContent = 'Comprar';
+
+    bookPhoto.appendChild(imgBook);
+    descriptionBook.appendChild(titleBook);
+    descriptionBook.appendChild(priceBook);
+    descriptionBook.appendChild(btnBuy);
+    
+    expensiveBookCard.appendChild(bookPhoto);
+    expensiveBookCard.appendChild(descriptionBook);
+
+    containerCostosos.appendChild(expensiveBookCard);
+});
 }
 

@@ -40,7 +40,7 @@ export const libros = [
         idioma: "Italiano",
         precio: 12.50 ,
         formato: "Físico",
-        isbn: "978-84-339-1162-4",
+        isbn: "978-84-339-1162-4",  
         descripcion: "Una novela histórica y de misterio ambientada en una abadía italiana medieval.",
         estado: "Usado",
         ubicacion: "Roma, Italia",
