@@ -136,20 +136,20 @@ function mostrarCincoMasCostosos() {
 }
 
 function masDe200Paginas() {
-  const paginas = libros.filter(libro => libro.paginas > 200)
+  const paginas = libros.filter(libro => libro.paginas > 200);
 
-  const containerCostosos = document.createElement('div');
-  containerCostosos.classList.add('top-five-costosos');
+  const containerPaginas = document.createElement('div');
+  containerPaginas.classList.add('paginas-mayor-a-200');
   
-  cincoMasCostosos.forEach(libro => {
-    let expensiveBookCard = document.createElement('div');
-    expensiveBookCard.classList.add('costosos');
+  paginas.forEach(libro => {
+    let paginaBookCard = document.createElement('div');
+    paginaBookCard.classList.add('book');
 
     let bookPhoto = document.createElement('div');
     bookPhoto.classList.add('book-photo');
 
     let imgBook = document.createElement('img');
-    imgBook.src = libro.image;
+    imgBook.src = libro.imagen;
     imgBook.alt = libro.titulo;
 
     let descriptionBook = document.createElement('div');
@@ -169,10 +169,13 @@ function masDe200Paginas() {
     descriptionBook.appendChild(priceBook);
     descriptionBook.appendChild(btnBuy);
     
-    expensiveBookCard.appendChild(bookPhoto);
-    expensiveBookCard.appendChild(descriptionBook);
+    paginaBookCard.appendChild(bookPhoto);
+    paginaBookCard.appendChild(descriptionBook);
 
-    containerCostosos.appendChild(expensiveBookCard);
-});
+    containerPaginas.appendChild(paginaBookCard);
+  });
+
+  const librosMasDe200Paginas = document.getElementById('librosMasDe200Paginas');
+  librosMasDe200Paginas.innerHTML = '';
+  librosMasDe200Paginas.appendChild(containerPaginas);
 }
-
