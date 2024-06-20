@@ -81,11 +81,57 @@ function sortedBooks() {
   return libros; // Devolvemos el array de libros ordenado
 }
 
-function bookspreasi() {
-  let bookcostoso = libros.filter(libros => libros.precio > 100)
-  bookcostoso.forEach(libros => makeCard(libros))
-  return bookcostoso
+
+
+
+const estante2 = document.getElementById('estanteriaCostos');
+const botonLibros = document.getElementById('botonestanteria');
+botonLibros.addEventListener('click', booksPreciosos);
+
+window.addEventListener('DOMContentLoaded', cargarEstante);
+
+function cargarEstante() {
+  libros.forEach(libro => mostrarLibroCostoso(libro));
 }
 
-bookspreasi(libros);
+function mostrarLibroCostoso(libro) {
+  if (libro.precio > 100) {
+    let expensiveBooks1 = document.createElement('div');
+    expensiveBooks1.classList.add('costosos');
+
+    let imagenLibro = document.createElement('div');
+    imagenLibro.classList.add('libro-imagen');
+
+    let imgBook = document.createElement('img');
+    imgBook.src = libro.imagen;
+    imgBook.alt = libro.titulo;
+
+    let descripcion = document.createElement('div');
+    descripcion.classList.add('description');
+
+    let titulo = document.createElement('h2');
+    titulo.textContent = libro.titulo;
+
+    let precio = document.createElement('h3');
+    precio.textContent = `${libro.precio}$`;
+
+    let botonCompra = document.createElement('button');
+    botonCompra.textContent = 'Comprar';
+
+    imagenLibro.appendChild(imgBook);
+    descripcion.appendChild(titulo);
+    descripcion.appendChild(precio);
+    descripcion.appendChild(botonCompra);
+
+    expensiveBooks1.appendChild(imagenLibro);
+    expensiveBooks1.appendChild(descripcion);
+
+    estante2.appendChild(expensiveBooks1);
+  }
+}
+
+function booksPreciosos() {
+  estante2.innerHTML = '';
+  libros.filter(libro => libro.precio > 1).forEach(libro => mostrarLibroCostoso(libro));
+}
 

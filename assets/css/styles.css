@@ -271,3 +271,7 @@ footer {
     border-radius: 15px;
     border: double 5px #041c93;
   }
+
+  #estanteriaCostos{
+    background-color: #041c93;
+  }
