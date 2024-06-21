@@ -486,32 +486,6 @@ function createBook(book) {
     divbooks.appendChild(myBook);
 }
 
-function aplicarDescuentoClick() {
-    libros.forEach(libro => {
-        // Guardar el precio original antes de aplicar el descuento
-        if (!libro.precioOriginal) {
-          libro.precioOriginal = libro.precio;
-        }
-  
-        let precioActual = parseFloat(libro.precio.split(" ")[0]); // Convertir el precio a un número
-        precioActual *= 0.9; // Aplicar descuento del 10%
-        libro.precio = `${precioActual.toFixed(2)} EUR`; // Actualizar el precio del libro
-    });
-  
-    listBooks(); // Mostrar los libros actualizados después de aplicar descuento
-  }
-  
-  function restaurarDescuentoClick() {
-    libros.forEach(libro => {
-        if (libro.precioOriginal) {
-          libro.precio = libro.precioOriginal;
-          delete libro.precioOriginal; // Eliminar la propiedad precioOriginal una vez restaurado el precio
-        }
-    });
-  
-    listBooks(); // Mostrar los libros con los precios restaurados
-  }
-
   // Función para buscar y eliminar un libro
   function searchAndDeleteBook() {
     const searchCriteria = document.getElementById('searchCriteria').value;
@@ -609,24 +583,6 @@ function cambiarEditorial() {
     }
 }
 
-function ordenarPorTitulo() {
-    libros.sort((a, b) => {
-        // Compara los títulos en minúsculas para evitar problemas de mayúsculas y minúsculas
-        const tituloA = a.titulo.toLowerCase();
-        const tituloB = b.titulo.toLowerCase();
-
-        if (tituloA < tituloB) {
-            return -1;
-        }
-        if (tituloA > tituloB) {
-            return 1;
-        }
-        return 0;
-    });
-
-    listBooks(); // Vuelve a renderizar la lista de libros ordenados
-}
-
 function agregarNuevoLibro() {
     const nuevoLibro = {};
 
@@ -635,9 +591,9 @@ function agregarNuevoLibro() {
     nuevoLibro.autor = prompt('Ingrese el autor del libro:');
     nuevoLibro.genero = prompt('Ingrese el género del libro:');
     nuevoLibro.idioma = prompt('Ingrese el idioma del libro:');
-    nuevoLibro.precio = prompt('Ingrese el precio del libro:');
+    nuevoLibro.precio = parseInt(prompt('Ingrese el precio del libro en EUR:'));
     nuevoLibro.formato = prompt('Ingrese el formato del libro:');
-    nuevoLibro.isbn = prompt('Ingrese el ISBN del libro:');
+    nuevoLibro.isbn = parseInt(prompt('Ingrese el ISBN del libro:'));
     nuevoLibro.descripcion = prompt('Ingrese la descripción del libro:');
     nuevoLibro.estado = prompt('Ingrese el estado del libro (Nuevo/Usado):');
     nuevoLibro.ubicacion = prompt('Ingrese la ubicación del libro:');
@@ -645,9 +601,7 @@ function agregarNuevoLibro() {
     nuevoLibro.editorial = prompt('Ingrese la editorial del libro:');
     nuevoLibro.paginas = parseInt(prompt('Ingrese el número de páginas del libro:'));
     nuevoLibro.stock = parseInt(prompt('Ingrese el stock inicial del libro:'));
-
-    // Capturar la URL de la imagen del libro
-    nuevoLibro.imagen = prompt('Ingrese la URL de la imagen del libro:');
+    nuevoLibro.Image = prompt('Ingrese la URL de la imagen del libro:');
 
     // Validar que se ingresen todos los campos obligatorios antes de agregar el libro
     if (
@@ -665,7 +619,7 @@ function agregarNuevoLibro() {
         nuevoLibro.editorial &&
         !isNaN(nuevoLibro.paginas) &&
         !isNaN(nuevoLibro.stock) &&
-        nuevoLibro.imagen // Validar que se haya ingresado la URL de la imagen
+        nuevoLibro.Image
     ) {
         libros.push(nuevoLibro); // Agregar el nuevo libro al arreglo libros
         listBooks(libros); // Actualizar la lista de libros mostrados (esto es una función hipotética, deberías reemplazarlo con tu lógica de actualización)
