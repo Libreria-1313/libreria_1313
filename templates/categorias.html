@@ -10,7 +10,7 @@
 <body>
     <nav>
         <div class="breadcrumb-title">
-            <p>LIBRERIA </p> <p id="textocolor1"> EL AMANECER</p>
+        <p>LIBRERIA </p> <p id="textocolor1"> EL AMANECER</p>
         </div>
         <ul>
             <li><a href="../index.html" >INICIO</a></li>
@@ -18,42 +18,29 @@
         </ul>
     </nav>
     <main id="main">
-        <div class="container-filter" id="container-filter">
-            <button id="btnSort">Ordenar de la A-Z</button>
-            <label for="select-gender">Género</label>
-            <select name="" id="select-gender">
-                <option value="gender">Género</option>
-                <option value="everything">Todos</option>
-                <option value="Ficción">Ficción</option>
-                <option value="Novela">Novela</option>
-                <option value="Drama">Drama</option>
-                <option value="Cuento">Cuento</option>
-                <option value="Epopeya">Epopeya</option>
-                <option value="Autoayuda">Autoayuda</option>
-            </select>
-            <label for="select-availability">Disponibilidad</label>
-            <select name="" id="select-availability">
-                <option value="availability">Disponibilidad</option>
-                <option value="inStock">En Stock</option>
-                <option value="outOfStock">Agotado</option>          
-            </select>
-        </div>
-        <div id="lista" class="lista"></div>
+      <div class="container-filter" id="container-filter">
+        <button id="btnSort">Ordenar de la A-Z</button>
+          <label for="">Género</label>
+          <select name="" id="select-gender">
+            <option value="gender">Género</option>
+            <option value="everything">Todos</option>
+            <option value="Ficción">Ficción</option>
+            <option value="Novela">Novela</option>
+            <option value="Drama">Drama</option>
+            <option value="Cuento">Cuento</option>
+            <option value="Epopeya">Epopeya</option>
+            <option value="Autoayuda">autoayuda</option>
+          </select>
+          <button id="btnTopPrices">Filtrar 5 Precios Más Caros</button>
+          <button id="btnMoreThan200Pages">Filtrar Libros con más de 200 Páginas</button>
+          <button id="btnPriceRange">libros entre 30000 y 80000</button>
+      </div>
+      <div id="lista" class="lista">      
+      </div>
     </main>
-    <section id="seccion2">
-      <h1>los libros mas costosos</h1>
-        <div id="estanteriaCostos"></div>
-    </section>
-    <section>
-        <h1>libros con mas de 200 paginas</h1>
-      <div id="librosMasDe200Paginas"></div>
-  </section>
-  <section>
-    <h1>libros que cuestas entre $30000 COP y  $80000 COP</h1>
-    <div></div>
-  </section>
     <footer></footer>
     <script type="module" src="../assets/js/libros.js"></script>
     <script type="module" src="../assets/js/categorias.js"></script>
 </body>
 </html>
+
