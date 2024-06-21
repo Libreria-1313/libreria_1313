@@ -6,9 +6,15 @@ const btnSort = document.getElementById('btnSort').addEventListener('click', sor
 const btnTopPrices = document.getElementById('btnTopPrices').addEventListener('click', filterTopPrices);
 const btnMoreThan200Pages = document.getElementById('btnMoreThan200Pages').addEventListener('click', filterMoreThan200Pages);
 const btnPriceRange = document.getElementById('btnPriceRange').addEventListener('click', filterPriceRange);
+const btnDiscount = document.getElementById('btnDiscount').addEventListener('click', applyDiscount);
+const btnResetPrices = document.getElementById('btnResetPrices').addEventListener('click', resetPrices);
+
+let originalPrices = [];
+
 window.addEventListener('DOMContentLoaded', generateCard);
 
 function generateCard() {  
+  containerBooks.innerHTML = '';  // Clear previous cards
   libros.forEach(libro => makeCard(libro));
 }
 
@@ -30,11 +36,8 @@ function makeCard(libro) {
   let titleBook = document.createElement('h2');
   titleBook.textContent = libro.titulo;
 
-  let autor = document.createElement('h4')
-  autor.textContent = libro.autor;
-
   let priceBook = document.createElement('h3');
-  priceBook.textContent = `${libro.precio} $`;
+  priceBook.textContent = `${libro.precio}$`;
 
   let btnBuy = document.createElement('button');
   btnBuy.textContent = 'Comprar';
@@ -42,7 +45,6 @@ function makeCard(libro) {
   bookPhoto.appendChild(imgBook);
   
   descriptionBook.appendChild(titleBook);
-  descriptionBook.appendChild(autor)
   descriptionBook.appendChild(priceBook);
   descriptionBook.appendChild(btnBuy);
   
@@ -95,8 +97,29 @@ function filterMoreThan200Pages() {
   const booksMoreThan200Pages = libros.filter(libro => libro.paginas > 200);
   booksMoreThan200Pages.forEach(libro => makeCard(libro));
 }
+
 function filterPriceRange() {
   containerBooks.innerHTML = '';
   const booksInRange = libros.filter(libro => libro.precio >= 30000 && libro.precio <= 80000);
   booksInRange.forEach(libro => makeCard(libro));
+}
+
+function applyDiscount() {
+  if (originalPrices.length === 0) {
+    originalPrices = libros.map(libro => libro.precio);
+  }
+  libros.forEach(libro => {
+    libro.precio = (libro.precio * 0.9).toFixed(2);
+  });
+  generateCard();
+}
+
+function resetPrices() {
+  if (originalPrices.length > 0) {
+    libros.forEach((libro, index) => {
+      libro.precio = originalPrices[index];
+    });
+    originalPrices = [];
+    generateCard();
+  }
 }
