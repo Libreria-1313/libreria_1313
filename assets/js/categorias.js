@@ -40,7 +40,7 @@ function makeCard(libros) {
   titleBook.textContent = libros.titulo;
 
   let priceBook = document.createElement('h3');
-  priceBook.textContent = `${libros.precio}$`;
+  priceBook.textContent = `${libros.precio} COP`;
 
   let btnBuy = document.createElement('button');
   btnBuy.textContent = 'Comprar';
@@ -114,7 +114,7 @@ function mostrarCincoMasCostosos() {
     titleBook.textContent = libro.titulo;
 
     let priceBook = document.createElement('h3');
-    priceBook.textContent = `${libro.precio}$`;
+    priceBook.textContent = `${libro.precio} COP`;
 
     let btnBuy = document.createElement('button');
     btnBuy.textContent = 'Comprar';
@@ -141,7 +141,7 @@ function masDe200Paginas() {
   const containerPaginas = document.createElement('div');
   containerPaginas.classList.add('paginas-mayor-a-200');
   
-  paginas.forEach(libro => {
+  paginas.forEach(libros => {
     let paginaBookCard = document.createElement('div');
     paginaBookCard.classList.add('book');
 
@@ -156,18 +156,18 @@ function masDe200Paginas() {
     descriptionBook.classList.add('book-description');
 
     let titleBook = document.createElement('h2');
-    titleBook.textContent = libro.titulo;
+    titleBook.textContent = libros.titulo;
 
     let priceBook = document.createElement('h3');
-    priceBook.textContent = `${libro.precio}$`;
+    priceBook.textContent = `${libros.precio} COP`;
 
-    let btnBuy = document.createElement('button');
-    btnBuy.textContent = 'Comprar';
+    let autorBook = document.createElement('h3');
+    autorBook.textContent = `${libros.autor} `;
 
     bookPhoto.appendChild(imgBook);
     descriptionBook.appendChild(titleBook);
+    descriptionBook.appendChild(autorBook);
     descriptionBook.appendChild(priceBook);
-    descriptionBook.appendChild(btnBuy);
     
     paginaBookCard.appendChild(bookPhoto);
     paginaBookCard.appendChild(descriptionBook);
@@ -179,3 +179,4 @@ function masDe200Paginas() {
   librosMasDe200Paginas.innerHTML = '';
   librosMasDe200Paginas.appendChild(containerPaginas);
 }
+

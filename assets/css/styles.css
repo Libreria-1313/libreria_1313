@@ -281,7 +281,8 @@ footer {
 
   #estanteriaCostos{
     display: flex;
-
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
 .costosos{
@@ -292,4 +293,19 @@ footer {
   background-color: white;
   border-radius: 5px;  
   margin: 1rem;
+  height: 200px;
+  width: 28%;
+
+}
+
+
+.top-five-costosos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.paginas-mayor-a-200{
+  display: flex;
+  flex-wrap: wrap;
 }
