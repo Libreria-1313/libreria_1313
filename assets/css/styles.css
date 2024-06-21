@@ -10,6 +10,7 @@ header{
     width: 100%;
     background-image: url(../imagenes/fondoHeader.jpeg);
     background-position: center;
+    padding: 0% 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +28,6 @@ header{
     font-size: 28px;
     font-family: Arial, Helvetica, sans-serif;
     color: #ffae00 ;
-    padding: 40px 350px;
 }
 
 
@@ -48,6 +48,7 @@ nav {
     font-size: 20px;
     color: #ffffff;
     padding: 0px 18px;
+    position: relative;
 }
 #textocolor1{
     color: #f7450f;
