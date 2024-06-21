@@ -627,6 +627,61 @@ function ordenarPorTitulo() {
     listBooks(); // Vuelve a renderizar la lista de libros ordenados
 }
 
+function agregarNuevoLibro() {
+    const nuevoLibro = {};
+
+    // Recolectar información del nuevo libro utilizando prompt
+    nuevoLibro.titulo = prompt('Ingrese el título del libro:');
+    nuevoLibro.autor = prompt('Ingrese el autor del libro:');
+    nuevoLibro.genero = prompt('Ingrese el género del libro:');
+    nuevoLibro.idioma = prompt('Ingrese el idioma del libro:');
+    nuevoLibro.precio = prompt('Ingrese el precio del libro:');
+    nuevoLibro.formato = prompt('Ingrese el formato del libro:');
+    nuevoLibro.isbn = prompt('Ingrese el ISBN del libro:');
+    nuevoLibro.descripcion = prompt('Ingrese la descripción del libro:');
+    nuevoLibro.estado = prompt('Ingrese el estado del libro (Nuevo/Usado):');
+    nuevoLibro.ubicacion = prompt('Ingrese la ubicación del libro:');
+    nuevoLibro.fecha_publicacion = prompt('Ingrese la fecha de publicación del libro en formato AAAA-MM-DD:');
+    nuevoLibro.editorial = prompt('Ingrese la editorial del libro:');
+    nuevoLibro.paginas = parseInt(prompt('Ingrese el número de páginas del libro:'));
+    nuevoLibro.stock = parseInt(prompt('Ingrese el stock inicial del libro:'));
+
+    // Capturar la URL de la imagen del libro
+    nuevoLibro.imagen = prompt('Ingrese la URL de la imagen del libro:');
+
+    // Validar que se ingresen todos los campos obligatorios antes de agregar el libro
+    if (
+        nuevoLibro.titulo &&
+        nuevoLibro.autor &&
+        nuevoLibro.genero &&
+        nuevoLibro.idioma &&
+        nuevoLibro.precio &&
+        nuevoLibro.formato &&
+        nuevoLibro.isbn &&
+        nuevoLibro.descripcion &&
+        nuevoLibro.estado &&
+        nuevoLibro.ubicacion &&
+        nuevoLibro.fecha_publicacion &&
+        nuevoLibro.editorial &&
+        !isNaN(nuevoLibro.paginas) &&
+        !isNaN(nuevoLibro.stock) &&
+        nuevoLibro.imagen // Validar que se haya ingresado la URL de la imagen
+    ) {
+        libros.push(nuevoLibro); // Agregar el nuevo libro al arreglo libros
+        listBooks(libros); // Actualizar la lista de libros mostrados (esto es una función hipotética, deberías reemplazarlo con tu lógica de actualización)
+        alert('Libro agregado con éxito!');
+    } else {
+        alert('Por favor, complete todos los campos correctamente, incluyendo la URL de la imagen.');
+    }
+}
+
+
+
+
+
+
+
+
 
 
 
