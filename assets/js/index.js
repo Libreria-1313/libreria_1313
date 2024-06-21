@@ -1,3 +1,4 @@
+import { libros } from "./libros.js";
 
 document.getElementById('buscarButton').addEventListener('click', () => {
     const tituloBuscado = document.getElementById('tituloInput').value;

@@ -8,56 +8,48 @@
     <title>diseño multimedia</title>
 </head>
 <body>
-    
-        <nav>
-            <div class="breadcrumb-title">
-                <p>LIBRERIA </p> <p id="textocolor1"> EL AMANECER</p>
-            </div>
-            <ul>
-                <li><a href="../index.html">INICIO</a></li>
-                <li><a href="categorias.html" class="activo">CATEGORIAS</a></li>
-            </ul>
-        </nav>
-        <main>
-            <section id="todo">
-            <section class="seccion1-1">
-                <div>
-                    <label for="ordenar">Ordenar por : </label>
-                    <select id="ordenar">
-                        <option value="estado">Disponibilidad</option>
-                        <option value="idioma">Idioma</option>
-                        <option value="editorial">Editorial</option>
-                        <option value="titulo">Título</option>
-                        <option value="autor">Autor</option>
-                        <option value="precio">Precio</option>
-                    </select>
-                    <a class="ayuda" href="#resultadosLista">lista ordenada</a>
-                    <a class="ayuda" href="#costo">libros costosos</a>
-                    <a class="ayuda" href="#paginas">libros con mas de 200 paginas</a> 
-                 </div>
-            </section>
-            <section class="seccion1-2">
-                <h1>libros disponibles</h1></a>
-                <div id="resultadosLista"></div>
-                <h1>libros mas costosos</h1></a>
-                <button id="filtrarCostosos">Filtrar 5 libros más costosos</button>
-                <div id="costo"></div>
-                <h1>libros que superan las 200 paginas</h1></a>
-                <div id="paginas"></div>
-                <h1>libros con precios entre $30000 COP y los $80000 COP </h1>
-                <div id="precio"></div>
-            </section>
-            <section>
-                
-            </section>
-            </section>
-            <footer>
-                <p>Grephel Desarrollo Web, copyright &copy; 2017</p>
-            </footer>
-            <script src="../assets/js/libros.js"></script>
-            <script src="../assets/js/categorias.js"></script>
-        
+    <nav>
+        <div class="breadcrumb-title">
+            <p>LIBRERIA </p> <p id="textocolor1"> EL AMANECER</p>
+        </div>
+        <ul>
+            <li><a href="../index.html" >INICIO</a></li>
+            <li><a href="categorias.html" class="activo">CATEGORIAS</a></li>
+        </ul>
+    </nav>
+    <main id="main">
+        <div class="container-filter" id="container-filter">
+            <button id="btnSort">Ordenar de la A-Z</button>
+            <label for="select-gender">Género</label>
+            <select name="" id="select-gender">
+                <option value="gender">Género</option>
+                <option value="everything">Todos</option>
+                <option value="Ficción">Ficción</option>
+                <option value="Novela">Novela</option>
+                <option value="Drama">Drama</option>
+                <option value="Cuento">Cuento</option>
+                <option value="Epopeya">Epopeya</option>
+                <option value="Autoayuda">Autoayuda</option>
+            </select>
+            <label for="select-availability">Disponibilidad</label>
+            <select name="" id="select-availability">
+                <option value="availability">Disponibilidad</option>
+                <option value="inStock">En Stock</option>
+                <option value="outOfStock">Agotado</option>          
+            </select>
+        </div>
+        <div id="lista" class="lista"></div>
     </main>
+    <section id="seccion2">
+      <h1>los libros mas costosos</h1>
+        <div id="estanteriaCostos"></div>
+    </section>
+    <section>
+      <button id="botonpaginas">Libros con más de 200 páginas</button>
+      <div id="librosMasDe200Paginas"></div>
+  </section>
+    <footer></footer>
+    <script type="module" src="../assets/js/libros.js"></script>
+    <script type="module" src="../assets/js/categorias.js"></script>
 </body>
 </html>
- 

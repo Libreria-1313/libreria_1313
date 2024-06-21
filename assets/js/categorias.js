@@ -1,93 +1,181 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const listaCosto = document.getElementById('costo');
-    const listaPaginas = document.getElementById('paginas');
-    const listaResultados = document.getElementById('resultadosLista');
-    const botonFiltrarCostosos = document.getElementById('filtrarCostosos');
-    botonFiltrarCostosos.classList.add('filtrarCostosos'); // Añadir clase CSS
-    const selectOrdenar = document.getElementById('ordenar');
+import { libros } from './libros.js';
 
-    function limpiarLista(lista) {
-        lista.innerHTML = ''; // Limpiar la lista antes de actualizarla
-    }
+const containerBooks = document.getElementById('lista');
+const filterGender = document.getElementById('select-gender');
+const btnSort = document.getElementById('btnSort');
+const estante2 = document.getElementById('estanteriaCostos');
+const numeropaginas = document.getElementById('numerodepaginas')
 
-    function crearDetalle(detalles) {
-        const fragment = document.createDocumentFragment();
-        detalles.forEach(detalle => {
-            const p = document.createElement('p');
-            p.textContent = `${detalle.label}: ${detalle.value}`;
-            fragment.appendChild(p);
-        });
-        return fragment;
-    }
 
-    function listarLibros(libros, lista) {
-        limpiarLista(lista);
+filterGender.addEventListener('change', filterToGender);
+btnSort.addEventListener('click', sortedBooks);
 
-        libros.forEach(libro => {
-            const libroItem = document.createElement('div');
-            libroItem.classList.add('libro');
 
-            const detalles = [
-                { label: 'Título', value: libro.titulo },
-                { label: 'Autor', value: libro.autor },
-                { label: 'Género', value: libro.genero },
-                { label: 'Idioma', value: libro.idioma },
-                { label: 'Precio', value: libro.precio },
-                { label: 'Editorial', value: libro.editorial },
-                { label: 'Páginas', value: libro.paginas },
-                { label: 'Fecha de Publicación', value: libro.fecha_publicacion },
-                { label: 'Disponibilidad', value: libro.estado }
-            ];
-
-            if (libro.Image) {
-                const image = document.createElement('img');
-                image.classList.add('img-libro'); // Añadir clase CSS
-                image.src = libro.Image;
-                image.alt = libro.titulo;
-                libroItem.appendChild(image);
-            }
-
-            libroItem.appendChild(crearDetalle(detalles));
-            lista.appendChild(libroItem);
-        });
-    }
-
-    function filtrarLibrosCostosos() {
-        const librosFiltrados = [...libros]
-            .map(libro => {
-                const precio = parseFloat(libro.precio.replace(/[^0-9.-]+/g, ""));
-                return { ...libro, precio };
-            })
-            .sort((a, b) => b.precio - a.precio)
-            .slice(0, 5);
-
-        listarLibros(librosFiltrados, listaCosto);
-    }
-
-    function filtrarLibrosPaginas() {
-        const librosFiltrados = libros.filter(libro => libro.paginas > 200);
-        listarLibros(librosFiltrados, listaPaginas);
-    }
-
-    function ordenarLibros(criterio) {
-        const librosOrdenados = [...libros].sort((a, b) => {
-            if (criterio === 'precio') {
-                const precioA = parseFloat(a.precio.replace(/[^0-9.-]+/g, ""));
-                const precioB = parseFloat(b.precio.replace(/[^0-9.-]+/g, ""));
-                return precioA - precioB;
-            } else {
-                return a[criterio].localeCompare(b[criterio]);
-            }
-        });
-        listarLibros(librosOrdenados, listaResultados);
-    }
-
-    botonFiltrarCostosos.addEventListener('click', filtrarLibrosCostosos);
-
-    selectOrdenar.addEventListener('change', (event) => {
-        ordenarLibros(event.target.value);
-    });
-
-    listarLibros(libros, listaResultados); // Mostrar todos los libros inicialmente
-    filtrarLibrosPaginas(); // Filtrar libros por páginas inicialmente
+window.addEventListener('DOMContentLoaded', () => {
+    generateCard();
+    mostrarCincoMasCostosos();
+    masDe200Paginas();
 });
+
+function generateCard() {  
+  libros.forEach(libro => makeCard(libro));
+}
+
+function makeCard(libros) {
+  // Crear elementos de la card
+  let bookCard = document.createElement('div');
+  bookCard.classList.add('book');
+
+  let bookPhoto = document.createElement('div');
+  bookPhoto.classList.add('book-photo');
+
+  let imgBook = document.createElement('img');
+  imgBook.src = libros.image;
+  imgBook.alt = libros.titulo;
+
+  let descriptionBook = document.createElement('div');
+  descriptionBook.classList.add('book-description');
+
+  let titleBook = document.createElement('h2');
+  titleBook.textContent = libros.titulo;
+
+  let priceBook = document.createElement('h3');
+  priceBook.textContent = `${libros.precio}$`;
+
+  let btnBuy = document.createElement('button');
+  btnBuy.textContent = 'Comprar';
+
+  bookPhoto.appendChild(imgBook);
+  
+  descriptionBook.appendChild(titleBook);
+  descriptionBook.appendChild(priceBook);
+  descriptionBook.appendChild(btnBuy);
+  
+  bookCard.appendChild(bookPhoto);
+  bookCard.appendChild(descriptionBook);
+
+  containerBooks.appendChild(bookCard);
+}
+
+function filterToGender(event) {     
+  containerBooks.innerHTML = '';
+  if (event.target.value === 'everything') {
+    generateCard();
+  } else {
+    libros.forEach(libro => {
+      if (libro.genero === event.target.value) {
+        makeCard(libro);
+      }
+    });
+  }
+}
+
+function sortedBooks() {
+  containerBooks.innerHTML = '';
+  libros.sort((a, b) => {
+    let titleA = a.titulo.toLowerCase();
+    let titleB = b.titulo.toLowerCase();
+    
+    if (titleA < titleB) {
+      return -1;
+    }
+    if (titleA > titleB) {
+      return 1;
+    }
+    return 0;
+  });
+  generateCard();
+}
+
+
+function mostrarCincoMasCostosos() {
+  const cincoMasCostosos = libros
+    .sort((a, b) => b.precio - a.precio)
+    .slice(0, 5);
+
+  const containerCostosos = document.createElement('div');
+  containerCostosos.classList.add('top-five-costosos');
+  
+  cincoMasCostosos.forEach(libro => {
+    let expensiveBookCard = document.createElement('div');
+    expensiveBookCard.classList.add('costosos');
+
+    let bookPhoto = document.createElement('div');
+    bookPhoto.classList.add('book-photo');
+
+    let imgBook = document.createElement('img');
+    imgBook.src = libro.image;
+    imgBook.alt = libro.titulo;
+
+    let descriptionBook = document.createElement('div');
+    descriptionBook.classList.add('book-description');
+
+    let titleBook = document.createElement('h2');
+    titleBook.textContent = libro.titulo;
+
+    let priceBook = document.createElement('h3');
+    priceBook.textContent = `${libro.precio}$`;
+
+    let btnBuy = document.createElement('button');
+    btnBuy.textContent = 'Comprar';
+
+    bookPhoto.appendChild(imgBook);
+    descriptionBook.appendChild(titleBook);
+    descriptionBook.appendChild(priceBook);
+    descriptionBook.appendChild(btnBuy);
+    
+    expensiveBookCard.appendChild(bookPhoto);
+    expensiveBookCard.appendChild(descriptionBook);
+
+    containerCostosos.appendChild(expensiveBookCard);
+  });
+
+  // Añadir el contenedor de libros más costosos a la sección del HTML específica
+  const estanteriaCostosos = document.getElementById('estanteriaCostos');
+  estanteriaCostosos.appendChild(containerCostosos);
+}
+
+function masDe200Paginas() {
+  const paginas = libros.filter(libro => libro.paginas > 200);
+
+  const containerPaginas = document.createElement('div');
+  containerPaginas.classList.add('paginas-mayor-a-200');
+  
+  paginas.forEach(libro => {
+    let paginaBookCard = document.createElement('div');
+    paginaBookCard.classList.add('book');
+
+    let bookPhoto = document.createElement('div');
+    bookPhoto.classList.add('book-photo');
+
+    let imgBook = document.createElement('img');
+    imgBook.src = libros.image;
+    imgBook.alt = libros.titulo;
+
+    let descriptionBook = document.createElement('div');
+    descriptionBook.classList.add('book-description');
+
+    let titleBook = document.createElement('h2');
+    titleBook.textContent = libro.titulo;
+
+    let priceBook = document.createElement('h3');
+    priceBook.textContent = `${libro.precio}$`;
+
+    let btnBuy = document.createElement('button');
+    btnBuy.textContent = 'Comprar';
+
+    bookPhoto.appendChild(imgBook);
+    descriptionBook.appendChild(titleBook);
+    descriptionBook.appendChild(priceBook);
+    descriptionBook.appendChild(btnBuy);
+    
+    paginaBookCard.appendChild(bookPhoto);
+    paginaBookCard.appendChild(descriptionBook);
+
+    containerPaginas.appendChild(paginaBookCard);
+  });
+
+  const librosMasDe200Paginas = document.getElementById('librosMasDe200Paginas');
+  librosMasDe200Paginas.innerHTML = '';
+  librosMasDe200Paginas.appendChild(containerPaginas);
+}

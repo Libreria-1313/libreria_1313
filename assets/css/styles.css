@@ -3,16 +3,12 @@
     padding: 0;
     box-sizing: content-box;
 }
-body{
-    background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWJ4dTZzbTFjZTVnem00aWd5OGJhdmJ2cTIzdmlxeXpkMDUyd2pzOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/94P1LEMyuVEeA/200.webp);
-}
 
 
 header{
     height: 70vh;
     width: 100%;
-    background-image: url(../imagenes/fondoHeader.png);
-    background-size: cover;
+    background-image: url(../imagenes/fondoHeader.jpeg);
     background-position: center;
     display: flex;
     justify-content: center;
@@ -86,26 +82,15 @@ li a {
     color:#f7450f;
 }
 
-.seccion1-1{
-    border-width: 5px;
-    border-radius: 20px;
-    border-color: #d14b0d;
-    border-style: groove;
-    text-align: center;
-    margin: 22px;
-	background-color:rgb(175, 175, 175) ;
-	color:rgb(9, 0, 0) ;
+.seccion1{
+	background-color:rgb(102, 102, 102) ;
+	color:rgb(255, 255, 255) ;
 	display: flex;
-	justify-content: space-around ;
-	flex-direction: column;
+	justify-content: space-around;
+	flex-direction: row;
 	align-items: center;
-    height: 40vh;
-    width: 250px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: oblique;
-    font-size: 15px;
+    height: 10vh;
 }
-
 
 #titulo{
 	display: flex;
@@ -137,6 +122,36 @@ li a {
     padding: 0px 10px; 
 }
 
+.seccion3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 40vh;
+    padding: 10px;
+}
+
+#imagenes{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 10px 0px;
+    width: 100%;;
+}
+
+#img1{
+    padding: 0px 15px;
+}
+
+#divtitulos{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+#divtitulos-h2{
+    padding: 0% 10px;
+}
 
 footer {
     background-color: #408cff;
@@ -149,117 +164,132 @@ footer {
 
 /* estilos de listas */
 
-#resultadosLista{
-    border-radius: 20px;
+#main{
+    background-image: url(../imagenes/fondoHeader.jpeg);
+}
+
+#container-filter{
+    display: flex;
     justify-content: center;
-    width: auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    background-color: #8f8f8f77;
-    border-style: solid;
-    border-color: #3a2708;
-    padding: px;
-    width: 1000px;
-    text-align: center;
-    border-width: 5px;
-}
-
-.libro{
-    background-image: url(../imagenes/libros.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 200px;
-    height: 350px;
-    justify-content: space-around;
-    border-style:inset;
-    border-color: #000000;
-    padding: 5px;
-    margin: 5px;
-    font-size: 15px;
-    border-radius: 5px 16px 5px 16px;
-    font-family: Georgia, 'Times New Roman', Times, serif;  
-}
-#paginas{
-    border-radius: 20px;
-    justify-content: center;
-    width: auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    background-color: #8f8f8f77;
-    border-style: solid;
-    border-color: #3a2708;
-    padding: px;
-    width: 1000px;
-    text-align: center;
-    border-width: 5px;   
-}
-#costo{
-    border-radius: 20px;
-    justify-content: center;
-    width: auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    background-color:#8f8f8f77;
-    border-style: solid;
-    border-color: #3a2708;
-    padding: px;
-    width: 1000px;
-    text-align: center;
-    border-width: 5px;
-}
-   
-
-
-
-aside{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     align-items: center;
-    background-color: #408cff;
-    border-style: solid;
-    border-color: #000000;
-    padding: 10px;
-    height: 10vh;
-    background-color: #b9b8b6;
+    flex-direction: column;
 }
 
-.ayuda{
+.container-filter {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .container-cards {
+    width: 100vw;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  #lista{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .book {
+    width: 25%;
+    height: 14rem;
+    border: double 5px gray;
+    background-color: white;
+    border-radius: 5px;  
+    margin: 1rem;
+    display: flex;  
+    align-items: center;
+  }
+  
+  .book-photo {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .book-photo > img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;  
+    box-shadow: -3px -3px 0 #34577ebc, 0 0 50px #022c5cbc;
+  }
+  
+  .book-description {
+    width: 70%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    background-color: transparent;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    padding: 0px 20px 0px 0px;
+    justify-content: space-around;
+    border-left: double 2px #5555cb;
+  }
+  
+  .book-description > h2 {
+    font-size: 1.5rem;
+    color: #5555cb;
+    text-align: center;
+  }
+  
+  .book-description > h3 {
+    font-size: 1rem;
+    margin-left: 1rem;
+    text-align: center;
+  }
+  
+  .book-description > h4 {
+    margin-top: 3rem;
+    color: #5555cb;
+    font-weight: 900;
+  }
+  
+  .book-description > button {
+    margin-top: 1rem;
+    width: 80%;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    font-weight: 600;
+    background-color: #0739f0c8;
+    color: #fff;
+    cursor: pointer;  
+    transition: background-color 0.3s ease;
+  }
+  
+  .book-description > button:hover,
+  .book-description > button:focus {
+    background-color: #366f36;
+  }
+  
+  #btnSort {
+    width: 10rem;
+    border-radius: 15px;
+    border: double 5px #041c93;
+  }
+
+
+#seccion2{
+  display: flex;
+  flex-direction: column;
+  background-color: #041c93;
 }
-/* caja principal */
-#todo{
-    display:flex;
-    width: 100%;
-    justify-content: space-evenly;
-}
-/* seccio 1-2 */
-#seccion1-2{
-    margin: 20px 20px 20px 20px;
-    align-items: center;
-}
-.img-libro {
-    width: 60px;
-    height: auto; /* Mantener la proporción */
-    border: #000000;
-    border-width: 3px;
-    border-style: solid;
-    border-radius:1cqi;
-}
-.filtrarCostosos{
-    background-color: #f7450f;
-    border-radius: 10px 0px 10px 0px;
-    height: 50px;
-    width: 200px;
-    margin: auto;
+
+  #estanteriaCostos{
+    display: flex;
+
+  }
+
+.costosos{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: double 5px gray;
+  background-color: white;
+  border-radius: 5px;  
+  margin: 1rem;
 }
