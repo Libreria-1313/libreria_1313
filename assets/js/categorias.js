@@ -1,7 +1,11 @@
 import { libros } from './libros.js';
 
 const containerBooks = document.getElementById('lista');
-const filterGender = document.getElementById('select-gender').addEventListener('change', filterToGender);
+const filterToGenero = document.getElementById('select-gender').addEventListener('change', filterToGeneros);
+const filterToDisponibilidad = document.getElementById('select-disponibles').addEventListener('change', filterToDisponibilidad2);
+const filterToIdioma = document.getElementById('select-lenguaje').addEventListener('change', filterToIdiomas);
+const filterToEditorial = document.getElementById('select-edito').addEventListener('change', filterToEditoriales);
+const filterToAutor = document.getElementById('select-escritor').addEventListener('change', filterToAutores);
 const btnSort = document.getElementById('btnSort').addEventListener('click', sortedBooks);
 const btnTopPrices = document.getElementById('btnTopPrices').addEventListener('click', filterTopPrices);
 const btnMoreThan200Pages = document.getElementById('btnMoreThan200Pages').addEventListener('click', filterMoreThan200Pages);
@@ -36,8 +40,11 @@ function makeCard(libro) {
   let titleBook = document.createElement('h2');
   titleBook.textContent = libro.titulo;
 
+  let autor = document.createElement('h3');
+  autor.textContent = libro.autor;
+
   let priceBook = document.createElement('h3');
-  priceBook.textContent = `${libro.precio}$`;
+  priceBook.textContent = `${libro.precio} COP`;
 
   let btnBuy = document.createElement('button');
   btnBuy.textContent = 'Comprar';
@@ -45,6 +52,7 @@ function makeCard(libro) {
   bookPhoto.appendChild(imgBook);
   
   descriptionBook.appendChild(titleBook);
+  descriptionBook.appendChild(autor);
   descriptionBook.appendChild(priceBook);
   descriptionBook.appendChild(btnBuy);
   
@@ -55,7 +63,7 @@ function makeCard(libro) {
   return bookCard;
 }
 
-function filterToGender(event) {     
+function filterToGeneros(event) {     
   containerBooks.innerHTML = '';
   if (event.target.value === 'everything') {
     generateCard();
@@ -63,10 +71,63 @@ function filterToGender(event) {
     libros.forEach(libro => {
       if (libro.genero === event.target.value) {
         makeCard(libro);
-      }
+      } 
     });
   }  
 }
+
+function filterToDisponibilidad2(event) {     
+  containerBooks.innerHTML = '';
+  if (event.target.value === 'everything') {
+    generateCard();
+  } else {
+    libros.forEach(libro => {
+      if (libro.diponibilidad === event.target.value) {
+        makeCard(libro);
+      } 
+    });
+  }  
+}
+
+function filterToIdiomas(event) {     
+  containerBooks.innerHTML = '';
+  if (event.target.value === 'everything') {
+    generateCard();
+  } else {
+    libros.forEach(libro => {
+      if (libro.idioma === event.target.value) {
+        makeCard(libro);
+      } 
+    });
+  }  
+}
+
+function filterToEditoriales(event) {     
+  containerBooks.innerHTML = '';
+  if (event.target.value === 'everything') {
+    generateCard();
+  } else {
+    libros.forEach(libro => {
+      if (libro.editorial === event.target.value) {
+        makeCard(libro);
+      } 
+    });
+  }  
+}
+
+function filterToAutores(event) {     
+  containerBooks.innerHTML = '';
+  if (event.target.value === 'everything') {
+    generateCard();
+  } else {
+    libros.forEach(libro => {
+      if (libro.autor === event.target.value) {
+        makeCard(libro);
+      } 
+    });
+  }  
+}
+
 
 function sortedBooks() {
   containerBooks.innerHTML = '';

@@ -10,7 +10,6 @@ header{
     width: 100%;
     background-image: url(../imagenes/fondoHeader.jpeg);
     background-position: center;
-    padding: 0% 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,6 +27,7 @@ header{
     font-size: 28px;
     font-family: Arial, Helvetica, sans-serif;
     color: #ffae00 ;
+    padding: 40px 350px;
 }
 
 
@@ -48,7 +48,6 @@ nav {
     font-size: 20px;
     color: #ffffff;
     padding: 0px 18px;
-    position: relative;
 }
 #textocolor1{
     color: #f7450f;
@@ -272,41 +271,3 @@ footer {
     border-radius: 15px;
     border: double 5px #041c93;
   }
-
-
-#seccion2{
-  display: flex;
-  flex-direction: column;
-  background-color: #041c93;
-}
-
-  #estanteriaCostos{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-.costosos{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: double 5px gray;
-  background-color: white;
-  border-radius: 5px;  
-  margin: 1rem;
-  height: 200px;
-  width: 28%;
-
-}
-
-
-.top-five-costosos{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.paginas-mayor-a-200{
-  display: flex;
-  flex-wrap: wrap;
-}

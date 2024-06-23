@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style2.css">
+    <title>Biblioteca</title>
+</head>
+<body>
+    <button onclick="agregarNuevoLibro()">Agregar Nuevo Libro</button>
+    <h2>Buscar y Eliminar Libro</h2>
+    <form id="searchForm">
+        <label for="searchCriteria">Criterio de Búsqueda:</label>
+        <select id="searchCriteria">
+            <option value="titulo">Título</option>
+            <option value="editorial">Editorial</option>
+            <option value="precio">Precio</option>
+        </select>
+        <label for="searchValue">Opción:</label>
+        <input type="text" id="searchValue" required>
+        <button type="button" onclick="searchAndDeleteBook()">Buscar y Eliminar</button>
+    </form>
+  <div class="change-editorial">
+    <h3>Cambiar editorial del libro</h3>
+    <select id='libro-select'>
+        <option value="">Selecciona un libro</option>
+    </select>
+    <input type="text" id='nueva-editorial-input' placeholder="Nueva Editorial">
+    <button onclick="cambiarEditorial()">Cambiar Editorial</button>
+</div>
+</div>
+    <h1>Lista de Libros</h1>
+    <div id="divbooks"></div>
+
+    <script type="module" src="../assets/js/app3.js"></script>
+    <script type="module" src="../assets/js/libros.js"></script>
+    <script type="module" src="../assets/js/categorias.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+       body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .book {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .book:last-child {
+            border-bottom: none;
+        }
+        .book h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .book p {
+            margin: 5px 0;
+        }
+        .book strong {
+            font-weight: bold;
+        }
+        .change-editorial {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .change-editorial select,
+        .change-editorial input,
+        .change-editorial button {
+            padding: 10px;
+            margin: 5px 0;
+            font-size: 1em;
+        }
