@@ -207,28 +207,38 @@ footer {
 /* estilos de listas */
 
 #main{
-    background-image: url(../imagenes/fondoHeader.jpeg);
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+    width: auto;
+    
 }
 
 #container-filter{
+    width: 350px;
+    padding-bottom: 540px;
+    padding-left:90px;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
 }
 
-.container-filter {
+/* .container-filter {
     width: 100%;
     display: flex;
     justify-content: space-around;
-  }
+  } */
   
   .container-cards {
-    width: 100vw;
+   
     height: 40%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+  }
+  #lista{
+    justify-content: center;
   }
   
   #lista{
@@ -238,11 +248,11 @@ footer {
   }
 
   .book {
-    width: 25%;
-    height: 14rem;
-    border: double 5px gray;
-    background-color: white;
-    border-radius: 5px;  
+    width: 40%;
+    height: 18rem;
+    padding-bottom: 50px;
+    background-image: url(../imagenes/card.png);
+    background-size: cover;
     margin: 1rem;
     display: flex;  
     align-items: center;
