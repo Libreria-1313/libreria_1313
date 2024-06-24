@@ -3,13 +3,18 @@
     padding: 0;
     box-sizing: content-box;
 }
+body{
+  background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGs1a2xqNTllZno5YTVjbHRyNDdrbXZ2bDVzbGduazBqM3ZweGViNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/94P1LEMyuVEeA/200.webp);
+}
 
 
 header{
-    height: 70vh;
+    height: 40vh;
     width: 100%;
-    background-image: url(../imagenes/fondoHeader.jpeg);
+    background-image: url(../imagenes/ff.png);
     background-position: center;
+    background-size: cover;
+    margin: -10px 0px -10px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,10 +40,41 @@ header{
 nav {
     display: flex; 
     justify-content: space-between;
-    background-color: #4b4946 ;
-    border-bottom: solid 4px #57d0e6;
-    height: 10vh;
+    background-image: url(../imagenes/header.png);
+    background-size: contain;
+    height: 20vh;
+    padding: 0px 0px 20
+    px 0px;
    
+}
+/* #logo{
+  margin-left: 50px;
+  margin-bottom: 40px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+} */
+
+#title-logo{
+  font-size:90px;
+  margin-bottom: 10px;
+}
+#logo{
+  font-size: 50px;
+  margin-bottom: -20px;
+  margin-left: 20px;
+  color:red;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style:oblique;
+  
+}
+#logo2{
+  font-size: 50px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+  color:red;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style:oblique;
 }
 
 .breadcrumb-title{
@@ -48,6 +84,11 @@ nav {
     font-size: 20px;
     color: #ffffff;
     padding: 0px 18px;
+    background-color: black;
+    height: 120px;
+    margin-top:10px;
+    margin-left: 20px;
+    border-radius: 20px;
 }
 #textocolor1{
     color: #f7450f;
@@ -83,7 +124,8 @@ li a {
 }
 
 .seccion1{
-	background-color:rgb(102, 102, 102) ;
+	background-image: url(../imagenes/headerD.png);
+  background-size: contain;
 	color:rgb(255, 255, 255) ;
 	display: flex;
 	justify-content: space-around;
@@ -127,7 +169,7 @@ li a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 40vh;
+    height: 70vh;
     padding: 10px;
 }
 
@@ -270,4 +312,60 @@ footer {
     width: 10rem;
     border-radius: 15px;
     border: double 5px #041c93;
+  }
+  /* slider */
+  .slider{
+    width: 1200px;
+    height: 550px;
+    overflow: hidden;
+    margin-right: 0px;
+    border-radius:10in;
+    background: rgba(94, 94, 94, 0.153);
+    box-shadow: 0 0.9rem 9rem rgb(0, 0, 0);
+    justify-content: right;
+    margin-top: 0px;
+    
+  }
+  .slider ul{
+      display: flex;
+      animation: cambio 20s infinite alternate linear;
+      width: 400%;
+      
+  }
+  .slider li{
+      width: 100%;
+      list-style: none;
+      
+  }
+  .slider img{
+      width: 1200px;
+      height: 550px;
+      
+      
+  }
+  @keyframes cambio{
+      0%{margin-left: 0;}
+      19%{margin-left: 0;}
+      
+      24%{margin-left: -100%;}
+      44%{margin-left: -100%;}
+      
+      49%{margin-left: -200%;}
+      69%{margin-left: -200%;}
+      
+      74%{margin-left: -300%;}
+      100%{margin-left: -300%;}
+  }
+  @media only screen and (min-width:320px) and (max-width:768px){
+  .slider, .slider ul, .slider img{
+      height: 100px;
+      width: 100px;
+      
+  }
+  }
+  /* contenidos del slider */
+  #imagenS{
+    margin: 60px 20px 20px 20px;
+    width: 250px;
+    height: 400px;
   }
