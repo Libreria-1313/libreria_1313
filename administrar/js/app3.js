@@ -631,102 +631,104 @@
     
     ];
 
+// Obtener el contenedor de libros y el elemento de selección de libros del DOM
 const divbooks = document.getElementById('divbooks');
 const libroSelect = document.getElementById('libro-select');
 
-// Cargar libros cuando se carga la página
+// Cargar los libros cuando se carga la página
 loadBooks();
 
+// Función para listar todos los libros en el contenedor y en el selector
 function listBooks() {
-    divbooks.innerHTML = ''; // Limpiar contenido anterior
+    divbooks.innerHTML = ''; // Limpiar el contenido anterior del contenedor de libros
 
     libros.forEach(book => {
-        createBook(book); // Llamar a createBook para cada libro
-        addBookOption(book); // Agregar opción al selector
+        createBook(book); // Llamar a createBook para cada libro para mostrarlo en el contenedor
+        addBookOption(book); // Agregar opción del libro al selector
     });
 }
 
+// Función para cargar todos los libros al iniciar la página
 function loadBooks() {
-    divbooks.innerHTML = ''; // Limpiar contenido anterior
+    divbooks.innerHTML = ''; // Limpiar el contenido anterior del contenedor de libros
 
     libros.forEach((book, index) => {
-        createBook(book); // Llamar a createBook para cada libro
-        addBookOption(book); // Agregar opción al selector
+        createBook(book); // Llamar a createBook para cada libro para mostrarlo en el contenedor
+        addBookOption(book); // Agregar opción del libro al selector
     });
 
-    // Opcionalmente, mostrar el primer libro por defecto
+    // Opcionalmente, mostrar los detalles del primer libro por defecto si hay libros disponibles
     if (libros.length > 0) {
         showBookDetails(libros[0].titulo); // Mostrar los detalles del primer libro por defecto
     }
 }
 
+// Función para crear la estructura de cada libro y añadirlo al contenedor
 function createBook(book) {
     const myBook = document.createElement('div');
-    myBook.classList.add('book');
+    myBook.classList.add('book'); // Asignar clase 'book' al div del libro
 
     const title = document.createElement('h2');
-    title.textContent = book.titulo;
+    title.textContent = book.titulo; // Asignar el título del libro
 
     const image = document.createElement('img');
-    image.src = book.Image; // Asigna la URL de la imagen desde el objeto book
-    image.alt = book.titulo; // Agrega un atributo alt para accesibilidad
+    image.src = book.Image; // Asignar la URL de la imagen desde el objeto book
+    image.alt = book.titulo; // Agregar un atributo alt para accesibilidad
 
     const autor = document.createElement('p');
-    autor.textContent = `Autor: ${book.autor}`;
+    autor.textContent = `Autor: ${book.autor}`; // Asignar el autor del libro
 
     const genero = document.createElement('p');
-    genero.textContent = `Género: ${book.genero}`;
+    genero.textContent = `Género: ${book.genero}`; // Asignar el género del libro
 
     const idioma = document.createElement('p');
-    idioma.textContent = `Idioma: ${book.idioma}`;
+    idioma.textContent = `Idioma: ${book.idioma}`; // Asignar el idioma del libro
 
     const precio = document.createElement('p');
-    precio.textContent = `Precio: ${book.precio}`;
+    precio.textContent = `Precio: ${book.precio}`; // Asignar el precio del libro
 
     const formato = document.createElement('p');
-    formato.textContent = `Formato: ${book.formato}`;
+    formato.textContent = `Formato: ${book.formato}`; // Asignar el formato del libro
 
     const isbn = document.createElement('p');
-    isbn.textContent = `ISBN: ${book.isbn}`;
+    isbn.textContent = `ISBN: ${book.isbn}`; // Asignar el ISBN del libro
 
     const descripcion = document.createElement('p');
-    descripcion.textContent = `Descripción: ${book.descripcion}`;
+    descripcion.textContent = `Descripción: ${book.descripcion}`; // Asignar la descripción del libro
 
     const estado = document.createElement('p');
-    estado.textContent = `Estado: ${book.estado}`;
+    estado.textContent = `Estado: ${book.estado}`; // Asignar el estado del libro
 
     const ubicacion = document.createElement('p');
-    ubicacion.textContent = `Ubicación: ${book.ubicacion}`;
+    ubicacion.textContent = `Ubicación: ${book.ubicacion}`; // Asignar la ubicación del libro
 
     const fecha = document.createElement('p');
-    fecha.textContent = `Fecha de publicación: ${book.fecha_publicacion}`;
+    fecha.textContent = `Fecha de publicación: ${book.fecha_publicacion}`; // Asignar la fecha de publicación del libro
 
     const editorial = document.createElement('p');
-    editorial.textContent = `Editorial: ${book.editorial}`;
+    editorial.textContent = `Editorial: ${book.editorial}`; // Asignar la editorial del libro
 
     const paginas = document.createElement('p');
-    paginas.textContent = `Páginas: ${book.paginas}`;
+    paginas.textContent = `Páginas: ${book.paginas}`; // Asignar el número de páginas del libro
 
     const stock = document.createElement('p');
-    stock.textContent = `Stock: ${book.stock}`;
+    stock.textContent = `Stock: ${book.stock}`; // Asignar el stock del libro
 
-    const stockContainer = document.createElement('div');
+    const stockContainer = document.createElement('div'); // Crear contenedor para el stock
 
     const stockLabel = document.createElement('label');
-    stockLabel.textContent = 'Stock: ';
+    stockLabel.textContent = 'Stock: '; // Etiqueta del stock
 
     const stockValue = document.createElement('span');
-    stockValue.textContent = book.stock;
+    stockValue.textContent = book.stock; // Valor del stock
 
     const increaseStockButton = document.createElement('button');
     increaseStockButton.textContent = '+';
-    increaseStockButton.addEventListener('click', () => increaseStock(book));
+    increaseStockButton.addEventListener('click', () => increaseStock(book)); // Evento para incrementar el stock
 
     const decreaseStockButton = document.createElement('button');
     decreaseStockButton.textContent = '-';
-    decreaseStockButton.addEventListener('click', () => decreaseStock(book));
-
-   
+    decreaseStockButton.addEventListener('click', () => decreaseStock(book)); // Evento para decrementar el stock
 
     // Añadir elementos al contenedor de cada libro
     myBook.appendChild(title);
@@ -748,8 +750,6 @@ function createBook(book) {
     stockContainer.appendChild(stockValue);
     stockContainer.appendChild(increaseStockButton);
     stockContainer.appendChild(decreaseStockButton);
-    // Agregar el botón de comprar al libro
-
     // Añadir el contenedor del stock al libro
     myBook.appendChild(stockContainer);
 
@@ -757,8 +757,8 @@ function createBook(book) {
     divbooks.appendChild(myBook);
 }
 
-  // Función para buscar y eliminar un libro
-  function searchAndDeleteBook() {
+// Función para buscar y eliminar un libro basado en criterios
+function searchAndDeleteBook() {
     const searchCriteria = document.getElementById('searchCriteria').value;
     const searchValue = document.getElementById('searchValue').value.toLowerCase();
 
@@ -771,7 +771,7 @@ function createBook(book) {
             (searchCriteria === 'editorial' && book.editorial.toLowerCase() === searchValue) ||
             (searchCriteria === 'precio' && book.precio.toLowerCase() === searchValue) // Modificar según los criterios de búsqueda necesarios
         ) {
-            libros.splice(i, 1);
+            libros.splice(i, 1); // Eliminar el libro del arreglo libros
             bookFound = true;
             break;
         }
@@ -785,11 +785,13 @@ function createBook(book) {
     }
 }
 
+// Función para incrementar el stock de un libro
 function increaseStock(book) {
     book.stock++; // Incrementa el stock del libro seleccionado
     listBooks(); // Vuelve a renderizar la lista de libros para mostrar el cambio
 }
 
+// Función para decrementar el stock de un libro
 function decreaseStock(book) {
     if (book.stock > 0) {
         book.stock--; // Decrementa el stock del libro seleccionado solo si es mayor que cero
@@ -799,6 +801,7 @@ function decreaseStock(book) {
     }
 }
 
+// Función para agregar una opción de libro al selector
 function addBookOption(book) {
     const option = document.createElement('option');
     option.value = book.titulo; // El valor del option será el título del libro
@@ -807,11 +810,13 @@ function addBookOption(book) {
     libroSelect.appendChild(option);
 }
 
+// Evento para mostrar los detalles del libro seleccionado cuando cambia el selector
 libroSelect.addEventListener('change', (event) => {
     const selectedBookTitle = event.target.value;
     showBookDetails(selectedBookTitle);
 });
 
+// Función para mostrar los detalles del libro seleccionado
 function showBookDetails(selectedBookTitle) {
     const selectedBook = libros.find(book => book.titulo === selectedBookTitle);
 
@@ -820,16 +825,14 @@ function showBookDetails(selectedBookTitle) {
     bookDetails.innerHTML = ''; // Limpiar contenido anterior
 
     const title = document.createElement('h2');
-    title.textContent = selectedBook.titulo;
+    title.textContent = selectedBook.titulo; // Asignar el título del libro seleccionado
 
     const image = document.createElement('img');
-    image.src = selectedBook.Image;
-    image.alt = selectedBook.titulo;
+    image.src = selectedBook.Image; // Asignar la URL de la imagen del libro seleccionado
+    image.alt = selectedBook.titulo; // Asignar el atributo alt de la imagen
 
     const author = document.createElement('p');
-    author.textContent = `Autor: ${selectedBook.autor}`;
-
-    // Agregar más detalles del libro según necesites
+    author.textContent = `Autor: ${selectedBook.autor}`; // Asignar el autor del libro seleccionado
 
     // Añadir elementos al contenedor de detalles del libro
     bookDetails.appendChild(title);
@@ -843,62 +846,10 @@ function showBookDetails(selectedBookTitle) {
 function cambiarEditorial() {
     const nuevaEditorial = document.getElementById('nueva-editorial-input').value;
     const selectedBookTitle = libroSelect.value;
-
-    if (selectedBookTitle) {
-        const selectedBook = libros.find(book => book.titulo === selectedBookTitle);
-        selectedBook.editorial = nuevaEditorial;
-        alert(`La editorial ha sido cambiada a: "${nuevaEditorial}" para el libro seleccionado`);
-        listBooks(); // Actualizar la lista de libros mostrados
-    } else {
-        alert('Por favor, selecciona un libro');
-    }
 }
 
-function agregarNuevoLibro() {
-    const nuevoLibro = {};
+   
 
-    // Recolectar información del nuevo libro utilizando prompt
-    nuevoLibro.titulo = prompt('Ingrese el título del libro:');
-    nuevoLibro.autor = prompt('Ingrese el autor del libro:');
-    nuevoLibro.genero = prompt('Ingrese el género del libro:');
-    nuevoLibro.idioma = prompt('Ingrese el idioma del libro:');
-    nuevoLibro.precio = parseInt(prompt('Ingrese el precio del libro en EUR:'));
-    nuevoLibro.formato = prompt('Ingrese el formato del libro:');
-    nuevoLibro.isbn = parseInt(prompt('Ingrese el ISBN del libro:'));
-    nuevoLibro.descripcion = prompt('Ingrese la descripción del libro:');
-    nuevoLibro.estado = prompt('Ingrese el estado del libro (Nuevo/Usado):');
-    nuevoLibro.ubicacion = prompt('Ingrese la ubicación del libro:');
-    nuevoLibro.fecha_publicacion = prompt('Ingrese la fecha de publicación del libro en formato AAAA-MM-DD:');
-    nuevoLibro.editorial = prompt('Ingrese la editorial del libro:');
-    nuevoLibro.paginas = parseInt(prompt('Ingrese el número de páginas del libro:'));
-    nuevoLibro.stock = parseInt(prompt('Ingrese el stock inicial del libro:'));
-    nuevoLibro.Image = prompt('Ingrese la URL de la imagen del libro:');
-
-    // Validar que se ingresen todos los campos obligatorios antes de agregar el libro
-    if (
-        nuevoLibro.titulo &&
-        nuevoLibro.autor &&
-        nuevoLibro.genero &&
-        nuevoLibro.idioma &&
-        nuevoLibro.precio &&
-        nuevoLibro.formato &&
-        nuevoLibro.isbn &&
-        nuevoLibro.descripcion &&
-        nuevoLibro.estado &&
-        nuevoLibro.ubicacion &&
-        nuevoLibro.fecha_publicacion &&
-        nuevoLibro.editorial &&
-        !isNaN(nuevoLibro.paginas) &&
-        !isNaN(nuevoLibro.stock) &&
-        nuevoLibro.Image
-    ) {
-        libros.push(nuevoLibro); // Agregar el nuevo libro al arreglo libros
-        listBooks(libros); // Actualizar la lista de libros mostrados (esto es una función hipotética, deberías reemplazarlo con tu lógica de actualización)
-        alert('Libro agregado con éxito!');
-    } else {
-        alert('Por favor, complete todos los campos correctamente, incluyendo la URL de la imagen.');
-    }
-}
 
 
 
