@@ -3,55 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style2.css">
+    <link rel="stylesheet" href="style/style2.css"> <!-- Enlace al archivo CSS personalizado -->
     <!-- <link rel="stylesheet" href="../assets/css/styles.css"> -->
     <title>Biblioteca</title>
 </head>
 <body>
+    <!-- Barra de navegación -->
     <nav>
         <div class="breadcrumb-title">
-        <p id="title-logo">LIBRERIA </p> 
-        <div>
-            <p id="logo">13</p>
-            <p id="logo2">13</p>
-        </div>
-        
-        <!-- <img src="assets/imagenes/logo.png" alt="logo" id="logo"> -->
+            <p id="title-logo">LIBRERIA</p>
+            <div>
+                <p id="logo">13</p>
+                <p id="logo2">13</p>
+            </div>
+            <!-- <img src="assets/imagenes/logo.png" alt="logo" id="logo"> -->
         </div>
         <ul>
             <li><a href="../index.html" class="activo">INICIO</a></li>
             <li><a href="../templates/categorias.html" class="activo">CATEGORIAS</a></li>
-            <li><a href="../administrar/index3.html" class="activo" >ADMINISTRAR</a></li>
+            <li><a href="../administrar/index3.html" class="activo">ADMINISTRAR</a></li>
         </ul>
     </nav>
+
+    <!-- Contenedor principal de botones y formularios -->
     <div id="botones">
-    <button id="boton-A" onclick="agregarNuevoLibro()">Agregar Nuevo Libro</button>
-    
-    <form id="searchForm">
-        <h2>Buscar y Eliminar Libro</h2>
-        <label for="searchCriteria">Criterio de Búsqueda:</label>
-        <select id="searchCriteria">
-            <option value="titulo">Título</option>
-            <option value="editorial">Editorial</option>
-            <option value="precio">Precio</option>
-        </select>
-        <label for="searchValue">Opción:</label>
-        <input type="text" id="searchValue" required>
-        <button id="boton-E" type="button" onclick="searchAndDeleteBook()">Buscar y Eliminar</button>
-    </form>
-    <div class="change-editorial">
-        <h3>Cambiar editorial del libro</h3>
-        <select id='libro-select'>
-            <option value="">Selecciona un libro</option>
-        </select>
-        <input type="text" id='nueva-editorial-input' placeholder="Nueva Editorial">
-        <button id="boton-C" onclick="cambiarEditorial()">Cambiar Editorial</button>
+        <!-- Botón para agregar un nuevo libro -->
+        <button id="boton-A" onclick="agregarNuevoLibro()">Agregar Nuevo Libro</button>
+
+        <!-- Formulario para buscar y eliminar un libro -->
+        <form id="searchForm">
+            <h2>Buscar y Eliminar Libro</h2>
+            <label for="searchCriteria">Criterio de Búsqueda:</label>
+            <select id="searchCriteria">
+                <option value="titulo">Título</option>
+                <option value="editorial">Editorial</option>
+                <option value="precio">Precio</option>
+            </select>
+            <label for="searchValue">Opción:</label>
+            <input type="text" id="searchValue" required>
+            <button id="boton-E" type="button" onclick="searchAndDeleteBook()">Buscar y Eliminar</button>
+        </form>
+
+        <!-- Div para cambiar la editorial del libro -->
+        <div class="change-editorial">
+            <h3>Cambiar editorial del libro</h3>
+            <select id='libro-select'>
+                <option value="">Selecciona un libro</option>
+            </select>
+            <input type="text" id='nueva-editorial-input' placeholder="Nueva Editorial">
+            <button id="boton-C" onclick="cambiarEditorial()">Cambiar Editorial</button>
+        </div>
     </div>
-</div>
-</div>
+
+    <!-- Título principal de la página -->
     <h1>Lista de Libros</h1>
+
+    <!-- Contenedor donde se mostrarán los libros -->
     <div id="divbooks"></div>
+
+    <!-- Scripts para cargar funcionalidades de los libros -->
     <script type="module" src="assets/js/libros.js"></script>
-    <script typr="module" src="js/app3.js"></script>
+    <script type="module" src="js/app3.js"></script>
 </body>
 </html>
