@@ -1,65 +1,53 @@
-/* Estilos para las imágenes dentro de los libros */
-img {
-  height: 200px; /* Altura fija para todas las imágenes */
-  width: 200px; /* Ancho fijo para todas las imágenes */
+img{
+    height: 200px;
+    width: 200px;
 }
-
-/* Estilos para el contenedor de botones */
-#botones {
-  display: flex; /* Flexbox para alinear elementos hijos */
-  flex-wrap: wrap; /* Permitir envolver los elementos cuando no caben en una sola línea */
-  background-color: rgb(165, 157, 157); /* Color de fondo */
-  height: 70px; /* Altura fija */
-  justify-content: space-evenly; /* Distribución equitativa del espacio entre los elementos */
-  padding: 19px; /* Espaciado interno */
-  margin: 0px 50px 0px 50px; /* Márgenes */
-  border-radius: 10px; /* Radio de borde */
-  border-color: black; /* Color del borde */
-  border-width: 5px; /* Ancho del borde */
-  border-style: solid; /* Estilo del borde */
+#botones{
+    display: flex;
+    flex-wrap: wrap;
+    background-color:rgb(165, 157, 157) ;
+    height: 70px;
+    justify-content: space-evenly;
+    padding: 19px;
+    margin: 0px 50px 0px 50px;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+    padding: 40px;
 }
-
-/* Estilos para el formulario de búsqueda y eliminación de libros */
-#searchForm {
-  font-size: 1.5rem; /* Tamaño de fuente */
+#searchForm{
+    font-size: 1.5rem;
 }
-
-/* Estilos para el botón de buscar y eliminar */
-#boton-E {
-  background-color: rgba(165, 42, 42, 0.64); /* Color de fondo con transparencia */
-  width: 90px; /* Ancho fijo */
-  font-size: 1rem; /* Tamaño de fuente */
-  margin-bottom: 20px; /* Margen inferior */
-  border-radius: 50px; /* Radio de borde */
+#boton-E{
+    background-color: rgba(165, 42, 42, 0.64);
+    width: 90px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border-radius: 50px;
 }
-
-/* Estilos para el botón de cambiar editorial */
-#boton-C {
-  background-color: rgba(136, 40, 181, 0.624); /* Color de fondo con transparencia */
-  width: 90px; /* Ancho fijo */
-  font-size: 1rem; /* Tamaño de fuente */
-  margin-bottom: 20px; /* Margen inferior */
-  border-radius: 50px; /* Radio de borde */
+#boton-C{
+    background-color: rgba(136, 40, 181, 0.624);
+    width: 90px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border-radius: 50px;
 }
-
-/* Estilos para el botón de agregar nuevo libro */
-#boton-A {
-  background-color: rgba(3, 150, 3, 0.647); /* Color de fondo con transparencia */
-  width: 140px; /* Ancho fijo */
-  padding: 10px; /* Relleno interno */
-  font-size: 1rem; /* Tamaño de fuente */
-  margin-bottom: 20px; /* Margen inferior */
-  border-radius: 50px; /* Radio de borde */
+#boton-A{
+    background-color: rgba(3, 150, 3, 0.647);
+    width: 140px;
+    padding:10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border-radius: 50px;
 }
-
-/* Estilos para el contenedor de cambio de editorial */
-.change-editorial {
-  font-size: 1.5rem; /* Tamaño de fuente */
+.change-editorial{
+    font-size: 1.5rem;
 }
-
-/* Estilos generales para los libros */
+#divbooks{
+    width: 200px;
+}
 .book {
-
     width: auto;
     height: 18rem;
     padding-bottom: 10px;
@@ -81,7 +69,7 @@ img {
   .book > p{
     color: #000000;
     padding: 10px;
-    font-size:1.3rem;
+    font-size:1.2rem;
   }
   .book > img{
     width: 150px;
@@ -111,172 +99,89 @@ img {
 }
 body{
   background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGs1a2xqNTllZno5YTVjbHRyNDdrbXZ2bDVzbGduazBqM3ZweGViNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/94P1LEMyuVEeA/200.webp);
-
-  width: auto; /* Ancho automático */
-  height: 18rem; /* Altura fija */
-  padding-bottom: 10px; /* Espaciado inferior */
-  background-color: rgb(173, 173, 173); /* Color de fondo */
-  background-size: cover; /* Ajuste de tamaño de fondo */
-  margin: 1rem; /* Márgenes */
-  display: flex; /* Flexbox para alinear elementos internos */
-  align-items: center; /* Alinear elementos verticalmente */
-  flex-direction: column; /* Dirección de los elementos flexibles */
-  flex-wrap: wrap; /* Envolver elementos flexibles */
-  justify-content: space-evenly; /* Distribución equitativa del espacio */
-  justify-content: center; /* Alinear al centro */
-  border-radius: 15px; /* Radio de borde */
-  border-color: black; /* Color del borde */
-  border-width: 5px; /* Ancho del borde */
-  border-style: solid; /* Estilo del borde */
-
 }
 
-/* Estilos para los párrafos dentro de los libros */
-.book > p {
-  color: #000000; /* Color de texto */
-  padding: 10px; /* Relleno interno */
-  font-size: 1.2rem; /* Tamaño de fuente */
-}
-
-/* Estilos para las imágenes dentro de los libros */
-.book > img {
-  width: 150px; /* Ancho fijo para las imágenes */
-  border-radius: 15px; /* Radio de borde */
-  border-color: black; /* Color del borde */
-  border-width: 5px; /* Ancho del borde */
-  border-style: solid; /* Estilo del borde */
-}
-
-/* Estilos para el contenedor de stock dentro de los libros */
-.book > div {
-  padding: 10px; /* Relleno interno */
-}
-
-/* Estilos para el contenedor principal de libros */
-#divbooks {
-  justify-content: center; /* Alinear al centro */
-  width: 1900px; /* Ancho fijo */
-  background-color: rgba(132, 132, 132, 0.574); /* Color de fondo con transparencia */
-  height: auto; /* Altura automática */
-  margin: 2.2%; /* Márgenes */
-  padding: 10px; /* Relleno interno */
-  border-radius: 15px; /* Radio de borde */
-}
-
-/* Estilos generales para todo el documento */
-* {
-  margin: 0; /* Margen exterior cero */
-  padding: 0; /* Relleno cero */
-  box-sizing: content-box; /* Modelo de caja */
-}
-
-/* Estilos para el cuerpo de la página */
-body {
-  background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGs1a2xqNTllZno5YTVjbHRyNDdrbXZ2bDVzbGduazBqM3ZweGViNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/94P1LEMyuVEeA/200.webp); /* Imagen de fondo */
-}
-
-/* Estilos para la barra de navegación */
 nav {
-  display: flex; /* Flexbox para alinear elementos */
-  justify-content: space-between; /* Distribución equitativa del espacio */
-  background-image: url(../../assets/imagenes/header.png); /* Imagen de fondo de la barra de navegación */
-  background-size: contain; /* Tamaño de la imagen de fondo */
-  height: 20vh; /* Altura fija */
-  padding: 0px 0px 20px; /* Espaciado interno */
+    display: flex; 
+    justify-content: space-between;
+    background-image: url(../../assets/imagenes/header.png);
+    background-size: contain;
+    height: 20vh;
+    padding: 0px 0px 20px;
+
 }
 
-/* Estilos para el título del logo */
-#title-logo {
-  font-size: 90px; /* Tamaño de fuente */
-  margin-bottom: 10px; /* Margen inferior */
+
+#title-logo{
+  font-size:90px;
+  margin-bottom: 10px;
+}
+#logo{
+  font-size: 50px;
+  margin-bottom: -20px;
+  margin-left: 20px;
+  color:red;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style:oblique;
+  
+}
+#logo2{
+  font-size: 50px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+  color:red;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style:oblique;
 }
 
-/* Estilos para el primer logo */
-#logo {
-  font-size: 50px; /* Tamaño de fuente */
-  margin-bottom: -20px; /* Margen inferior negativo */
-  margin-left: 20px; /* Margen izquierdo */
-  color: red; /* Color de texto */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Familia de fuente */
-  font-style: oblique; /* Estilo de fuente */
+.breadcrumb-title{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 0px 18px;
+    background-color: black;
+    height: 120px;
+    margin-top:10px;
+    margin-left: 20px;
+    border-radius: 20px;
+}
+#textocolor1{
+    color: #f7450f;
+    padding: 0px 6px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Estilos para el segundo logo */
-#logo2 {
-  font-size: 50px; /* Tamaño de fuente */
-  margin-bottom: 10px; /* Margen inferior */
-  margin-left: 40px; /* Margen izquierdo */
-  color: red; /* Color de texto */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Familia de fuente */
-  font-style: oblique; /* Estilo de fuente */
-}
-
-/* Estilos para el contenedor del título y logo */
-.breadcrumb-title {
-  display: flex; /* Flexbox para alinear elementos */
-  justify-content: center; /* Distribución centrada del contenido */
-  align-items: center; /* Alinear elementos verticalmente */
-  font-size: 20px; /* Tamaño de fuente */
-  color: #ffffff; /* Color de texto */
-  padding: 0px 18px; /* Espaciado interno */
-  background-color: black; /* Color de fondo */
-  height: 120px; /* Altura fija */
-  margin-top: 10px; /* Margen superior */
-  margin-left: 20px; /* Margen izquierdo */
-  border-radius: 20px; /* Radio de borde */
-}
-
-/* Estilos para el texto con color específico */
-#textocolor1 {
-  color: #f7450f; /* Color de texto */
-  padding: 0px 6px; /* Espaciado interno */
-  font-family: Arial, Helvetica, sans-serif; /* Familia de fuente */
-}
-
-/* Estilos para la lista no ordenada de la barra de navegación */
 ul {
-  list-style-type: none; /* Sin viñetas */
-  margin: 0; /* Margen exterior cero */
-  padding: 0px 200px; /* Relleno interno */
-  display: flex; /* Flexbox para alinear elementos */
-  justify-content: center; /* Distribución centrada */
-  align-items: center; /* Alinear elementos verticalmente */
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0px 200px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
 }
 
-/* Estilos para los elementos de la lista */
 li {
-  margin-right: 20px; /* Margen derecho */
+    margin-right: 20px; 
 }
 
-/* Estilos para los enlaces de la lista */
 li a {
-  text-decoration: none; /* Sin subrayado */
-  color: #ffffff; /* Color de texto */
+    text-decoration: none; 
+    color: #ffffff; 
 }
 
-/* Estilos para el texto con color blanco */
-.colorLetra {
-  color: white; /* Color de texto */
-  font-size: 30px; /* Tamaño de fuente */
+.colorLetra{
+    color: white;
+	font-size: 30px;
 }
 
-/* Estilos para el enlace activo */
-.activo {
-  color: #ffffff; /* Color de texto */
-  font-size: 25px; /* Tamaño de fuente */
-  background-color: #00000094; /* Color de fondo con transparencia */
-  border-radius: 20px; /* Radio de borde */
-  padding: 20px; /* Relleno interno */
+.activo{
+    color:#ffffff;
+    font-size: 25px;
+    background-color: #00000094;
+    border-radius: 20px;
+    padding: 20px;
+  
 }
 
-
-#lista-D{
-    background-color: brown;
-    border-radius: 15px;
-    width: 300px;
-    margin-left: 50px;
-}
-
-h1{color: white;}
-
-h3{color: white;}
