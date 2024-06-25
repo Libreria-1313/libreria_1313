@@ -1,33 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Declaración del tipo de documento -->
+<html lang="en"> <!-- Inicio del documento HTML con especificación del idioma -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/styles.css">
-    <link rel="shortcut icon" href="../assets/imagenes/logo.jpg">
-    <title>diseño multimedia</title>
+    <meta charset="UTF-8"> <!-- Codificación de caracteres UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración del viewport para dispositivos móviles -->
+    <link rel="stylesheet" href="../assets/css/styles.css"> <!-- Enlace al archivo CSS para estilos -->
+    <link rel="shortcut icon" href="../assets/imagenes/logo.jpg"> <!-- Ícono de la página -->
+    <title>diseño multimedia</title> <!-- Título de la página -->
 </head>
 <body>
     <nav>
         <div class="breadcrumb-title">
-          <p id="title-logo">LIBRERIA </p> 
+          <p id="title-logo">LIBRERIA </p>  <!-- Título de la librería -->
           <div>
-              <p id="logo">13</p>
-              <p id="logo2">13</p>
+              <p id="logo">13</p> <!-- Logo parte 1 -->
+              <p id="logo2">13</p> <!-- Logo parte 2 -->
           </div>
         </div>
         <ul>
-            <li><a href="../index.html" class="activo" >INICIO</a></li>
-            <li><a href="categorias.html" class="activo">CATEGORIAS</a></li>
-            <li><a href="../administrar/index3.html" class="activo">ADMINISTRAR</a></li>
+            <li><a href="../index.html" class="activo" >INICIO</a></li> <!-- Enlace a la página de inicio -->
+            <li><a href="categorias.html" class="activo">CATEGORIAS</a></li> <!-- Enlace a la página de categorías -->
+            <li><a href="../administrar/index3.html" class="activo">ADMINISTRAR</a></li> <!-- Enlace a la página de administración -->
         </ul>
     </nav>
     <main id="main">
       <div  id="container-filter">
         <div class="fondo-filtros">
-        <button  class="extras" id="btnSort">Ordenar de la A-Z</button>
-          <label id="tituloF" for="">Género</label>
-          <select class="extras" name="" id="select-gender">
+        <button  class="extras" id="btnSort">Ordenar de la A-Z</button> <!-- Botón para ordenar -->
+          <label id="tituloF" for="">Género</label> <!-- Etiqueta para filtro de género -->
+          <select class="extras" name="" id="select-gender"> <!-- Selector de género -->
             <option value="gender">Género</option>
             <option value="everything">Todos</option>
             <option value="Ficción">Ficción</option>
@@ -38,13 +38,13 @@
             <option value="Autoayuda">autoayuda</option>
             <option value=" estado">Nuevo</option>
           </select>
-          <label id="tituloF" for="">Disponibilidad</label>
-          <select class="extras" name="" id="select-disponibles">
+          <label id="tituloF" for="">Disponibilidad</label> <!-- Etiqueta para filtro de disponibilidad -->
+          <select class="extras" name="" id="select-disponibles"> <!-- Selector de disponibilidad -->
             <option value="no disponible">no disponible</option>
             <option value="si disponible">si disponible</option>
           </select>
-          <label id="tituloF" for="">Idioma</label>
-          <select class="extras" name="" id="select-lenguaje">
+          <label id="tituloF" for="">Idioma</label> <!-- Etiqueta para filtro de idioma -->
+          <select class="extras" name="" id="select-lenguaje"> <!-- Selector de idioma -->
             <option value="Español">Español</option>
             <option value="Italiano">Italiano</option>
             <option value="Portugues">Portugues</option>
@@ -54,8 +54,8 @@
             <option value="Frances">Frances</option>
             <option value="Griego">Griego</option>
           </select>
-          <label id="tituloF" for="">Editoriales</label>
-          <select class="extras" name="" id="select-edito">
+          <label id="tituloF" for="">Editoriales</label> <!-- Etiqueta para filtro de editoriales -->
+          <select class="extras" name="" id="select-edito"> <!-- Selector de editoriales -->
             <option value="Editorial Sudamericana">Editorial Sudamericana</option>
             <option value="Bompiani">Bompiani</option>
             <option value="Debate">Debate</option>
@@ -78,8 +78,8 @@
             <option value="A. Lacroix, Verboeckhoven & Cie.">A. Lacroix, Verboeckhoven & Cie.</option>
             <option value="Ballantine Books">Ballantine Books</option>
           </select>
-          <label id="tituloF" for="">Escritores</label>
-          <select class="extras" name="" id="select-escritor">
+          <label id="tituloF" for="">Escritores</label> <!-- Etiqueta para filtro de escritores -->
+          <select class="extras" name="" id="select-escritor"> <!-- Selector de escritores -->
             <option value="Miguel de Cervantes">Miguel de Cervantes</option>
             <option value="Jane Austen">Jane Austen</option>
             <option value="Paulo Coelho">Paulo Coelho</option>
@@ -102,27 +102,26 @@
             <option value="Ray Bradbury">Ray Bradbury</option>
           </select>
           
-          <button class="extras" id="btnTopPrices">Filtrar 5 Precios Más Caros</button>
-          <button class="extras" id="btnMoreThan200Pages">Filtrar Libros con más de 200 Páginas</button>
-          <button class="extras" id="btnPriceRange">libros entre 30000 y 80000</button>
-          <button class="extras" id="btnDiscount">Aplicar Descuento del 10%</button>
-          <button class="extras" id="btnResetPrices">Restablecer Precios Originales</button>
+          <button class="extras" id="btnTopPrices">Filtrar 5 Precios Más Caros</button> <!-- Botón para filtrar los 5 libros más caros -->
+          <button class="extras" id="btnMoreThan200Pages">Filtrar Libros con más de 200 Páginas</button> <!-- Botón para filtrar libros con más de 200 páginas -->
+          <button class="extras" id="btnPriceRange">libros entre 30000 y 80000</button> <!-- Botón para filtrar libros con precios entre 30000 y 80000 -->
+          <button class="extras" id="btnDiscount">Aplicar Descuento del 10%</button> <!-- Botón para aplicar descuento del 10% -->
+          <button class="extras" id="btnResetPrices">Restablecer Precios Originales</button> <!-- Botón para restablecer precios originales -->
         </div>
-      </div class="librosT">
-      <div id="lista" class="lista">      
+      </div> <!-- Fin del contenedor de filtros -->
+      <div id="lista" class="lista"> <!-- Contenedor para listar los libros -->
       </div>
     </main>
     <footer>
-			<p>libreria 13 13 &copy; 2024</p>
-            <p>jahir leonel</p>
-            <p>brayan aguirre</p>
-            <p>sebastian sanchez</p>
+			<p>libreria 13 13 &copy; 2024</p> <!-- Derechos de autor y año -->
+            <p>jahir leonel</p> <!-- Nombre del autor -->
+            <p>brayan aguirre</p> <!-- Nombre del autor -->
+            <p>sebastian sanchez</p> <!-- Nombre del autor -->
+            <p>...</p> <!-- Placeholder para autores adicionales -->
             <p>...</p>
             <p>...</p>
-            <p>...</p>
-		</footer>
-    <script type="module" src="../assets/js/libros.js"></script>
-    <script type="module" src="../assets/js/categorias.js"></script>
+		 </footer> <!-- Fin del pie de página -->
+    <script type="module" src="../assets/js/libros.js"></script> <!-- Enlace al archivo JS para funcionalidad de libros -->
+    <script type="module" src="../assets/js/categorias.js"></script> <!-- Enlace al archivo JS para funcionalidad de categorías -->
 </body>
 </html>
-

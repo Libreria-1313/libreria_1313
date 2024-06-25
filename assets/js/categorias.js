@@ -1,6 +1,10 @@
+// Importar el array 'libros' desde el módulo './libros.js'
 import { libros } from './libros.js';
 
+// Obtener referencia al contenedor de libros en el DOM
 const containerBooks = document.getElementById('lista');
+
+// Asignar event listeners a los elementos del DOM y definir funciones para cada evento
 const filterToGenero = document.getElementById('select-gender').addEventListener('change', filterToGeneros);
 const filterToDisponibilidad = document.getElementById('select-disponibles').addEventListener('change', filterToDisponibilidad2);
 const filterToIdioma = document.getElementById('select-lenguaje').addEventListener('change', filterToIdiomas);
@@ -13,17 +17,21 @@ const btnPriceRange = document.getElementById('btnPriceRange').addEventListener(
 const btnDiscount = document.getElementById('btnDiscount').addEventListener('click', applyDiscount);
 const btnResetPrices = document.getElementById('btnResetPrices').addEventListener('click', resetPrices);
 
+// Array para almacenar los precios originales de los libros
 let originalPrices = [];
 
+// Event listener para cargar las tarjetas de libros al cargar la página
 window.addEventListener('DOMContentLoaded', generateCard);
 
+// Función para generar las tarjetas de libros
 function generateCard() {  
-  containerBooks.innerHTML = '';  // Clear previous cards
-  libros.forEach(libro => makeCard(libro));
+  containerBooks.innerHTML = '';  // Limpiar las tarjetas previas
+  libros.forEach(libro => makeCard(libro));  // Crear tarjeta para cada libro
 }
 
+// Función para crear una tarjeta de libro
 function makeCard(libro) {
-  // Crear elementos de la card
+  // Crear elementos de la tarjeta
   let bookCard = document.createElement('div');
   bookCard.classList.add('book');
 
@@ -49,92 +57,98 @@ function makeCard(libro) {
   let btnBuy = document.createElement('button');
   btnBuy.textContent = 'Solicitar';
   btnBuy.classList.add('btn-buy');
-btnBuy.addEventListener('click', () => {
+  btnBuy.addEventListener('click', () => {
     window.location.href = '../templates/informacion.html'; // Redirige a la URL del enlace de compra
-});
+  });
 
+  // Construir la estructura de la tarjeta
   bookPhoto.appendChild(imgBook);
-  
   descriptionBook.appendChild(titleBook);
   descriptionBook.appendChild(autor);
   descriptionBook.appendChild(priceBook);
   descriptionBook.appendChild(btnBuy);
-  
   bookCard.appendChild(bookPhoto);
   bookCard.appendChild(descriptionBook);
-
   containerBooks.appendChild(bookCard);
+
   return bookCard;
 }
 
+// Funciones de filtrado por diferentes criterios
+
+// Filtrar libros por género
 function filterToGeneros(event) {     
-  containerBooks.innerHTML = '';
+  containerBooks.innerHTML = '';  // Limpiar las tarjetas previas
   if (event.target.value === 'everything') {
-    generateCard();
+    generateCard();  // Mostrar todos los libros si se selecciona 'everything'
   } else {
     libros.forEach(libro => {
       if (libro.genero === event.target.value) {
-        makeCard(libro);
+        makeCard(libro);  // Mostrar libros que coincidan con el género seleccionado
       } 
     });
   }  
 }
 
+// Filtrar libros por disponibilidad
 function filterToDisponibilidad2(event) {     
-  containerBooks.innerHTML = '';
+  containerBooks.innerHTML = '';  // Limpiar las tarjetas previas
   if (event.target.value === 'everything') {
-    generateCard();
+    generateCard();  // Mostrar todos los libros si se selecciona 'everything'
   } else {
     libros.forEach(libro => {
       if (libro.diponibilidad === event.target.value) {
-        makeCard(libro);
+        makeCard(libro);  // Mostrar libros que coincidan con la disponibilidad seleccionada
       } 
     });
   }  
 }
 
+// Filtrar libros por idioma
 function filterToIdiomas(event) {     
-  containerBooks.innerHTML = '';
+  containerBooks.innerHTML = '';  // Limpiar las tarjetas previas
   if (event.target.value === 'everything') {
-    generateCard();
+    generateCard();  // Mostrar todos los libros si se selecciona 'everything'
   } else {
     libros.forEach(libro => {
       if (libro.idioma === event.target.value) {
-        makeCard(libro);
+        makeCard(libro);  // Mostrar libros que coincidan con el idioma seleccionado
       } 
     });
   }  
 }
 
+// Filtrar libros por editorial
 function filterToEditoriales(event) {     
-  containerBooks.innerHTML = '';
+  containerBooks.innerHTML = '';  // Limpiar las tarjetas previas
   if (event.target.value === 'everything') {
-    generateCard();
+    generateCard();  // Mostrar todos los libros si se selecciona 'everything'
   } else {
     libros.forEach(libro => {
       if (libro.editorial === event.target.value) {
-        makeCard(libro);
+        makeCard(libro);  // Mostrar libros que coincidan con la editorial seleccionada
       } 
     });
   }  
 }
 
+// Filtrar libros por autor
 function filterToAutores(event) {     
-  containerBooks.innerHTML = '';
+  containerBooks.innerHTML = '';  // Limpiar las tarjetas previas
   if (event.target.value === 'everything') {
-    generateCard();
+    generateCard();  // Mostrar todos los libros si se selecciona 'everything'
   } else {
     libros.forEach(libro => {
       if (libro.autor === event.target.value) {
-        makeCard(libro);
+        makeCard(libro);  // Mostrar libros que coincidan con el autor seleccionado
       } 
     });
   }  
 }
 
-
+// Función para ordenar libros alfabéticamente por título
 function sortedBooks() {
-  containerBooks.innerHTML = '';
+  containerBooks.innerHTML = '';  // Limpiar las tarjetas previas
   libros.sort((a, b) => {
     let titleA = a.titulo.toLowerCase();
     let titleB = b.titulo.toLowerCase();
@@ -147,47 +161,53 @@ function sortedBooks() {
     }
     return 0;
   });
-  generateCard();
-  return libros;
+  generateCard();  // Generar las tarjetas actualizadas
 }
 
+// Función para filtrar y mostrar los libros con los precios más altos
 function filterTopPrices() {
-  containerBooks.innerHTML = '';
+  containerBooks.innerHTML = '';  // Limpiar las tarjetas previas
   const topPricedBooks = [...libros].sort((a, b) => b.precio - a.precio).slice(0, 5);
-  topPricedBooks.forEach(libro => makeCard(libro));
+  topPricedBooks.forEach(libro => makeCard(libro));  // Mostrar los libros con precios más altos
 }
 
+// Función para filtrar y mostrar los libros con más de 200 páginas
 function filterMoreThan200Pages() {
-  containerBooks.innerHTML = '';
+  containerBooks.innerHTML = '';  // Limpiar las tarjetas previas
   const booksMoreThan200Pages = libros.filter(libro => libro.paginas > 200);
-  booksMoreThan200Pages.forEach(libro => makeCard(libro));
+  booksMoreThan200Pages.forEach(libro => makeCard(libro));  // Mostrar libros con más de 200 páginas
 }
 
+// Función para filtrar y mostrar los libros dentro de un rango de precios específico
 function filterPriceRange() {
-  containerBooks.innerHTML = '';
+  containerBooks.innerHTML = '';  // Limpiar las tarjetas previas
   const booksInRange = libros.filter(libro => libro.precio >= 30000 && libro.precio <= 80000);
-  booksInRange.forEach(libro => makeCard(libro));
+  booksInRange.forEach(libro => makeCard(libro));  // Mostrar libros dentro del rango de precios
 }
 
+// Función para aplicar un descuento del 10% a los precios de los libros
 function applyDiscount() {
   if (originalPrices.length === 0) {
-    originalPrices = libros.map(libro => libro.precio);
+    originalPrices = libros.map(libro => libro.precio);  // Guardar los precios originales
   }
   libros.forEach(libro => {
-    libro.precio = (libro.precio * 0.9).toFixed(2);
+    libro.precio = (libro.precio * 0.9).toFixed(2);  // Aplicar descuento del 10%
   });
-  generateCard();
+  generateCard();  // Generar las tarjetas actualizadas con los precios descontados
 }
 
+// Función para restablecer los precios originales de los libros
 function resetPrices() {
   if (originalPrices.length > 0) {
     libros.forEach((libro, index) => {
-      libro.precio = originalPrices[index];
+      libro.precio = originalPrices[index];  // Restablecer los precios originales
     });
-    originalPrices = [];
-    generateCard();
+    originalPrices = [];  // Limpiar el array de precios originales
+    generateCard();  // Generar las tarjetas actualizadas
   }
 }
+
+// Event listener para el botón de enviar formulario
 document.getElementById('submitButton').addEventListener('click', function() {
   const form = document.getElementById('dataForm');
   const formData = new FormData(form);
@@ -206,4 +226,3 @@ document.getElementById('submitButton').addEventListener('click', function() {
   const titulo = document.getElementById('titulo');
   titulo.innerHTML = `<h2>${formData.get('titulo')}</h2>`;
 });
-

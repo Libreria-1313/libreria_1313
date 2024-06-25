@@ -1,3 +1,4 @@
+// array de libros exportado 
 export const libros = [
     {
     Image: "../assets/imagenes/img1.jpeg",
@@ -628,7 +629,6 @@ export const libros = [
     stock: 15,
     disponibilidad: "si disponible"
 }
-    
-    
+    //mas libros aqui:
     ];
 

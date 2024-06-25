@@ -1,426 +1,456 @@
+/* Establece márgenes, rellenos y modelo de caja para todos los elementos */
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
 }
+
+/* Estilo para el cuerpo de la página */
 body{
-  background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGs1a2xqNTllZno5YTVjbHRyNDdrbXZ2bDVzbGduazBqM3ZweGViNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/94P1LEMyuVEeA/200.webp);
+  background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGs1a2xqNTllZno5YTVjbHRyNDdrbXZ2bDVzbGduazBqM3ZweGViNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/94P1LEMyuVEeA/200.webp); /* Fondo de la página */
 }
 
-
+/* Estilo para el encabezado */
 header{
-    height: 40vh;
-    width: 100%;
-    background-image: url(../imagenes/ff.png);
-    background-position: center;
-    background-size: cover;
-    margin: -10px 0px -10px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  height: 40vh; /* Altura del encabezado */
+  width: 100%; /* Ancho completo */
+  background-image: url(../imagenes/ff.png); /* Imagen de fondo del encabezado */
+  background-position: center; /* Posición del fondo */
+  background-size: cover; /* Tamaño del fondo */
+  margin: -10px 0px -10px 0px; /* Márgenes negativos */
+  display: flex; /* Uso de flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  flex-direction: column; /* Alinea elementos en columna */
 }
 
+/* Estilo para el título del encabezado */
 .tituloEncavesado{
-    font-size: 150px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #fafafa ;
-    background-color: black;
-    border-radius: 40px;
-    width: 1200px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+  font-size: 150px; /* Tamaño de la fuente */
+  font-family: Arial, Helvetica, sans-serif; /* Familia de fuentes */
+  color: #fafafa; /* Color del texto */
+  background-color: black; /* Color de fondo */
+  border-radius: 40px; /* Borde redondeado */
+  width: 1200px; /* Ancho fijo */
+  text-align: center; /* Alineación del texto */
+  display: flex; /* Uso de flexbox */
+  justify-content: center; /* Centra horizontalmente */
 }
+
+/* Estilo para el primer logo */
 .logo{
-  font-size: 60px;
-  margin-bottom: 0px;
-  margin-left: 20px;
-  color:red;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-style:oblique;
-  
+  font-size: 60px; /* Tamaño de la fuente */
+  margin-bottom: 0px; /* Margen inferior */
+  margin-left: 20px; /* Margen izquierdo */
+  color: red; /* Color del texto */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Familia de fuentes */
+  font-style: oblique; /* Estilo de la fuente */
 }
+
+/* Estilo para el segundo logo */
 .logo2{
-  font-size: 60px;
-  margin-bottom: -100px;
-  margin-left: 40px;
-  color:red;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-style:oblique;
+  font-size: 60px; /* Tamaño de la fuente */
+  margin-bottom: -100px; /* Margen inferior negativo */
+  margin-left: 40px; /* Margen izquierdo */
+  color: red; /* Color del texto */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Familia de fuentes */
+  font-style: oblique; /* Estilo de la fuente */
 }
 
-
-
-
-
-
+/* Estilos para la barra de navegación */
 nav {
-    display: flex; 
-    justify-content: space-between;
-    background-image: url(../imagenes/header.png);
-    background-size: contain;
-    height: 20vh;
-    padding: 0px 0px 20px;
-
+  display: flex; /* Uso de flexbox */
+  justify-content: space-between; /* Espaciado entre elementos */
+  background-image: url(../imagenes/header.png); /* Imagen de fondo de la barra */
+  background-size: contain; /* Tamaño del fondo */
+  height: 20vh; /* Altura de la barra */
+  padding: 0px 0px 20px; /* Relleno */
 }
 
-
+/* Estilo para el título del logo */
 #title-logo{
-  font-size:90px;
-  margin-bottom: 10px;
+  font-size: 90px; /* Tamaño de la fuente */
+  margin-bottom: 10px; /* Margen inferior */
 }
+
+/* Estilo para el primer logo en la barra de navegación */
 #logo{
-  font-size: 50px;
-  margin-bottom: -20px;
-  margin-left: 20px;
-  color:red;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-style:oblique;
-  
+  font-size: 50px; /* Tamaño de la fuente */
+  margin-bottom: -20px; /* Margen inferior */
+  margin-left: 20px; /* Margen izquierdo */
+  color: red; /* Color del texto */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Familia de fuentes */
+  font-style: oblique; /* Estilo de la fuente */
 }
+
+/* Estilo para el segundo logo en la barra de navegación */
 #logo2{
-  font-size: 50px;
-  margin-bottom: 10px;
-  margin-left: 40px;
-  color:red;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-style:oblique;
+  font-size: 50px; /* Tamaño de la fuente */
+  margin-bottom: 10px; /* Margen inferior */
+  margin-left: 40px; /* Margen izquierdo */
+  color: red; /* Color del texto */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Familia de fuentes */
+  font-style: oblique; /* Estilo de la fuente */
 }
 
+/* Estilo para el título de la miga de pan */
 .breadcrumb-title{
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-    font-size: 20px;
-    color: #ffffff;
-    padding: 0px 18px;
-    background-color: black;
-    height: 120px;
-    margin-top:10px;
-    margin-left: 20px;
-    border-radius: 20px;
+  display: flex; /* Uso de flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  font-size: 20px; /* Tamaño de la fuente */
+  color: #ffffff; /* Color del texto */
+  padding: 0px 18px; /* Relleno */
+  background-color: black; /* Color de fondo */
+  height: 120px; /* Altura */
+  margin-top: 10px; /* Margen superior */
+  margin-left: 20px; /* Margen izquierdo */
+  border-radius: 20px; /* Borde redondeado */
 }
+
+/* Estilo para el texto de color 1 */
 #textocolor1{
-    color: #f7450f;
-    padding: 0px 6px;
-    font-family: Arial, Helvetica, sans-serif;
+  color: #f7450f; /* Color del texto */
+  padding: 0px 6px; /* Relleno */
+  font-family: Arial, Helvetica, sans-serif; /* Familia de fuentes */
 }
 
+/* Estilos para las listas */
 ul {
-    list-style-type: none; 
-    margin: 0; 
-    padding: 0px 200px; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
+  list-style-type: none; /* Elimina el estilo de lista */
+  margin: 0; /* Elimina el margen */
+  padding: 0px 200px; /* Relleno */
+  display: flex; /* Uso de flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
 }
 
+/* Estilo para los elementos de lista */
 li {
-    margin-right: 20px; 
+  margin-right: 20px; /* Margen derecho */
 }
 
+/* Estilo para los enlaces dentro de los elementos de lista */
 li a {
-    text-decoration: none; 
-    color: #ffffff; 
+  text-decoration: none; /* Sin subrayado */
+  color: #ffffff; /* Color del texto */
 }
 
+/* Estilo para el color de la letra */
 .colorLetra{
-    color: white;
-	font-size: 30px;
+  color: white; /* Color del texto */
+  font-size: 30px; /* Tamaño de la fuente */
 }
 
+/* Estilo para el elemento activo */
 .activo{
-    color:#ffffff;
-    font-size: 25px;
-    background-color: #00000094;
-    border-radius: 20px;
-    padding: 20px;
-  
+  color: #ffffff; /* Color del texto */
+  font-size: 25px; /* Tamaño de la fuente */
+  background-color: #00000094; /* Color de fondo */
+  border-radius: 20px; /* Borde redondeado */
+  padding: 20px; /* Relleno */
 }
 
+/* Estilo para la sección 1 */
 .seccion1{
-	background-image: url(../imagenes/headerD.png);
-  background-size: contain;
-	color:rgb(255, 255, 255) ;
-	display: flex;
-	justify-content: space-around;
-	flex-direction: row;
-	align-items: center;
-    height: 10vh;
+  background-image: url(../imagenes/headerD.png); /* Imagen de fondo */
+  background-size: contain; /* Tamaño del fondo */
+  color: rgb(255, 255, 255); /* Color del texto */
+  display: flex; /* Uso de flexbox */
+  justify-content: space-around; /* Espaciado entre elementos */
+  flex-direction: row; /* Alineación en fila */
+  align-items: center; /* Centra verticalmente */
+  height: 10vh; /* Altura */
 }
 
+/* Estilo para el título */
 #titulo{
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex; /* Uso de flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
 }
 
+/* Estilo para el color del título */
 #colorTitulo{
-	display: flex;
-	color: white
+  display: flex; /* Uso de flexbox */
+  color: white; /* Color del texto */
 }
 
+/* Estilo para el contenedor de entrada */
 #input{
-    display: flex; 
-    justify-content: space-around; 
-    align-items: center;
-    padding: 0px 10px;
+  display: flex; /* Uso de flexbox */
+  justify-content: space-around; /* Espaciado entre elementos */
+  align-items: center; /* Centra verticalmente */
+  padding: 0px 10px; /* Relleno */
 }
 
+/* Estilo para el título del input */
 #tituloInput{
-	padding: 0px 10px;
+  padding: 0px 10px; /* Relleno */
 }
 
-
+/* Estilo para el botón de búsqueda */
 #buscarButton {
-    background-color: #d14b0d;
-	border-radius: 5px;
-    color: rgb(255, 255, 255); 
-    padding: 0px 10px; 
+  background-color: #d14b0d; /* Color de fondo */
+  border-radius: 5px; /* Borde redondeado */
+  color: rgb(255, 255, 255); /* Color del texto */
+  padding: 0px 10px; /* Relleno */
 }
 
+/* Estilo para la sección 3 */
 .seccion3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 70vh;
-    padding: 10px;
+  display: flex; /* Uso de flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  flex-direction: column; /* Alineación en columna */
+  height: 70vh; /* Altura */
+  padding: 10px; /* Relleno */
 }
 
+/* Estilo para las imágenes */
 #imagenes{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    padding: 10px 0px;
-    width: 100%;;
+  display: flex; /* Uso de flexbox */
+  justify-content: space-around; /* Espaciado entre elementos */
+  flex-direction: row; /* Alineación en fila */
+  padding: 10px 0px; /* Relleno */
+  width: 100%; /* Ancho completo */
 }
 
+/* Estilo para la primera imagen */
 #img1{
-    padding: 0px 15px;
+  padding: 0px 15px; /* Relleno */
 }
 
+/* Estilo para el contenedor de títulos */
 #divtitulos{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
+  display: flex; /* Uso de flexbox */
+  justify-content: space-around; /* Espaciado entre elementos */
+  flex-direction: row; /* Alineación en fila */
 }
 
+/* Estilo para el título dentro del contenedor de títulos */
 #divtitulos-h2{
-    padding: 0% 10px;
+  padding: 0% 10px; /* Relleno */
 }
 
+/* Estilo para el pie de página */
 footer {
-    background-color: black;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: black; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  padding: 20px; /* Relleno */
+  display: flex; /* Uso de flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
 }
 
-/* estilos de listas */
-
+/* Estilo para el contenido principal */
 #main{
-    display: flex;
-    padding: 0px;
-    justify-content: center;
-    width: auto;
-    
+  display: flex; /* Uso de flexbox */
+  padding: 0px; /* Relleno */
+  justify-content: center; /* Centra horizontalmente */
+  width: auto; /* Ancho automático */
 }
 
+/* Estilo para el contenedor de filtros */
 #container-filter{
-    width: 350px;
-    padding-bottom: 540px;
-    padding-left:90px;
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    flex-direction: column;
-    
+  width: 350px; /* Ancho */
+  padding-bottom: 540px; /* Relleno inferior */
+  padding-left: 90px; /* Relleno izquierdo */
+  display: flex; /* Uso de flexbox */
+  align-items: center; /* Centra verticalmente */
+  flex-direction: column; /* Alineación en columna */
 }
 
-/* .container-filter {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-  } */
-  
-  .container-cards {
-   
-    height: 40%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  #lista{
-    justify-content: center;
-  }
-  
-  #lista{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+/* Estilo para los contenedores de tarjetas */
+.container-cards {
+  height: 40%; /* Altura */
+  display: flex; /* Uso de flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  flex-wrap: wrap; /* Ajuste de línea */
+}
 
-  .book {
-    width: 600px;
-    height: 18rem;
-    padding-bottom: 50px;
-    background-image: url(../imagenes/card.png);
-    background-size: cover;
-    margin: 1rem;
-    display: flex;  
-    align-items: center;
+/* Estilo para la lista */
+#lista{
+  display: flex; /* Uso de flexbox */
+  flex-direction: row; /* Alineación en fila */
+  flex-wrap: wrap; /* Ajuste de línea */
+}
+
+/* Estilo para las tarjetas de libro */
+.book {
+  width: 600px; /* Ancho */
+  height: 18rem; /* Altura */
+  padding-bottom: 50px; /* Relleno inferior */
+  background-image: url(../imagenes/card.png); /* Imagen de fondo */
+  background-size: cover; /* Tamaño del fondo */
+  margin: 1rem; /* Margen */
+  display: flex; /* Uso de flexbox */
+  align-items: center; /* Centra verticalmente */
+  margin-left: 250px;
+}
+
+/* Estilo para la foto del libro */
+.book-photo {
+  width: 30%; /* Ancho */
+  height: 100%; /* Altura */
+  display: flex; /* Uso de flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
+
+/* Estilo para la imagen dentro de la foto del libro */
+.book-photo > img {
+  width: 85%; /* Ancho */
+  height: 85%; /* Altura */
+  object-fit: cover; /* Ajuste de imagen */
+  box-shadow: -5px -5px 0 #000000bc, 0 0 50px #000000bc; /* Sombra */
+}
+
+/* Estilo para la descripción del libro */
+.book-description {
+  width: 70%; /* Ancho */
+  height: 100%; /* Altura */
+  display: flex; /* Uso de flexbox */
+  flex-direction: column; /* Alineación en columna */
+  align-items: center; /* Centra verticalmente */
+  justify-content: space-around; /* Espaciado entre elementos */
+  border-left: double 2px #7f0000; /* Borde izquierdo */
+}
+
+/* Estilo para el título del libro */
+.book-description > h2 {
+  font-size: 2rem; /* Tamaño de la fuente */
+  font-family: 'Times New Roman', Times, serif; /* Familia de fuentes */
+  font-style: oblique; /* Estilo de la fuente */
+  color: #d40000; /* Color del texto */
+  text-align: center; /* Alineación del texto */
+}
+
+/* Estilo para el autor del libro */
+.book-description > h3 {
+  font-size: 1.4rem; /* Tamaño de la fuente */
+  margin-left: 1rem; /* Margen izquierdo */
+  text-align: center; /* Alineación del texto */
+  color: black; /* Color del texto */
+}
+
+/* Estilo para el género del libro */
+.book-description > h4 {
+  margin-top: 3rem; /* Margen superior */
+  color: #5555cb; /* Color del texto */
+  font-weight: 900; /* Peso de la fuente */
+}
+
+/* Estilo para el botón dentro de la descripción del libro */
+.book-description > button {
+  margin-top: 1rem; /* Margen superior */
+  width: 60%; /* Ancho */
+  font-size: 1.5rem; /* Tamaño de la fuente */
+  border-radius: 15px; /* Borde redondeado */
+  font-weight: 600; /* Peso de la fuente */
+  background-color: #797979c8; /* Color de fondo */
+  color: rgb(137, 0, 0); /* Color del texto */
+  cursor: pointer; /* Cursor */
+  transition: background-color 0.3s ease; /* Transición */
+  box-shadow: 0px -5px 0 #000000bc, 0 0 50px #000000bc; /* Sombra */
+}
+
+/* Estilo hover para el botón */
+.book-description > button:hover,
+.book-description > button:focus {
+  background-color: #7f000092; /* Color de fondo al pasar el mouse */
+  color: white; /* Color del texto al pasar el mouse */
+  box-shadow: 0px 0px 0 #000000bc, 0 0 50px #000000bc; /* Sombra al pasar el mouse */
+}
+
+/* Estilo para el slider */
+.slider {
+  width: 1200px; /* Ancho */
+  height: 550px; /* Altura */
+  overflow: hidden; /* Ocultar desbordamiento */
+  margin-right: 0px; /* Margen derecho */
+  border-radius: 10in; /* Borde redondeado */
+  background: rgba(94, 94, 94, 0.153); /* Fondo */
+  box-shadow: 0 0.9rem 9rem rgb(0, 0, 0); /* Sombra */
+  justify-content: right; /* Justificación derecha */
+  margin-top: 0px; /* Margen superior */
+}
+
+/* Estilo para la lista dentro del slider */
+.slider ul {
+  display: flex; /* Uso de flexbox */
+  animation: cambio 20s infinite alternate linear; /* Animación */
+  width: 400%; /* Ancho */
+}
+
+/* Estilo para los elementos de la lista dentro del slider */
+.slider li {
+  width: 100%; /* Ancho */
+  list-style: none; /* Sin estilo de lista */
+}
+
+/* Estilo para las imágenes dentro del slider */
+.slider img {
+  width: 1200px; /* Ancho */
+  height: 550px; /* Altura */
+}
+
+/* Animación para el slider */
+@keyframes cambio {
+  0%{margin-left: 0;} /* Inicio de la animación */
+  19%{margin-left: 0;} /* Fin del primer movimiento */
+  24%{margin-left: -100%;} /* Inicio del segundo movimiento */
+  44%{margin-left: -100%;} /* Fin del segundo movimiento */
+  49%{margin-left: -200%;} /* Inicio del tercer movimiento */
+  69%{margin-left: -200%;} /* Fin del tercer movimiento */
+  74%{margin-left: -300%;} /* Inicio del cuarto movimiento */
+  100%{margin-left: -300%;} /* Fin de la animación */
+}
+
+/* Estilo responsivo para dispositivos móviles */
+@media only screen and (min-width: 320px) and (max-width: 768px){
+  .slider, .slider ul, .slider img {
+      height: 100px; /* Altura */
+      width: 100px; /* Ancho */
   }
-  
-  .book-photo {
-    width: 30%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .book-photo > img {
-    width: 85%;
-    height: 85%;
-    object-fit: cover;  
-    box-shadow: -5px -5px 0 #000000bc, 0 0 50px #000000bc;
-  }
-  
-  .book-description {
-    width: 70%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    border-left: double 2px #7f0000;
-  }
-  
-  .book-description > h2 {
-    font-size: 2rem;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: oblique;
-    color: #d40000;
-    text-align: center;
-  }
-  
-  .book-description > h3 {
-    font-size: 1.4rem;
-    margin-left: 1rem;
-    text-align: center;
-    color: black;
-  }
-  
-  .book-description > h4 {
-    margin-top: 3rem;
-    color: #5555cb;
-    font-weight: 900;
-  }
-  
-  .book-description > button {
-    margin-top: 1rem;
-    width: 60%;
-    font-size: 1.5rem;
-    border-radius: 15px;
-    font-weight: 600;
-    background-color: #797979c8;
-    color: rgb(137, 0, 0);
-    cursor: pointer;  
-    transition: background-color 0.3s ease;
-    box-shadow: 0px -5px 0 #000000bc, 0 0 50px #000000bc;
-  }
-  
-  .book-description > button:hover,
-  .book-description > button:focus {
-    background-color: #7f000092;
-    color:white;
-     box-shadow: 0px 0px 0 #000000bc, 0 0 50px #000000bc;
-  }
-  
- 
-  /* slider */
-  .slider{
-    width: 1200px;
-    height: 550px;
-    overflow: hidden;
-    margin-right: 0px;
-    border-radius:10in;
-    background: rgba(94, 94, 94, 0.153);
-    box-shadow: 0 0.9rem 9rem rgb(0, 0, 0);
-    justify-content: right;
-    margin-top: 0px;
-    
-  }
-  .slider ul{
-      display: flex;
-      animation: cambio 20s infinite alternate linear;
-      width: 400%;
-      
-  }
-  .slider li{
-      width: 100%;
-      list-style: none;
-      
-  }
-  .slider img{
-      width: 1200px;
-      height: 550px;
-      
-      
-  }
-  @keyframes cambio{
-      0%{margin-left: 0;}
-      19%{margin-left: 0;}
-      
-      24%{margin-left: -100%;}
-      44%{margin-left: -100%;}
-      
-      49%{margin-left: -200%;}
-      69%{margin-left: -200%;}
-      
-      74%{margin-left: -300%;}
-      100%{margin-left: -300%;}
-  }
-  @media only screen and (min-width:320px) and (max-width:768px){
-  .slider, .slider ul, .slider img{
-      height: 100px;
-      width: 100px;
-      
-  }
-  }
-  /* contenidos del slider */
-  #imagenS{
-    margin: 60px 20px 20px 20px;
-    width: 250px;
-    height: 400px;
-  }
-  .extras{
-    background-color: white;
-    width: 250px;
-    padding: 10px;
-    align-content: center;
-    border-width: 2px;
-    border-color: black;
-    border-radius: 20px;
-    margin:5px;
-    font-size: 1.1rem;
-    box-shadow: -5px -5px 0 #000000bc, 0 0 50px #000000bc;
-  }
-  .librosT{
-    width: 400px;
-    height: auto;
-  }
-  .fondo-filtros{
-    background-color: rgba(104, 100, 100, 0.584);
-    border-radius: 20px;
-    padding:10px;
-    padding-top: 10px;
-    
-  }
-  #tituloF{
-    color: white;
-  }
+}
+
+/* Estilo para la imagen S */
+#imagenS {
+  margin: 60px 20px 20px 20px; /* Márgenes */
+  width: 250px; /* Ancho */
+  height: 400px; /* Altura */
+}
+
+/* Estilo para los extras */
+.extras {
+  background-color: white; /* Color de fondo */
+  width: 250px; /* Ancho */
+  padding: 10px; /* Relleno */
+  align-content: center; /* Alineación de contenido */
+  border-width: 2px; /* Ancho del borde */
+  border-color: black; /* Color del borde */
+  border-radius: 20px; /* Borde redondeado */
+  margin: 5px; /* Márgenes */
+  font-size: 1.1rem; /* Tamaño de la fuente */
+  box-shadow: -5px -5px 0 #000000bc, 0 0 50px #000000bc; /* Sombra */
+}
+
+/* Estilo para libros T */
+.librosT {
+  width: 400px; /* Ancho */
+  height: auto; /* Altura automática */
+}
+
+/* Estilo para el fondo de filtros */
+.fondo-filtros {
+  background-color: rgba(104, 100, 100, 0.584); /* Color de fondo */
+  border-radius: 20px; /* Borde redondeado */
+  padding: 10px; /* Relleno */
+  padding-top: 10px; /* Relleno superior */
+}
+
+/* Estilo para el título F */
+#tituloF {
+  color: white; /* Color del texto */
+}

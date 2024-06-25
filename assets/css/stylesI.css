@@ -1,42 +1,48 @@
+/* Estilos para el cuerpo del documento */
+body {
+    font-family: Arial, sans-serif; /* Familia de fuentes */
+    background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGs1a2xqNTllZno5YTVjbHRyNDdrbXZ2bDVzbGduazBqM3ZweGViNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/94P1LEMyuVEeA/200.webp); /* Imagen de fondo */
+    margin: 0; /* Margen */
+    padding: 0; /* Relleno */
+    display: flex; /* Uso de flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Altura del viewport */
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGs1a2xqNTllZno5YTVjbHRyNDdrbXZ2bDVzbGduazBqM3ZweGViNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/94P1LEMyuVEeA/200.webp);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+/* Estilos para el contenedor principal */
+.container {
+    background-color: rgba(97, 97, 97, 0.503); /* Color de fondo con transparencia */
+    padding: 50px; /* Relleno interno */
+    border-radius: 8px; /* Borde redondeado */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    width: 400px; /* Ancho del contenedor */
+    text-align: center; /* Alineación del texto */
+}
 
-        .container {
-            background-color: rgba(97, 97, 97, 0.503);
-            padding: 50px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 350px;
-            text-align: center;
-        }
+/* Estilos para el título h1 */
+h1 {
+    margin-bottom: 20px; /* Margen inferior */
+}
 
-        h1 {
-            margin-bottom: 20px;
-        }
+/* Estilos para los campos de entrada y botón */
+input, button {
+    padding: 10px; /* Relleno */
+    margin-top: 10px; /* Margen superior */
+    width: 378px; /* Ancho */
+}
 
-        input, button {
-            padding: 10px;
-            margin-top: 10px;
-            width: 100%;
-        }
+/* Estilos específicos para el botón */
+button {
+    background-color: #007bff; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Cursor */
+    width: 400px; /* Ancho */
+}
 
-        button {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
+/* Estilos hover para el botón */
+button:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
