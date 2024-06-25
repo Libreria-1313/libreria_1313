@@ -1,187 +1,235 @@
+/* Establece la altura y anchura de todas las imágenes */
 img{
-    height: 200px;
-    width: 200px;
+  height: 200px;
+  width: 200px;
 }
+
+/* Estilo para el contenedor de los botones */
 #botones{
-    display: flex;
-    flex-wrap: wrap;
-    background-color:rgb(165, 157, 157) ;
-    height: 70px;
-    justify-content: space-evenly;
-    padding: 19px;
-    margin: 0px 50px 0px 50px;
-    border-radius: 10px;
-    border-color: black;
-    border-width: 5px;
-    border-style: solid;
-    padding: 40px;
+  display: flex; /* Usa flexbox para el diseño */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en múltiples líneas */
+  background-color:rgb(165, 157, 157); /* Color de fondo */
+  height: 70px; /* Altura del contenedor */
+  justify-content: space-evenly; /* Distribuye el espacio uniformemente entre los elementos */
+  padding: 19px; /* Relleno interno */
+  margin: 0px 50px; /* Margen externo */
+  border-radius: 10px; /* Bordes redondeados */
+  border-color: black; /* Color del borde */
+  border-width: 5px; /* Ancho del borde */
+  border-style: solid; /* Estilo del borde */
+  padding: 40px; /* Relleno interno adicional */
 }
+
+/* Estilo para el formulario de búsqueda */
 #searchForm{
-    font-size: 1.5rem;
+  font-size: 1.5rem; /* Tamaño de fuente */
 }
+
+/* Estilo para el botón de búsqueda y eliminación */
 #boton-E{
-    background-color: rgba(165, 42, 42, 0.64);
-    width: 90px;
-    font-size: 1rem;
-    margin-bottom: 20px;
-    border-radius: 50px;
+  background-color: rgba(165, 42, 42, 0.64); /* Color de fondo */
+  width: 90px; /* Ancho del botón */
+  font-size: 1rem; /* Tamaño de fuente */
+  margin-bottom: 20px; /* Margen inferior */
+  border-radius: 50px; /* Bordes redondeados */
 }
+
+/* Estilo para el botón de cambiar editorial */
 #boton-C{
-    background-color: rgba(136, 40, 181, 0.624);
-    width: 90px;
-    font-size: 1rem;
-    margin-bottom: 20px;
-    border-radius: 50px;
+  background-color: rgba(136, 40, 181, 0.624); /* Color de fondo */
+  width: 90px; /* Ancho del botón */
+  font-size: 1rem; /* Tamaño de fuente */
+  margin-bottom: 20px; /* Margen inferior */
+  border-radius: 50px; /* Bordes redondeados */
 }
+
+/* Estilo para el botón de agregar nuevo libro */
 #boton-A{
-    background-color: rgba(3, 150, 3, 0.647);
-    width: 140px;
-    padding:10px;
-    font-size: 1rem;
-    margin-bottom: 20px;
-    border-radius: 50px;
+  background-color: rgba(3, 150, 3, 0.647); /* Color de fondo */
+  width: 140px; /* Ancho del botón */
+  padding:10px; /* Relleno interno */
+  font-size: 1rem; /* Tamaño de fuente */
+  margin-bottom: 20px; /* Margen inferior */
+  border-radius: 50px; /* Bordes redondeados */
 }
+
+/* Estilo para la sección de cambio de editorial */
 .change-editorial{
-    font-size: 1.5rem;
+  font-size: 1.5rem; /* Tamaño de fuente */
+  margin-top: 30px; /* Margen superior */
 }
+
+/* Estilo para el contenedor de los libros */
 #divbooks{
-    width: 200px;
+  width: 200px; /* Ancho del contenedor */
 }
+
+/* Estilo para cada libro individual */
 .book {
-    width: auto;
-    height: 18rem;
-    padding-bottom: 10px;
-    background-color: rgb(173, 173, 173);
-    background-size: cover;
-    margin: 1rem;
-    display: flex;  
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    justify-content: center;
-    border-radius: 15px;
-    border-color: black;
-    border-width: 5px;
-    border-style: solid;
-  }
-  .book > p{
-    color: #000000;
-    padding: 10px;
-    font-size:1.2rem;
-  }
-  .book > img{
-    width: 150px;
-    border-radius: 15px;
-    border-color: black;
-    border-width: 5px;
-    border-style: solid;
-  }
-  .book > div{
-    padding: 10px;
-    
-  }
- 
-  #divbooks{
-    justify-content: center;
-    width: 1900px;
-    background-color: rgba(132, 132, 132, 0.574);
-    height: auto;
-    margin: 2.2%;
-    padding: 10px;
-    border-radius: 15px;
-  }
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: content-box;
+  width: auto; /* Ancho automático */
+  height: 18rem; /* Altura fija */
+  padding-bottom: 10px; /* Relleno inferior */
+  background-color: rgb(173, 173, 173); /* Color de fondo */
+  background-size: cover; /* Tamaño de fondo */
+  margin: 1rem; /* Margen */
+  display: flex; /* Usa flexbox para el diseño */
+  align-items: center; /* Alinea los elementos verticalmente */
+  flex-direction: column; /* Coloca los elementos en una columna */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+  justify-content: space-evenly; /* Distribuye el espacio uniformemente */
+  border-radius: 15px; /* Bordes redondeados */
+  border-color: black; /* Color del borde */
+  border-width: 5px; /* Ancho del borde */
+  border-style: solid; /* Estilo del borde */
 }
+
+/* Estilo para los párrafos dentro de cada libro */
+.book > p{
+  color: #000000; /* Color del texto */
+  padding: 10px; /* Relleno interno */
+  font-size:1.2rem; /* Tamaño de fuente */
+}
+
+/* Estilo para las imágenes dentro de cada libro */
+.book > img{
+  width: 150px; /* Ancho de la imagen */
+  border-radius: 15px; /* Bordes redondeados */
+  border-color: black; /* Color del borde */
+  border-width: 5px; /* Ancho del borde */
+  border-style: solid; /* Estilo del borde */
+}
+
+/* Estilo para los divs dentro de cada libro */
+.book > div{
+  padding: 10px; /* Relleno interno */
+}
+
+/* Estilo general para el contenedor de los libros */
+#divbooks{
+  justify-content: center; /* Centra los elementos */
+  width: 1900px; /* Ancho del contenedor */
+  background-color: rgba(132, 132, 132, 0.574); /* Color de fondo */
+  height: auto; /* Altura automática */
+  margin: 2.2%; /* Margen */
+  padding: 10px; /* Relleno interno */
+  border-radius: 15px; /* Bordes redondeados */
+  margin-top: 70px; /* Margen superior */
+}
+
+/* Estilo general para todos los elementos */
+*{
+  margin: 0; /* Margen */
+  padding: 0; /* Relleno */
+  box-sizing: content-box; /* Modelo de caja */
+}
+
+/* Estilo general para el cuerpo */
 body{
-  background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGs1a2xqNTllZno5YTVjbHRyNDdrbXZ2bDVzbGduazBqM3ZweGViNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/94P1LEMyuVEeA/200.webp);
+  background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGs1a2xqNTllZno5YTVjbHRyNDdrbXZ2bDVzbGduazBqM3ZweGViNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/94P1LEMyuVEeA/200.webp); /* Imagen de fondo */
 }
 
+/* Estilo para la navegación */
 nav {
-    display: flex; 
-    justify-content: space-between;
-    background-image: url(../../assets/imagenes/header.png);
-    background-size: contain;
-    height: 20vh;
-    padding: 0px 0px 20px;
-
+  display: flex; /* Usa flexbox para el diseño */
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  background-image: url(../../assets/imagenes/header.png); /* Imagen de fondo */
+  background-size: contain; /* Ajusta la imagen de fondo */
+  height: 20vh; /* Altura de la navegación */
+  padding: 0px 0px 20px; /* Relleno interno */
 }
 
-
+/* Estilo para el título del logo */
 #title-logo{
-  font-size:90px;
-  margin-bottom: 10px;
+  font-size:90px; /* Tamaño de fuente */
+  margin-bottom: 10px; /* Margen inferior */
 }
+
+/* Estilo para el logo */
 #logo{
-  font-size: 50px;
-  margin-bottom: -20px;
-  margin-left: 20px;
-  color:red;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-style:oblique;
-  
+  font-size: 50px; /* Tamaño de fuente */
+  margin-bottom: -20px; /* Margen inferior negativo */
+  margin-left: 20px; /* Margen izquierdo */
+  color:red; /* Color del texto */
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Familia de fuentes */
+  font-style:oblique; /* Estilo de fuente */
 }
+
+/* Estilo para el segundo logo */
 #logo2{
-  font-size: 50px;
-  margin-bottom: 10px;
-  margin-left: 40px;
-  color:red;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-style:oblique;
+  font-size: 50px; /* Tamaño de fuente */
+  margin-bottom: 10px; /* Margen inferior */
+  margin-left: 40px; /* Margen izquierdo */
+  color:red; /* Color del texto */
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Familia de fuentes */
+  font-style:oblique; /* Estilo de fuente */
 }
 
+/* Estilo para el contenedor del título y logo */
 .breadcrumb-title{
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-    font-size: 20px;
-    color: #ffffff;
-    padding: 0px 18px;
-    background-color: black;
-    height: 120px;
-    margin-top:10px;
-    margin-left: 20px;
-    border-radius: 20px;
+  display: flex; /* Usa flexbox para el diseño */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Alinea los elementos verticalmente */
+  font-size: 20px; /* Tamaño de fuente */
+  color: #ffffff; /* Color del texto */
+  padding: 0px 18px; /* Relleno interno */
+  background-color: black; /* Color de fondo */
+  height: 120px; /* Altura del contenedor */
+  margin-top:10px; /* Margen superior */
+  margin-left: 20px; /* Margen izquierdo */
+  border-radius: 20px; /* Bordes redondeados */
 }
+
+/* Estilo para el texto colorido */
 #textocolor1{
-    color: #f7450f;
-    padding: 0px 6px;
-    font-family: Arial, Helvetica, sans-serif;
+  color: #f7450f; /* Color del texto */
+  padding: 0px 6px; /* Relleno interno */
+  font-family: Arial, Helvetica, sans-serif; /* Familia de fuentes */
 }
 
+/* Estilo para las listas no ordenadas */
 ul {
-    list-style-type: none; 
-    margin: 0; 
-    padding: 0px 200px; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
+  list-style-type: none; /* Sin estilo de lista */
+  margin: 0; /* Sin margen */
+  padding: 0px 200px; /* Relleno interno */
+  display: flex; /* Usa flexbox para el diseño */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Alinea los elementos verticalmente */
 }
 
+/* Estilo para los elementos de la lista */
 li {
-    margin-right: 20px; 
+  margin-right: 20px; /* Margen derecho */
 }
 
+/* Estilo para los enlaces */
 li a {
-    text-decoration: none; 
-    color: #ffffff; 
+  text-decoration: none; /* Sin subrayado */
+  color: #ffffff; /* Color del texto */
 }
 
+/* Estilo para la clase de color de letra */
 .colorLetra{
-    color: white;
-	font-size: 30px;
+  color: white; /* Color del texto */
+  font-size: 30px; /* Tamaño de fuente */
 }
 
+/* Estilo para los enlaces activos */
 .activo{
-    color:#ffffff;
-    font-size: 25px;
-    background-color: #00000094;
-    border-radius: 20px;
-    padding: 20px;
-  
+  color:#ffffff; /* Color del texto */
+  font-size: 25px; /* Tamaño de fuente */
+  background-color: #00000094; /* Color de fondo */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 20px; /* Relleno interno */
 }
 
+/* Estilo para los encabezados de nivel 1 */
+h1{
+  color: white; /* Color del texto */
+  margin-top: 20px; /* Margen superior */
+  margin-left: 30px; /* Margen izquierdo */
+}
+
+/* Estilo para los encabezados de nivel 3 */
+h3{
+  color: white; /* Color del texto */
+}

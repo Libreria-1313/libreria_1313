@@ -3,55 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style2.css">
-    <!-- <link rel="stylesheet" href="../assets/css/styles.css"> -->
-    <title>Biblioteca</title>
+    <link rel="stylesheet" href="style/style2.css"> <!-- Enlace al archivo de estilos CSS -->
+    <!-- <link rel="stylesheet" href="../assets/css/styles.css"> --> <!-- Comentado: otro enlace CSS -->
+    <title>Biblioteca</title> <!-- Título de la página -->
 </head>
 <body>
     <nav>
         <div class="breadcrumb-title">
-        <p id="title-logo">LIBRERIA </p> 
-        <div>
-            <p id="logo">13</p>
-            <p id="logo2">13</p>
-        </div>
-        
-        <!-- <img src="assets/imagenes/logo.png" alt="logo" id="logo"> -->
+            <p id="title-logo">LIBRERIA </p> <!-- Título del logo -->
+            <div>
+                <p id="logo">13</p>
+                <p id="logo2">13</p>
+            </div>
+            <!-- <img src="assets/imagenes/logo.png" alt="logo" id="logo"> --> <!-- Comentado: imagen del logo -->
         </div>
         <ul>
-            <li><a href="../index.html" class="activo">INICIO</a></li>
-            <li><a href="../templates/categorias.html" class="activo">CATEGORIAS</a></li>
-            <li><a href="../administrar/index3.html" class="activo" >ADMINISTRAR</a></li>
+            <li><a href="../index.html" class="activo">INICIO</a></li> <!-- Enlace a la página de inicio -->
+            <li><a href="../templates/categorias.html" class="activo">CATEGORIAS</a></li> <!-- Enlace a la página de categorías -->
+            <li><a href="../administrar/index3.html" class="activo">ADMINISTRAR</a></li> <!-- Enlace a la página de administración -->
         </ul>
     </nav>
     <div id="botones">
-    <button id="boton-A" onclick="agregarNuevoLibro()">Agregar Nuevo Libro</button>
-    
-    <form id="searchForm">
-        <h2>Buscar y Eliminar Libro</h2>
-        <label for="searchCriteria">Criterio de Búsqueda:</label>
-        <select id="searchCriteria">
-            <option value="titulo">Título</option>
-            <option value="editorial">Editorial</option>
-            <option value="precio">Precio</option>
-        </select>
-        <label for="searchValue">Opción:</label>
-        <input type="text" id="searchValue" required>
-        <button id="boton-E" type="button" onclick="searchAndDeleteBook()">Buscar y Eliminar</button>
-    </form>
-    <div class="change-editorial">
-        <h3>Cambiar editorial del libro</h3>
-        <select id='libro-select'>
-            <option value="">Selecciona un libro</option>
-        </select>
-        <input type="text" id='nueva-editorial-input' placeholder="Nueva Editorial">
-        <button id="boton-C" onclick="cambiarEditorial()">Cambiar Editorial</button>
+        <button id="boton-A" onclick="agregarNuevoLibro()">Agregar Nuevo Libro</button> <!-- Botón para agregar un nuevo libro -->
+        
+        <form id="searchForm">
+            <h2>Buscar y Eliminar Libro</h2> <!-- Título del formulario de búsqueda y eliminación -->
+            <label for="searchCriteria">Criterio de Búsqueda:</label>
+            <select id="searchCriteria">
+                <option value="titulo">Título</option>
+                <option value="editorial">Editorial</option>
+                <option value="precio">Precio</option> <!-- Opciones de criterio de búsqueda -->
+            </select>
+            <label for="searchValue">Opción:</label>
+            <input type="text" id="searchValue" required> <!-- Campo para ingresar el valor de búsqueda -->
+            <button id="boton-E" type="button" onclick="searchAndDeleteBook()">Buscar y Eliminar</button> <!-- Botón para buscar y eliminar un libro -->
+        </form>
+
+        <div class="change-editorial">
+            <h3>Cambiar editorial del libro</h3> <!-- Título de la sección para cambiar la editorial -->
+            <select id='libro-select'>
+                <option value="">Selecciona un libro</option> <!-- Selector para elegir un libro -->
+            </select>
+            <input type="text" id='nueva-editorial-input' placeholder="Nueva Editorial"> <!-- Campo para ingresar la nueva editorial -->
+            <button id="boton-C" onclick="cambiarEditorial()">Cambiar Editorial</button> <!-- Botón para cambiar la editorial -->
+        </div>
     </div>
-</div>
-</div>
-    <h1>Lista de Libros</h1>
-    <div id="divbooks"></div>
-    <script type="module" src="assets/js/libros.js"></script>
-    <script typr="module" src="js/app3.js"></script>
+
+    <h1>Lista de Libros</h1> <!-- Título de la sección de lista de libros -->
+    <div id="divbooks"></div> <!-- Contenedor para mostrar la lista de libros -->
+
+    <script type="module" src="assets/js/libros.js"></script> <!-- Enlace al script de libros -->
+    <script typr="module" src="js/app3.js"></script> <!-- Nota: hay un error tipográfico en 'type' que debe ser corregido -->
 </body>
 </html>
