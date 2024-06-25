@@ -848,6 +848,48 @@ function cambiarEditorial() {
     const selectedBookTitle = libroSelect.value;
 }
 
+// Recolectar información del nuevo libro utilizando prompt
+nuevoLibro.titulo = prompt('Ingrese el título del libro:');
+nuevoLibro.autor = prompt('Ingrese el autor del libro:');
+nuevoLibro.genero = prompt('Ingrese el género del libro:');
+nuevoLibro.idioma = prompt('Ingrese el idioma del libro:');
+nuevoLibro.precio = parseInt(prompt('Ingrese el precio del libro en EUR:'));
+nuevoLibro.formato = prompt('Ingrese el formato del libro:');
+nuevoLibro.isbn = parseInt(prompt('Ingrese el ISBN del libro:'));
+nuevoLibro.descripcion = prompt('Ingrese la descripción del libro:');
+nuevoLibro.estado = prompt('Ingrese el estado del libro (Nuevo/Usado):');
+nuevoLibro.ubicacion = prompt('Ingrese la ubicación del libro:');
+nuevoLibro.fecha_publicacion = prompt('Ingrese la fecha de publicación del libro en formato AAAA-MM-DD:');
+nuevoLibro.editorial = prompt('Ingrese la editorial del libro:');
+nuevoLibro.paginas = parseInt(prompt('Ingrese el número de páginas del libro:'));
+nuevoLibro.stock = parseInt(prompt('Ingrese el stock inicial del libro:'));
+nuevoLibro.Image = prompt('Ingrese la URL de la imagen del libro:');
+
+// Validar que se ingresen todos los campos obligatorios antes de agregar el libro
+if (
+    nuevoLibro.titulo &&
+    nuevoLibro.autor &&
+    nuevoLibro.genero &&
+    nuevoLibro.idioma &&
+    nuevoLibro.precio &&
+    nuevoLibro.formato &&
+    nuevoLibro.isbn &&
+    nuevoLibro.descripcion &&
+    nuevoLibro.estado &&
+    nuevoLibro.ubicacion &&
+    nuevoLibro.fecha_publicacion &&
+    nuevoLibro.editorial &&
+    !isNaN(nuevoLibro.paginas) &&
+    !isNaN(nuevoLibro.stock) &&
+    nuevoLibro.Image
+) {
+    libros.push(nuevoLibro); // Agregar el nuevo libro al arreglo libros
+    listBooks(); // Actualizar la lista de libros mostrados
+    alert('Libro agregado con éxito!');
+} else {
+    alert('Por favor, complete todos los campos correctamente, incluyendo la URL de la imagen.');
+}
+
    
 
 
