@@ -212,7 +212,7 @@ li a {
 }
 
 footer {
-    background-image: url(/assets/imagenes/header.png);
+    background-color: black;
     color: #fff;
     padding: 20px;
     display: flex;
@@ -420,4 +420,7 @@ footer {
     padding:10px;
     padding-top: 10px;
     
+  }
+  #tituloF{
+    color: white;
   }
