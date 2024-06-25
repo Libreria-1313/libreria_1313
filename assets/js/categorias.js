@@ -47,7 +47,11 @@ function makeCard(libro) {
   priceBook.textContent = `${libro.precio} COP`;
 
   let btnBuy = document.createElement('button');
-  btnBuy.textContent = 'Comprar';
+  btnBuy.textContent = 'Solicitar';
+  btnBuy.classList.add('btn-buy');
+btnBuy.addEventListener('click', () => {
+    window.location.href = '../templates/informacion.html'; // Redirige a la URL del enlace de compra
+});
 
   bookPhoto.appendChild(imgBook);
   
@@ -184,3 +188,22 @@ function resetPrices() {
     generateCard();
   }
 }
+document.getElementById('submitButton').addEventListener('click', function() {
+  const form = document.getElementById('dataForm');
+  const formData = new FormData(form);
+
+  const output = [];
+  formData.forEach((value, key) => {
+      output.push(`${key}: ${value}`);
+  });
+
+  // Mostrar en la consola los datos del formulario
+  console.log('Datos del formulario:');
+  console.log(output);
+
+  // Si deseas también mostrar los datos en algún elemento HTML
+  // Puedes hacerlo de la siguiente manera:
+  const titulo = document.getElementById('titulo');
+  titulo.innerHTML = `<h2>${formData.get('titulo')}</h2>`;
+});
+
