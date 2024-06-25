@@ -1,452 +1,457 @@
+/* Reset de estilos y ajustes generales */
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box; /* Box-sizing para que el padding no afecte al ancho total */
 }
+
+/* Estilos del body */
 body{
   background-image: url(https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGs1a2xqNTllZno5YTVjbHRyNDdrbXZ2bDVzbGduazBqM3ZweGViNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/94P1LEMyuVEeA/200.webp);
 }
 
-
+/* Estilos del header */
 header{
-    height: 40vh;
-    width: 100%;
-    background-image: url(../imagenes/ff.png);
-    background-position: center;
-    background-size: cover;
-    margin: -10px 0px -10px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  height: 40vh;
+  width: 100%;
+  background-image: url(../imagenes/ff.png); /* Imagen de fondo */
+  background-position: center;
+  background-size: cover; /* Ajuste de tamaño de fondo */
+  margin: -10px 0px -10px 0px; /* Ajuste de margen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
+/* Estilos del título principal */
 .tituloEncavesado{
-    font-size: 150px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #fafafa ;
-    background-color: black;
-    border-radius: 40px;
-    width: 1200px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+  font-size: 150px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fafafa ;
+  background-color: black; /* Color de fondo */
+  border-radius: 40px; /* Borde redondeado */
+  width: 1200px; /* Ancho del título */
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
+
+/* Estilos del primer logo */
 .logo{
   font-size: 60px;
   margin-bottom: 0px;
   margin-left: 20px;
   color:red;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-style:oblique;
-  
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style: oblique;
 }
+
+/* Estilos del segundo logo */
 .logo2{
   font-size: 60px;
   margin-bottom: -100px;
   margin-left: 40px;
   color:red;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-style:oblique;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style: oblique;
 }
 
-
-
-
-
-
+/* Estilos de la barra de navegación */
 nav {
-    display: flex; 
-    justify-content: space-between;
-    background-image: url(../imagenes/header.png);
-    background-size: contain;
-    height: 20vh;
-    padding: 0px 0px 20px;
-
+  display: flex; 
+  justify-content: space-between;
+  background-image: url(../imagenes/header.png); /* Imagen de fondo */
+  background-size: contain; /* Ajuste de tamaño de fondo */
+  height: 20vh;
+  padding: 0px 0px 20px; /* Padding en la parte inferior */
 }
 
-
+/* Estilos del título del logo */
 #title-logo{
-  font-size:90px;
+  font-size: 90px;
   margin-bottom: 10px;
 }
+
+/* Estilos del primer logo en la barra de navegación */
 #logo{
   font-size: 50px;
   margin-bottom: -20px;
   margin-left: 20px;
-  color:red;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-style:oblique;
-  
+  color: red;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style: oblique;
 }
+
+/* Estilos del segundo logo en la barra de navegación */
 #logo2{
   font-size: 50px;
   margin-bottom: 10px;
   margin-left: 40px;
-  color:red;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-style:oblique;
+  color: red;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style: oblique;
 }
 
+/* Estilos del título de la migaja de pan */
 .breadcrumb-title{
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-    font-size: 20px;
-    color: #ffffff;
-    padding: 0px 18px;
-    background-color: black;
-    height: 120px;
-    margin-top:10px;
-    margin-left: 20px;
-    border-radius: 20px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 0px 18px;
+  background-color: black; /* Color de fondo */
+  height: 120px;
+  margin-top: 10px;
+  margin-left: 20px; /* Margen izquierdo */
+  border-radius: 20px; /* Borde redondeado */
 }
+
+/* Estilos para el texto de color 1 */
 #textocolor1{
-    color: #f7450f;
-    padding: 0px 6px;
-    font-family: Arial, Helvetica, sans-serif;
+  color: #f7450f; /* Color de texto */
+  padding: 0px 6px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Estilos para la lista no ordenada */
 ul {
-    list-style-type: none; 
-    margin: 0; 
-    padding: 0px 200px; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
+  list-style-type: none; /* Sin viñetas */
+  margin: 0; 
+  padding: 0px 200px; /* Padding en los lados */
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
 }
 
+/* Estilos para los elementos de lista */
 li {
-    margin-right: 20px; 
+  margin-right: 20px; /* Margen derecho */
 }
 
+/* Estilos para los enlaces dentro de los elementos de lista */
 li a {
-    text-decoration: none; 
-    color: #ffffff; 
+  text-decoration: none; /* Sin decoración de enlace */
+  color: #ffffff; /* Color de texto */
 }
 
+/* Estilos para el color de letra */
 .colorLetra{
-    color: white;
-	font-size: 30px;
-}
-
-.activo{
-    color:#ffffff;
-    font-size: 25px;
-    background-color: #00000094;
-    border-radius: 20px;
-    padding: 20px;
-  
-}
-
-.seccion1{
-	background-image: url(../imagenes/headerD.png);
-  background-size: contain;
-	color:rgb(255, 255, 255) ;
-	display: flex;
-	justify-content: space-around;
-	flex-direction: row;
-	align-items: center;
-    height: 10vh;
-}
-
-#titulo{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-#colorTitulo{
-	display: flex;
-	color: white
-}
-
-#input{
-    display: flex; 
-    justify-content: space-around; 
-    align-items: center;
-    padding: 0px 10px;
-}
-
-#tituloInput{
-	padding: 0px 10px;
-}
-
-
-#buscarButton {
-    background-color: #d14b0d;
-	border-radius: 5px;
-    color: rgb(255, 255, 255); 
-    padding: 0px 10px; 
-}
-
-.seccion3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 70vh;
-    padding: 10px;
-}
-
-#imagenes{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    padding: 10px 0px;
-    width: 100%;;
-}
-
-#img1{
-    padding: 0px 15px;
-}
-
-#divtitulos{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-}
-
-#divtitulos-h2{
-    padding: 0% 10px;
-}
-
-footer {
-    background-color: black;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-}
-
-/* estilos de listas */
-
-#main{
-    display: flex;
-    padding: 0px;
-    justify-content: center;
-    width: auto;
-    
-}
-
-#container-filter{
-    width: 350px;
-    padding-bottom: 540px;
-    padding-left:90px;
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    flex-direction: column;
-    
-}
-
-/* .container-filter {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-  } */
-  
-  .container-cards {
-   
-    height: 40%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  #lista{
-    justify-content: center;
-  }
-  
-  #lista{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .book {
-    width: 600px;
-    height: 18rem;
-    padding-bottom: 50px;
-    background-image: url(../imagenes/card.png);
-    background-size: cover;
-    margin: 1rem;
-    display: flex;  
-    align-items: center;
-  }
-  
-  .book-photo {
-    width: 30%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .book-photo > img {
-    width: 85%;
-    height: 85%;
-    object-fit: cover;  
-    box-shadow: -5px -5px 0 #000000bc, 0 0 50px #000000bc;
-  }
-  
-  .book-description {
-    width: 70%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    border-left: double 2px #7f0000;
-  }
-  
-  .book-description > h2 {
-    font-size: 2rem;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: oblique;
-    color: #d40000;
-    text-align: center;
-  }
-  
-  .book-description > h3 {
-    font-size: 1.4rem;
-    margin-left: 1rem;
-    text-align: center;
-    color: black;
-  }
-  
-  .book-description > h4 {
-    margin-top: 3rem;
-    color: #5555cb;
-    font-weight: 900;
-  }
-  
-  .book-description > button {
-    margin-top: 1rem;
-    width: 60%;
-    font-size: 1.5rem;
-    border-radius: 15px;
-    font-weight: 600;
-    background-color: #797979c8;
-    color: rgb(137, 0, 0);
-    cursor: pointer;  
-    transition: background-color 0.3s ease;
-    box-shadow: 0px -5px 0 #000000bc, 0 0 50px #000000bc;
-  }
-  
-  .book-description > button:hover,
-  .book-description > button:focus {
-    background-color: #7f000092;
-    color:white;
-     box-shadow: 0px 0px 0 #000000bc, 0 0 50px #000000bc;
-  }
-  
- 
-  /* slider */
-  .slider{
-    width: 1200px;
-    height: 550px;
-    overflow: hidden;
-    margin-right: 0px;
-    border-radius:10in;
-    background: rgba(94, 94, 94, 0.153);
-    box-shadow: 0 0.9rem 9rem rgb(0, 0, 0);
-    justify-content: right;
-    margin-top: 0px;
-    box-shadow: -5px -5px 0 #000000bc, 0 0 50px #000000bc;
-    
-  }
-  .slider ul{
-      display: flex;
-      animation: cambio 30s infinite alternate linear;
-      width: 400%;
-      
-  }
-  .slider li{
-      width: 100%;
-      list-style: none;
-      
-  }
-  .slider img{
-      width: 1200px;
-      height: 550px;
-      
-      
-  }
-  @keyframes cambio{
-      0%{margin-left: 0;}
-      19%{margin-left: 0;}
-      
-      24%{margin-left: -100%;}
-      44%{margin-left: -100%;}
-      
-      49%{margin-left: -200%;}
-      69%{margin-left: -200%;}
-      
-      74%{margin-left: -300%;}
-      100%{margin-left: -300%;}
-  }
-  @media only screen and (min-width:320px) and (max-width:768px){
-  .slider, .slider ul, .slider img{
-      height: 100px;
-      width: 100px;
-      
-  }
-  }
- 
-  /* contenidos del slider */
-   #slider1{
-    display: flex;
-    align-items:center;
-    
-  }
-  #datos-libro{
-    width: 500px;
-    font-size: 2rem;
-    background-color: rgb(165, 165, 165);
-    margin: 20px;
-    border-radius: 15px;
-    padding: 10px;
-    border-color: black;
-    border-style: solid;
-    border-width: 4px;
-    box-shadow: -5px -5px 0 #000000bc, 0 0 50px #000000bc;
-  }
-  #imagenS{
-    margin: 60px 20px 20px 20px;
-    width: 250px;
-    height: 400px;
-    border-color: black;
-    border-style: solid;
-    border-width: 6px;
-    border-radius: 15px;
-    box-shadow: -5px -5px 0 #000000bc, 0 0 50px #000000bc;
-  }
-  .extras{
-    background-color: white;
-    width: 250px;
-    padding: 10px;
-    align-content: center;
-    border-width: 2px;
-    border-color: black;
-    border-radius: 20px;
-    margin:5px;
-    font-size: 1.1rem;
-    box-shadow: -5px -5px 0 #000000bc, 0 0 50px #000000bc;
-  }
-  .librosT{
-    width: 400px;
-    height: auto;
-  }
-  .fondo-filtros{
-    background-color: rgba(104, 100, 100, 0.584);
-    border-radius: 20px;
-    padding:10px;
-    padding-top: 10px;
-    
-  }
-  
-#titulo-C{
   color: white;
+font-size: 30px;
+}
+
+/* Estilos para el estado activo */
+.activo{
+  color: #ffffff;
+  font-size: 25px;
+  background-color: #00000094; /* Color de fondo */
+  border-radius: 20px; /* Borde redondeado */
+  padding: 20px; /* Padding interior */
+}
+
+/* Estilos de la sección 1 */
+.seccion1{
+background-image: url(../imagenes/headerD.png); /* Imagen de fondo */
+  background-size: contain; /* Ajuste de tamaño de fondo */
+color: rgb(255, 255, 255) ; /* Color de texto */
+display: flex;
+justify-content: space-around;
+flex-direction: row;
+align-items: center;
+  height: 10vh;
+}
+
+/* Estilos del título */
+#titulo{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* Estilos del color del título */
+#colorTitulo{
+display: flex;
+color: white; /* Color de texto */
+}
+
+/* Estilos del input */
+#input{
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center;
+  padding: 0px 10px;
+}
+
+/* Estilos del título del input */
+#tituloInput{
+padding: 0px 10px;
+}
+
+/* Estilos para el botón de búsqueda */
+#buscarButton {
+  background-color: #d14b0d; /* Color de fondo */
+border-radius: 5px; /* Borde redondeado */
+  color: rgb(255, 255, 255); /* Color de texto */
+  padding: 0px 10px; /* Padding interior */
+}
+
+/* Estilos de la sección 3 */
+.seccion3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh;
+  padding: 10px;
+}
+
+/* Estilos para las imágenes */
+#imagenes{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 10px 0px;
+  width: 100%;
+}
+
+/* Estilos para la imagen 1 */
+#img1{
+  padding: 0px 15px;
+}
+
+/* Estilos para los div de títulos */
+#divtitulos{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+/* Estilos para el div de títulos H2 */
+#divtitulos-h2{
+  padding: 0% 10px;
+}
+
+/* Estilos del footer */
+footer {
+  background-image: url(/assets/imagenes/header.png); /* Imagen de fondo */
+  color: #fff; /* Color de texto */
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos de listas */
+
+/* Estilos para el contenedor principal */
+#main{
+  display: flex;
+  padding: 0px;
+  justify-content: center;
+  width: auto;
+}
+
+/* Estilos para el contenedor de filtros */
+#container-filter{
+  width: 350px;
+  padding-bottom: 540px; /* Padding inferior */
+  padding-left: 90px; /* Padding izquierdo */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Estilos para los contenedores de tarjetas */
+.container-cards {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Estilos para la lista */
+#lista{
+  justify-content: center;
+}
+
+/* Estilos para la lista (otra vez) */
+#lista{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Estilos para las tarjetas de libro */
+.book {
+  width: 600px;
+  height: 18rem;
+  padding-bottom: 50px;
+  background-image: url(../imagenes/card.png); /* Imagen de fondo */
+  background-size: cover; /* Ajuste de tamaño de fondo */
+  margin: 1rem;
+  display: flex;  
+  align-items: center;
+}
+
+/* Estilos para la foto del libro */
+.book-photo {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos para la imagen dentro de la foto del libro */
+.book-photo > img {
+  width: 85%;
+  height: 85%;
+  object-fit: cover;  
+  box-shadow: -5px -5px 0 #000000bc, 0 0 50px #000000bc; /* Sombra */
+}
+
+/* Estilos para la descripción del libro */
+.book-description {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-left: double 2px #7f0000; /* Borde izquierdo doble */
+}
+
+/* Estilos para el título H2 de la descripción del libro */
+.book-description > h2 {
+  font-size: 2rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: oblique;
+  color: #d40000; /* Color de texto */
+  text-align: center;
+}
+
+/* Estilos para el título H3 de la descripción del libro */
+.book-description > h3 {
+  font-size: 1.4rem;
+  margin-left: 1rem;
+  text-align: center;
+  color: black; /* Color de texto */
+}
+
+/* Estilos para el título H4 de la descripción del libro */
+.book-description > h4 {
+  margin-top: 3rem;
+  color: #5555cb; /* Color de texto */
+  font-weight: 900;
+}
+
+/* Estilos para el botón de la descripción del libro */
+.book-description > button {
+  margin-top: 1rem;
+  width: 60%;
+  font-size: 1.5rem;
+  border-radius: 15px; /* Borde redondeado */
+  font-weight: 600;
+  background-color: #797979c8; /* Color de fondo */
+  color: rgb(137, 0, 0); /* Color de texto */
+  cursor: pointer;  
+  transition: background-color 0.3s ease; /* Transición suave de color de fondo */
+  box-shadow: 0px -5px 0 #000000bc, 0 0 50px #000000bc; /* Sombra */
+}
+
+/* Estilos para el botón de la descripción del libro (hover y focus) */
+.book-description > button:hover,
+.book-description > button:focus {
+  background-color: #7f000092; /* Color de fondo al pasar el cursor */
+  color:white; /* Color de texto */
+  box-shadow: 0px 0px 0 #000000bc, 0 0 50px #000000bc; /* Sombra */
+}
+
+/* Estilos del slider */
+.slider{
+  width: 1200px; /* Ancho del slider */
+  height: 550px; /* Alto del slider */
+  overflow: hidden; /* Ocultar contenido que se desborda */
+  margin-right: 0px; /* Margen derecho */
+  border-radius: 10in; /* Borde redondeado */
+  background: rgba(94, 94, 94, 0.153); /* Color de fondo */
+  box-shadow: 0 0.9rem 9rem rgb(0, 0, 0); /* Sombra */
+  justify-content: right; /* Alineación a la derecha */
+  margin-top: 0px; /* Margen superior */
+}
+
+/* Estilos para la lista dentro del slider */
+.slider ul{
+  display: flex;
+  animation: cambio 20s infinite alternate linear; /* Animación de cambio */
+  width: 400%; /* Ancho de la lista (4 veces el ancho de cada elemento) */
+}
+
+/* Estilos para los elementos de la lista dentro del slider */
+.slider li{
+  width: 100%; /* Ancho de cada elemento de la lista */
+  list-style: none; /* Sin viñetas */
+}
+
+/* Estilos para las imágenes dentro del slider */
+.slider img{
+  width: 1200px; /* Ancho de las imágenes */
+  height: 550px; /* Alto de las imágenes */
+}
+
+/* Animación de cambio de imágenes dentro del slider */
+@keyframes cambio{
+  0%{margin-left: 0;}
+  19%{margin-left: 0;}
+  24%{margin-left: -100%;}
+  44%{margin-left: -100%;}
+  49%{margin-left: -200%;}
+  69%{margin-left: -200%;}
+  74%{margin-left: -300%;}
+  100%{margin-left: -300%;}
+}
+
+/* Media query para dispositivos móviles */
+@media only screen and (min-width:320px) and (max-width:768px){
+  .slider, .slider ul, .slider img{
+      height: 100px; /* Ajuste de altura */
+      width: 100px; /* Ajuste de ancho */
+  }
+}
+
+/* Estilos para la imagen S */
+#imagenS{
+  margin: 60px 20px 20px 20px; /* Margen */
+  width: 250px; /* Ancho */
+  height: 400px; /* Alto */
+}
+
+/* Estilos para los extras */
+.extras{
+  background-color: white; /* Color de fondo */
+  width: 250px; /* Ancho */
+  padding: 10px; /* Padding interior */
+  align-content: center; /* Alineación de contenido */
+  border-width: 2px; /* Ancho del borde */
+  border-color: black; /* Color del borde */
+  border-radius: 20px; /* Borde redondeado */
+  margin: 5px; /* Margen */
+  font-size: 1.1rem; /* Tamaño de fuente */
+  box-shadow: -5px -5px 0 #000000bc, 0 0 50px #000000bc; /* Sombra */
+}
+
+/* Estilos para los libros T */
+.librosT{
+  width: 400px; /* Ancho */
+  height: auto; /* Alto automático */
+}
+
+/* Estilos para el fondo de filtros */
+.fondo-filtros{
+  background-color: rgba(104, 100, 100, 0.584); /* Color de fondo con opacidad */
+  border-radius: 20px; /* Borde redondeado */
+  padding: 10px; /* Padding */
+  padding-top: 10px; /* Padding superior */
 }

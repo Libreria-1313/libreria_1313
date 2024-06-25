@@ -3,99 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="shortcut icon" href="assets/imagenes/logo.jpg">
-    <title>diseño multimedia</title>
+    <link rel="stylesheet" href="assets/css/styles.css"> <!-- Enlace al archivo CSS externo -->
+    <link rel="shortcut icon" href="assets/imagenes/logo.jpg"> <!-- Icono de la página -->
+    <title>diseño multimedia</title> <!-- Título de la página -->
 </head>
 <body>
     <main>
         <nav>
             <div class="breadcrumb-title">
-            <p id="title-logo">LIBRERIA </p> 
-            <div>
-                <p id="logo">13</p>
-                <p id="logo2">13</p>
+                <p id="title-logo">LIBRERIA </p> 
+                <div>
+                    <p id="logo">13</p> <!-- Primer logo -->
+                    <p id="logo2">13</p> <!-- Segundo logo -->
+                </div>
+                <!-- Lista de navegación -->
+                <ul>
+                    <li><a href="index.html" class="activo">INICIO</a></li>
+                    <li><a href="templates/categorias.html"  class="activo">CATEGORIAS</a></li>
+                    <li><a href="administrar/index3.html"  class="activo">ADMINISTRAR</a></li>
+                </ul>
             </div>
-            
-            <!-- <img src="assets/imagenes/logo.png" alt="logo" id="logo"> -->
-            </div>
-			<ul>
-				<li><a href="index.html" class="activo">INICIO</a></li>
-                <li><a href="templates/categorias.html"  class="activo">CATEGORIAS</a></li>
-                <li><a href="administrar/index3.html"  class="activo">ADMINISTRAR</a></li>
-			</ul>
-		</nav>
-		<header>
-             <h1 class="tituloEncavesado">Libreria <div>
-                <p class="logo">13</p>
-                <p class="logo2">13</p>
-            </div>  </h1>
-		</header>
+        </nav>
+
+        <header>
+            <h1 class="tituloEncavesado">
+                Libreria 
+                <div>
+                    <p class="logo">13</p> <!-- Primer logo en el encabezado -->
+                    <p class="logo2">13</p> <!-- Segundo logo en el encabezado -->
+                </div>
+            </h1>
+        </header>
+
         <section class="seccion1">
             <div id="titulo">
-                <h1 id="colorTitulo">busqueda de libros</h1>
+                <h1 id="colorTitulo">busqueda de libros</h1> <!-- Título de la sección -->
             </div>
-                <div id="input">
-                    <input type="text" id="tituloInput" placeholder="nombre del libro">
-                    <button id="buscarButton">Buscar</button>
-                </div>
+            <div id="input">
+                <input type="text" id="tituloInput" placeholder="nombre del libro"> <!-- Campo de búsqueda -->
+                <button id="buscarButton">Buscar</button> <!-- Botón de búsqueda -->
             </div>
         </section>
 
         <section class="seccion2">
-            <div id="resultadosBusqueda"></div>
+            <div id="resultadosBusqueda"></div> <!-- Contenedor para los resultados de búsqueda -->
         </section>
-       
-        <section class="seccion3">
-            <h1>libros destacados</h1>
-            <section class="content header">
 
+        <section class="seccion3">
+            <h1>libros destacados</h1> <!-- Título de la sección de libros destacados -->
+            <section class="content header">
                 <div class="total">
                     <div class="slider">
-                        
+                        <!-- Lista de imágenes en el slider -->
                         <ul>
                             <li>
                                 <div id="slider1">
                                     <img id="imagenS" src="assets/imagenes/Don Quijote de la Mancha.jpg" alt="">
-                                    <p id="datos-libro">Don Quijote de la Manchaa​ es una novela moderna y la primera novela polifónica escrita por el español Miguel de Cervantes Saavedra. Publicada su primera parte con el título de El ingenioso hidalgo don Quijote de la Mancha a comienzos de 1605, es la obra más destacada de la literatura española y una de las principales de la literatura universal</p> 
                                 </div>
-
                             </li>
                             <li>
-                                <div id="slider1">
+                                <div id="slider2">
                                     <img id="imagenS" src="assets/imagenes/ElSseñorAnillos.jpg" alt="">
-                                    <p id="datos-libro">El Señor de los Anillos (título original en inglés: The Lord of the Rings) es una novela de fantasía épica escrita por el filólogo y escritor británico J. R. R. Tolkien.
-
-                                    </p> 
                                 </div>
-
                             </li>
                             <li>
-                                <div id="slider1">
+                                <div id="slider3">
                                     <img id="imagenS" src="assets/imagenes/El zahir.jpeg" alt="">
-                                    <p id="datos-libro">El Zahir1​ es un cuento del escritor argentino Jorge Luis Borges que integra El Aleph, colección de cuentos y relatos publicada en 1949.</p> 
                                 </div>
-
                             </li>
                             <li>
-                                <div id="slider1">
-                                    <img id="imagenS" src="assets/imagenes/En busca del tiempo perdido.jpg" alt="">     
-                                    <p id="datos-libro">Es una novela de Marcel Proust, escrita entre 1908 y 1922 que consta de siete partes publicadas entre 1913 y 1927, de las que las tres últimas son póstumas. Es ampliamente considerada una de las cumbres de la literatura francesa y universal</p> 
+                                <div id="slider4">
+                                    <img id="imagenS" src="assets/imagenes/En busca del tiempo perdido.jpg" alt="">      
                                 </div>
-
                             </li>
-                        </ul>   
+                        </ul>
+                    </div>
                 </div>
-        
-                   
-        
-              </section>
+            </section>
+            <div id="divtitulos">
+                <h2>Cien Años de Soledad</h2> <!-- Título del primer libro destacado -->
+                <h2>el señor de los anillos</h2> <!-- Título del segundo libro destacado -->
+            </div>
         </section>
-		<footer>
-			<p>Libreria 13-13 &copy; 2024</p>
-		</footer>
-        <script type="module" src="assets/js/libros.js"></script>
-        <script type="module" src="assets/js/index.js"></script>
-	</main>
+
+        <footer>
+            <p>Grephel Desarrollo Web, copyright &copy; 2017</p>
+        </footer>
+
+        <!-- Scripts JavaScript -->
+        <script type="module" src="assets/js/libros.js"></script> <!-- Script para funciones relacionadas con libros -->
+        <script type="module" src="assets/js/index.js"></script> <!-- Script principal de la página -->
+    </main>
 </body>
 </html>
