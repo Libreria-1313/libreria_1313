@@ -407,13 +407,15 @@ footer {
     border-color: black;
     border-radius: 20px;
     margin:5px;
+    font-size: 1.1rem;
+    box-shadow: -5px -5px 0 #000000bc, 0 0 50px #000000bc;
   }
   .librosT{
     width: 400px;
     height: auto;
   }
   .fondo-filtros{
-    background-color: rgba(255, 255, 255, 0.584);
+    background-color: rgba(104, 100, 100, 0.584);
     border-radius: 20px;
     padding:10px;
     padding-top: 10px;

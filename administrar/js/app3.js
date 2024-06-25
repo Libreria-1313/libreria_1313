@@ -726,9 +726,7 @@ function createBook(book) {
     decreaseStockButton.textContent = '-';
     decreaseStockButton.addEventListener('click', () => decreaseStock(book));
 
-    const comprarButton = document.createElement('button');
-    comprarButton.textContent = `comprar`;
-    comprarButton.addEventListener('click', () => comprarLibro(book));
+   
 
     // Añadir elementos al contenedor de cada libro
     myBook.appendChild(title);
@@ -750,7 +748,7 @@ function createBook(book) {
     stockContainer.appendChild(stockValue);
     stockContainer.appendChild(increaseStockButton);
     stockContainer.appendChild(decreaseStockButton);
-    myBook.appendChild(comprarButton); // Agregar el botón de comprar al libro
+    // Agregar el botón de comprar al libro
 
     // Añadir el contenedor del stock al libro
     myBook.appendChild(stockContainer);
