@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/style2.css">
+    <link rel="stylesheet" href="style/style2.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
     <title>Biblioteca</title>
 </head>
 <body>
+    <nav>
+        <div class="breadcrumb-title">
+        <p id="title-logo">LIBRERIA </p> 
+        <div>
+            <p id="logo">13</p>
+            <p id="logo2">13</p>
+        </div>
+        
+        <!-- <img src="assets/imagenes/logo.png" alt="logo" id="logo"> -->
+        </div>
+        <ul>
+            <li><a href="../index.html" class="activo">INICIO</a></li>
+            <li><a href="../templates/categorias.html">CATEGORIAS</a></li>
+            <li><a href="../administrar/index3.html">ADMINISTRAR</a></li>
+        </ul>
+    </nav>
     <button onclick="agregarNuevoLibro()">Agregar Nuevo Libro</button>
     <h2>Buscar y Eliminar Libro</h2>
     <form id="searchForm">
@@ -31,9 +48,7 @@
 </div>
     <h1>Lista de Libros</h1>
     <div id="divbooks"></div>
-
-    <script type="module" src="../assets/js/app3.js"></script>
-    <script type="module" src="../assets/js/libros.js"></script>
-    <script type="module" src="../assets/js/categorias.js"></script>
+    <script type="module" src="assets/js/libros.js"></script>
+    <script typr="module" src="js/app3.js"></script>
 </body>
 </html>
