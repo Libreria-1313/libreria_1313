@@ -24,9 +24,10 @@
     </nav>
     <main id="main">
       <div  id="container-filter">
-        <button id="btnSort">Ordenar de la A-Z</button>
+        <div class="fondo-filtros">
+        <button  class="extras" id="btnSort">Ordenar de la A-Z</button>
           <label for="">Género</label>
-          <select name="" id="select-gender">
+          <select class="extras" name="" id="select-gender">
             <option value="gender">Género</option>
             <option value="everything">Todos</option>
             <option value="Ficción">Ficción</option>
@@ -37,13 +38,13 @@
             <option value="Autoayuda">autoayuda</option>
             <option value=" estado">Nuevo</option>
           </select>
-          <label for="">disponibles</label>
-          <select name="" id="select-disponibles">
+          <label for="">Disponibilidad</label>
+          <select class="extras" name="" id="select-disponibles">
             <option value="no disponible">no disponible</option>
             <option value="si disponible">si disponible</option>
           </select>
-          <label for="">disponibles</label>
-          <select name="" id="select-lenguaje">
+          <label for="">Idioma</label>
+          <select class="extras" name="" id="select-lenguaje">
             <option value="Español">Español</option>
             <option value="Italiano">Italiano</option>
             <option value="Portugues">Portugues</option>
@@ -54,7 +55,7 @@
             <option value="Griego">Griego</option>
           </select>
           <label for="">Editoriales</label>
-          <select name="" id="select-edito">
+          <select class="extras" name="" id="select-edito">
             <option value="Editorial Sudamericana">Editorial Sudamericana</option>
             <option value="Bompiani">Bompiani</option>
             <option value="Debate">Debate</option>
@@ -77,7 +78,8 @@
             <option value="A. Lacroix, Verboeckhoven & Cie.">A. Lacroix, Verboeckhoven & Cie.</option>
             <option value="Ballantine Books">Ballantine Books</option>
           </select>
-          <select name="" id="select-escritor">
+          <label for="">Escritores</label>
+          <select class="extras" name="" id="select-escritor">
             <option value="Miguel de Cervantes">Miguel de Cervantes</option>
             <option value="Jane Austen">Jane Austen</option>
             <option value="Paulo Coelho">Paulo Coelho</option>
@@ -100,12 +102,13 @@
             <option value="Ray Bradbury">Ray Bradbury</option>
           </select>
           
-          <button id="btnTopPrices">Filtrar 5 Precios Más Caros</button>
-          <button id="btnMoreThan200Pages">Filtrar Libros con más de 200 Páginas</button>
-          <button id="btnPriceRange">libros entre 30000 y 80000</button>
-          <button id="btnDiscount">Aplicar Descuento del 10%</button>
-          <button id="btnResetPrices">Restablecer Precios Originales</button>
-      </div>
+          <button class="extras" id="btnTopPrices">Filtrar 5 Precios Más Caros</button>
+          <button class="extras" id="btnMoreThan200Pages">Filtrar Libros con más de 200 Páginas</button>
+          <button class="extras" id="btnPriceRange">libros entre 30000 y 80000</button>
+          <button class="extras" id="btnDiscount">Aplicar Descuento del 10%</button>
+          <button class="extras" id="btnResetPrices">Restablecer Precios Originales</button>
+        </div>
+      </div class="librosT">
       <div id="lista" class="lista">      
       </div>
     </main>

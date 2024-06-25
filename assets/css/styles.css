@@ -238,6 +238,7 @@ footer {
     /* justify-content: center; */
     align-items: center;
     flex-direction: column;
+    
 }
 
 /* .container-filter {
@@ -264,7 +265,7 @@ footer {
   }
 
   .book {
-    width: 40%;
+    width: 600px;
     height: 18rem;
     padding-bottom: 50px;
     background-image: url(../imagenes/card.png);
@@ -283,10 +284,10 @@ footer {
   }
   
   .book-photo > img {
-    width: 80%;
-    height: 80%;
+    width: 85%;
+    height: 85%;
     object-fit: cover;  
-    box-shadow: -3px -3px 0 #34577ebc, 0 0 50px #022c5cbc;
+    box-shadow: -5px -5px 0 #000000bc, 0 0 50px #000000bc;
   }
   
   .book-description {
@@ -296,19 +297,22 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    border-left: double 2px #5555cb;
+    border-left: double 2px #7f0000;
   }
   
   .book-description > h2 {
-    font-size: 1.5rem;
-    color: #5555cb;
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: oblique;
+    color: #d40000;
     text-align: center;
   }
   
   .book-description > h3 {
-    font-size: 1rem;
+    font-size: 1.4rem;
     margin-left: 1rem;
     text-align: center;
+    color: black;
   }
   
   .book-description > h4 {
@@ -319,26 +323,25 @@ footer {
   
   .book-description > button {
     margin-top: 1rem;
-    width: 80%;
-    font-size: 1.2rem;
+    width: 60%;
+    font-size: 1.5rem;
     border-radius: 15px;
     font-weight: 600;
-    background-color: #0739f0c8;
-    color: #fff;
+    background-color: #797979c8;
+    color: rgb(137, 0, 0);
     cursor: pointer;  
     transition: background-color 0.3s ease;
+    box-shadow: 0px -5px 0 #000000bc, 0 0 50px #000000bc;
   }
   
   .book-description > button:hover,
   .book-description > button:focus {
-    background-color: #366f36;
+    background-color: #7f000092;
+    color:white;
+     box-shadow: 0px 0px 0 #000000bc, 0 0 50px #000000bc;
   }
   
-  #btnSort {
-    width: 10rem;
-    border-radius: 15px;
-    border: double 5px #041c93;
-  }
+ 
   /* slider */
   .slider{
     width: 1200px;
@@ -394,4 +397,25 @@ footer {
     margin: 60px 20px 20px 20px;
     width: 250px;
     height: 400px;
+  }
+  .extras{
+    background-color: white;
+    width: 250px;
+    padding: 10px;
+    align-content: center;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 20px;
+    margin:5px;
+  }
+  .librosT{
+    width: 400px;
+    height: auto;
+  }
+  .fondo-filtros{
+    background-color: rgba(255, 255, 255, 0.584);
+    border-radius: 20px;
+    padding:10px;
+    padding-top: 10px;
+    
   }
