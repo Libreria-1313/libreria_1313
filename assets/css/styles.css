@@ -454,3 +454,11 @@ footer {
 #tituloF {
   color: white; /* Color del texto */
 }
+
+/* assets/css/styles.css */
+#resultadosBusqueda .libro {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  color: white;
+}
